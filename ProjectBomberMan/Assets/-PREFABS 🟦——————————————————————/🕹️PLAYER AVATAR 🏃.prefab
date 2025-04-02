@@ -47,7 +47,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -223,10 +223,10 @@ GameObject:
   - component: {fileID: 7793468648195284962}
   - component: {fileID: 195246377207941392}
   - component: {fileID: 5328175499122790670}
-  - component: {fileID: 7528090689328026634}
   - component: {fileID: 4392077597655153312}
   - component: {fileID: 3459277675610821995}
   - component: {fileID: 5320076987262580759}
+  - component: {fileID: 7886838930677061023}
   - component: {fileID: 6371353069162640122}
   m_Layer: 6
   m_Name: "\U0001F579\uFE0FPLAYER AVATAR \U0001F3C3"
@@ -269,6 +269,7 @@ MonoBehaviour:
   hpMax: 10
   spawnOnStart: 1
   destroyOnDeath: 0
+  healthBar: {fileID: 0}
   onSpawn: []
   onHit: []
   onDeath: []
@@ -286,24 +287,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerID: 0
   maxSpeed: 5
---- !u!114 &7528090689328026634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4366888945474098782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ee4846a678d2a047914c7e003570d57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerID: 0
-  lookSpeed: {x: 1, y: 1}
-  mouseSensitivity: {x: 0.1, y: 0.1}
-  maxVerticalAngle: 89
-  horizontalPivot: {fileID: 5368870109600697686}
-  verticalPivot: {fileID: 9182846347747517818}
 --- !u!114 &4392077597655153312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,6 +338,25 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &7886838930677061023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4366888945474098782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80fb6bc236f08840b320887d97aceef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 118284845688184463, guid: 6267db36b714fdc408882d407987753f,
+    type: 3}
+  bombParent: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 524288
+  offset: {x: 0, y: 5, z: 0}
 --- !u!54 &6371353069162640122
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -378,7 +380,7 @@ Rigidbody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -748,18 +750,6 @@ PrefabInstance:
 --- !u!4 &1548654775471198934 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4210961915673613873, guid: 72f07ed203562254a9fada503b5a3104,
-    type: 3}
-  m_PrefabInstance: {fileID: 3390571553128236263}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5368870109600697686 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7318266065102211505, guid: 72f07ed203562254a9fada503b5a3104,
-    type: 3}
-  m_PrefabInstance: {fileID: 3390571553128236263}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &9182846347747517818 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5799999447970292125, guid: 72f07ed203562254a9fada503b5a3104,
     type: 3}
   m_PrefabInstance: {fileID: 3390571553128236263}
   m_PrefabAsset: {fileID: 0}
