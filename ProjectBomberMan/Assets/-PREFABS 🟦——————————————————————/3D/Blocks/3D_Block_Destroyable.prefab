@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 6457332334866905902}
   - component: {fileID: 5289788389670971401}
   m_Layer: 0
-  m_Name: Block_Destroyable
+  m_Name: 3D_Block_Destroyable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
