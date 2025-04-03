@@ -36,9 +36,11 @@ public class scr_Bomb : MonoBehaviour
         {
         
         }
+
+        StartCoroutine(Animation());
     }
 
-    IEnumerator animation()
+    IEnumerator Animation()
     {
         yield return new WaitForSeconds(1);
         Destroy(gameObject);
