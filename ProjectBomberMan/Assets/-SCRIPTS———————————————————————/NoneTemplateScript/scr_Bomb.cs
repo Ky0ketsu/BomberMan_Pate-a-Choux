@@ -19,30 +19,27 @@ public class scr_Bomb : MonoBehaviour
         StartCoroutine(Timer());
     }
 
-    IEnumerator Timer()
+    public IEnumerator Timer()
     {
         yield return new WaitForSeconds(timer);
         Explosion();
     }
 
-    private void Explosion()
+    public void Explosion()
     {
         if(owner != null)
         {
             owner.GetComponent<scr_Player_Bombe>().stockBomb++;
         }
 
-        for(int i = 0; i < 4; i++)
-        {
-        
-        }
+        gameObject.GetComponent<scr_Bomb_Propagation>().Explosion();
 
         StartCoroutine(Animation());
     }
 
     IEnumerator Animation()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         Destroy(gameObject);
     }
 }
