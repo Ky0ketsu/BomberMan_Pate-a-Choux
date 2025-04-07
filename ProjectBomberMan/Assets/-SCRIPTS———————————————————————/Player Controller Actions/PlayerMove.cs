@@ -63,7 +63,7 @@ public class PlayerMove : MonoBehaviour
 
     void VerticalMovement()
     {
-        movement.y= CanFall ? -60f : 0; // very simple fall with constant speed
+        movement.y= CanFall ? -10f : 0; // very simple fall with constant speed
     }
 
     void HorizontalMovement()
