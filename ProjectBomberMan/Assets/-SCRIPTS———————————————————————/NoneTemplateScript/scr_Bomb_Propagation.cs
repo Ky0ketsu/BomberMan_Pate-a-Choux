@@ -29,14 +29,18 @@ public class scr_Bomb_Propagation : MonoBehaviour
                 {
                     canLeft = false;
                     GameObject currenthitLeft = hitLeft.transform.parent.parent.gameObject;
-                    if (currenthitLeft.GetComponent<Scr_Block>() != null)
+
+                    if (currenthitLeft.GetComponent<Scr_Block_Breakable>() != null)
                     {
-                        currenthitLeft.GetComponent<Scr_Block>().Explode();
+                        currenthitLeft.GetComponent<Scr_Block_Breakable>().Explode();
+                        GameObject currentLeftProp = Instantiate(propagation, propParent);
+                        currentLeftProp.transform.position += new Vector3(-i * 2, 0, 0);
                     }
 
                     if(currenthitLeft.GetComponent<scr_Bomb>() != null)
                     {
-                        currenthitLeft.GetComponent<scr_Bomb>().timer = 0;
+                        currenthitLeft.GetComponent<scr_Bomb>().StopAllCoroutines();
+                        currenthitLeft.GetComponent<scr_Bomb>().Explosion();
                     }
                 }
                 else
@@ -53,9 +57,11 @@ public class scr_Bomb_Propagation : MonoBehaviour
                 {
                     canRight = false;
                     GameObject currenthitRight = hitRight.transform.parent.parent.gameObject;
-                    if (currenthitRight.GetComponent<Scr_Block>() != null)
+                    if (currenthitRight.GetComponent<Scr_Block_Breakable>() != null)
                     {
-                        currenthitRight.GetComponent<Scr_Block>().Explode();
+                        currenthitRight.GetComponent<Scr_Block_Breakable>().Explode();
+                        GameObject currentLeftProp = Instantiate(propagation, propParent);
+                        currentLeftProp.transform.position += new Vector3(i * 2, 0, 0);
                     }
 
                     if (currenthitRight.GetComponent<scr_Bomb>() != null)
@@ -78,14 +84,17 @@ public class scr_Bomb_Propagation : MonoBehaviour
                 {
                     canForward = false;
                     GameObject currenthitForward = hitForward.transform.parent.parent.gameObject;
-                    if (currenthitForward.GetComponent<Scr_Block>() != null)
+                    if (currenthitForward.GetComponent<Scr_Block_Breakable>() != null)
                     {
-                        currenthitForward.GetComponent<Scr_Block>().Explode();
+                        currenthitForward.GetComponent<Scr_Block_Breakable>().Explode();
+                        GameObject currentLeftProp = Instantiate(propagation, propParent);
+                        currentLeftProp.transform.position += new Vector3(0, 0, i * 2);
                     }
 
                     if (currenthitForward.GetComponent<scr_Bomb>() != null)
                     {
-                        currenthitForward.GetComponent<scr_Bomb>().timer = 0;
+                        currenthitForward.GetComponent<scr_Bomb>().StopAllCoroutines();
+                        currenthitForward.GetComponent<scr_Bomb>().Explosion();
                     }
                 }
                 else
@@ -102,14 +111,17 @@ public class scr_Bomb_Propagation : MonoBehaviour
                 {
                     canBack = false;
                     GameObject currenthitBack = hitBack.transform.parent.parent.gameObject;
-                    if (currenthitBack.GetComponent<Scr_Block>() != null)
+                    if (currenthitBack.GetComponent<Scr_Block_Breakable>() != null)
                     {
-                        currenthitBack.GetComponent<Scr_Block>().Explode();
+                        currenthitBack.GetComponent<Scr_Block_Breakable>().Explode();
+                        GameObject currentLeftProp = Instantiate(propagation, propParent);
+                        currentLeftProp.transform.position += new Vector3(0, 0, -i * 2);
                     }
 
                     if (currenthitBack.GetComponent<scr_Bomb>() != null)
                     {
-                        currenthitBack.GetComponent<scr_Bomb>().timer = 0;
+                        currenthitBack.GetComponent<scr_Bomb>().StopAllCoroutines();
+                        currenthitBack.GetComponent<scr_Bomb>().Explosion();
                     }
                 }
                 else

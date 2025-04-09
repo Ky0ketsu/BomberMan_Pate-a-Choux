@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scr_Block : MonoBehaviour
+public class Scr_Block_Breakable : MonoBehaviour
 {
     public bool canDestroy;
 
 
     public void Explode()
     {
-        if(canDestroy)
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }
