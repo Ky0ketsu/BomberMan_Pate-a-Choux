@@ -29,7 +29,7 @@ public class Scr_Bomb : MonoBehaviour
     {
         if(owner != null)
         {
-            owner.GetComponent<Scr_Player_Bombe>().stockBomb++;
+            owner.GetComponent<Scr_Player_Bomb>().stockBomb++;
         }
 
         gameObject.GetComponent<Scr_Bomb_Propagation>().Explosion();
