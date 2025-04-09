@@ -39,7 +39,7 @@ public class scr_Bomb : MonoBehaviour
 
     IEnumerator Animation()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
 }

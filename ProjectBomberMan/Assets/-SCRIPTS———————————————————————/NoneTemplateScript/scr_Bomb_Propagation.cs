@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class scr_Bomb_Propagation : MonoBehaviour
 {
@@ -12,11 +13,10 @@ public class scr_Bomb_Propagation : MonoBehaviour
     private bool canLeft, canRight, canForward, canBack;
 
     public GameObject propagation;
-    public Transform propParent;
 
     private void Start()
     {
-        canBack = canForward = canLeft = canRight = true; 
+        canBack = canForward = canLeft = canRight = true;
     }
 
     public void Explosion()
@@ -28,20 +28,27 @@ public class scr_Bomb_Propagation : MonoBehaviour
                 if (Physics.Raycast(transform.position, Vector3.left, out RaycastHit hitLeft,i * 2, mask))
                 {
                     canLeft = false;
-                    GameObject currenthitLeft = hitLeft.transform.parent.parent.gameObject;
-                    if (currenthitLeft.GetComponent<Scr_Block>() != null)
+                    GameObject currentLeftHit = hitLeft.transform.gameObject;
+
+                    while (currentLeftHit.transform.parent.parent != null) currentLeftHit = currentLeftHit.transform.parent.gameObject;
+
+                    if (currentLeftHit.GetComponent<Scr_Block_Breakable>() != null)
                     {
-                        currenthitLeft.GetComponent<Scr_Block>().Explode();
+                        currentLeftHit.GetComponent<Scr_Block_Breakable>().Explode();
+                        currentLeftHit = Instantiate(propagation, transform);
+                        currentLeftHit.transform.localPosition = Vector3.zero;
+                        currentLeftHit.transform.position += new Vector3(-i * 2, 0, 0);
                     }
 
-                    if(currenthitLeft.GetComponent<scr_Bomb>() != null)
+                    if (currentLeftHit.GetComponent<scr_Bomb>() != null)
                     {
-                        currenthitLeft.GetComponent<scr_Bomb>().timer = 0;
+                        currentLeftHit.GetComponent<scr_Bomb>().StopAllCoroutines();
+                        currentLeftHit.GetComponent<scr_Bomb>().Explosion();
                     }
                 }
                 else
                 {
-                    GameObject currentLeftProp = Instantiate(propagation, propParent);
+                    GameObject currentLeftProp = Instantiate(propagation, transform);
                     currentLeftProp.transform.position += new Vector3(-i * 2, 0, 0); 
                 }
             }
@@ -52,21 +59,27 @@ public class scr_Bomb_Propagation : MonoBehaviour
                 if (Physics.Raycast(transform.position, Vector3.right, out RaycastHit hitRight,i * 2, mask))
                 {
                     canRight = false;
-                    GameObject currenthitRight = hitRight.transform.parent.parent.gameObject;
-                    if (currenthitRight.GetComponent<Scr_Block>() != null)
+                    GameObject currentRightHit = hitRight.transform.gameObject;
+
+                    while (currentRightHit.transform.parent.parent != null) currentRightHit = currentRightHit.transform.parent.gameObject;
+
+                    if (currentRightHit.GetComponent<Scr_Block_Breakable>() != null)
                     {
-                        currenthitRight.GetComponent<Scr_Block>().Explode();
+                        currentRightHit.GetComponent<Scr_Block_Breakable>().Explode();
+                        currentRightHit = Instantiate(propagation, transform);
+                        currentRightHit.transform.localPosition = Vector3.zero;
+                        currentRightHit.transform.position += new Vector3(i * 2, 0, 0);
                     }
 
-                    if (currenthitRight.GetComponent<scr_Bomb>() != null)
+                    if (currentRightHit.GetComponent<scr_Bomb>() != null)
                     {
-                        currenthitRight.GetComponent<scr_Bomb>().StopAllCoroutines();
-                        currenthitRight.GetComponent<scr_Bomb>().Explosion();
+                        currentRightHit.GetComponent<scr_Bomb>().StopAllCoroutines();
+                        currentRightHit.GetComponent<scr_Bomb>().Explosion();
                     }
                 }
                 else
                 {
-                    GameObject currentRightProp = Instantiate(propagation, propParent);
+                    GameObject currentRightProp = Instantiate(propagation, transform);
                     currentRightProp.transform.position += new Vector3(i * 2, 0, 0);
                 }
             }
@@ -77,20 +90,27 @@ public class scr_Bomb_Propagation : MonoBehaviour
                 if (Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hitForward,i* 2, mask))
                 {
                     canForward = false;
-                    GameObject currenthitForward = hitForward.transform.parent.parent.gameObject;
-                    if (currenthitForward.GetComponent<Scr_Block>() != null)
+                    GameObject currentForwardHit = hitForward.transform.gameObject;
+
+                    while (currentForwardHit.transform.parent.parent != null) currentForwardHit = currentForwardHit.transform.parent.gameObject;
+
+                    if (currentForwardHit.GetComponent<Scr_Block_Breakable>() != null)
                     {
-                        currenthitForward.GetComponent<Scr_Block>().Explode();
+                        currentForwardHit.GetComponent<Scr_Block_Breakable>().Explode();
+                        currentForwardHit = Instantiate(propagation, transform);
+                        currentForwardHit.transform.localPosition = Vector3.zero;
+                        currentForwardHit.transform.position += new Vector3(0, 0, i * 2);
                     }
 
-                    if (currenthitForward.GetComponent<scr_Bomb>() != null)
+                    if (currentForwardHit.GetComponent<scr_Bomb>() != null)
                     {
-                        currenthitForward.GetComponent<scr_Bomb>().timer = 0;
+                        currentForwardHit.GetComponent<scr_Bomb>().StopAllCoroutines();
+                        currentForwardHit.GetComponent<scr_Bomb>().Explosion();
                     }
                 }
                 else
                 {
-                    GameObject currentForwardProp = Instantiate(propagation, propParent);
+                    GameObject currentForwardProp = Instantiate(propagation, transform);
                     currentForwardProp.transform.position += new Vector3(0, 0, i * 2);
                 }
             }
@@ -98,27 +118,37 @@ public class scr_Bomb_Propagation : MonoBehaviour
 
             if(canBack)
             {
-                if (Physics.Raycast(transform.position, Vector3.back, out RaycastHit hitBack,i* 2, mask))
+                if (Physics.Raycast(transform.position, Vector3.back, out RaycastHit hitBack,i * 2, mask))
                 {
                     canBack = false;
-                    GameObject currenthitBack = hitBack.transform.parent.parent.gameObject;
-                    if (currenthitBack.GetComponent<Scr_Block>() != null)
+                    GameObject currentBackHit = hitBack.transform.gameObject ;
+                    
+                    while(currentBackHit.transform.parent.parent != null) currentBackHit = currentBackHit.transform.parent.gameObject;
+
+                    if (currentBackHit.GetComponent<Scr_Block_Breakable>() != null)
                     {
-                        currenthitBack.GetComponent<Scr_Block>().Explode();
+                        currentBackHit.GetComponent<Scr_Block_Breakable>().Explode();
+                        currentBackHit = Instantiate(propagation, transform);
+                        currentBackHit.transform.localPosition = Vector3.zero;
+                        currentBackHit.transform.position += new Vector3(0, 0, -i * 2);
+
+                        Debug.Log("block");
                     }
 
-                    if (currenthitBack.GetComponent<scr_Bomb>() != null)
+                    if (currentBackHit.GetComponent<scr_Bomb>() != null)
                     {
-                        currenthitBack.GetComponent<scr_Bomb>().timer = 0;
+                        currentBackHit.GetComponent<scr_Bomb>().StopAllCoroutines();
+                        currentBackHit.GetComponent<scr_Bomb>().Explosion();
+                        Debug.Log("Boum");
                     }
+                    Debug.Log("Nothing");
                 }
                 else
                 {
-                    GameObject currentBackProp = Instantiate(propagation, propParent);
+                    GameObject currentBackProp = Instantiate(propagation, transform);
                     currentBackProp.transform.position += new Vector3(0, 0,-i * 2);
                 }
             }
         }
     }
-
 }
