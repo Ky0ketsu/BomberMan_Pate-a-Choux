@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class TerrainGenerator : MonoBehaviour
+public class Scr_Terrain_Generator : MonoBehaviour
 {
 
 }

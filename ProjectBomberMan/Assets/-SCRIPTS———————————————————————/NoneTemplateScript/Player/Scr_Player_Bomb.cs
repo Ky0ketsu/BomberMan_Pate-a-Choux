@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class scr_Player_Bombe : MonoBehaviour
+public class Scr_Player_Bomb : MonoBehaviour
 {
     public GameObject bombPrefab;
     private GameObject CurrentBomb;
@@ -32,7 +32,7 @@ public class scr_Player_Bombe : MonoBehaviour
                     GameObject currentBomb = Instantiate(bombPrefab, currentCase);
                     currentBomb.transform.position = currentCase.position + offset;
                     stockBomb--;
-                    currentBomb.GetComponent<scr_Bomb>().owner = gameObject;
+                    currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
                 }
             }
         }

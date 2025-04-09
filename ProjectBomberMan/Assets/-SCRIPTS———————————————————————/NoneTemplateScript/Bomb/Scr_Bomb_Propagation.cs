@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
-public class scr_Bomb_Propagation : MonoBehaviour
+public class Scr_Bomb_Propagation : MonoBehaviour
 {
     public int range;
 
@@ -40,10 +40,10 @@ public class scr_Bomb_Propagation : MonoBehaviour
                         currentLeftHit.transform.position += new Vector3(-i * 2, 0, 0);
                     }
 
-                    if (currentLeftHit.GetComponent<scr_Bomb>() != null)
+                    if (currentLeftHit.GetComponent<Scr_Bomb>() != null)
                     {
-                        currentLeftHit.GetComponent<scr_Bomb>().StopAllCoroutines();
-                        currentLeftHit.GetComponent<scr_Bomb>().Explosion();
+                        currentLeftHit.GetComponent<Scr_Bomb>().StopAllCoroutines();
+                        currentLeftHit.GetComponent<Scr_Bomb>().Explosion();
                     }
                 }
                 else
@@ -71,10 +71,10 @@ public class scr_Bomb_Propagation : MonoBehaviour
                         currentRightHit.transform.position += new Vector3(i * 2, 0, 0);
                     }
 
-                    if (currentRightHit.GetComponent<scr_Bomb>() != null)
+                    if (currentRightHit.GetComponent<Scr_Bomb>() != null)
                     {
-                        currentRightHit.GetComponent<scr_Bomb>().StopAllCoroutines();
-                        currentRightHit.GetComponent<scr_Bomb>().Explosion();
+                        currentRightHit.GetComponent<Scr_Bomb>().StopAllCoroutines();
+                        currentRightHit.GetComponent<Scr_Bomb>().Explosion();
                     }
                 }
                 else
@@ -102,10 +102,10 @@ public class scr_Bomb_Propagation : MonoBehaviour
                         currentForwardHit.transform.position += new Vector3(0, 0, i * 2);
                     }
 
-                    if (currentForwardHit.GetComponent<scr_Bomb>() != null)
+                    if (currentForwardHit.GetComponent<Scr_Bomb>() != null)
                     {
-                        currentForwardHit.GetComponent<scr_Bomb>().StopAllCoroutines();
-                        currentForwardHit.GetComponent<scr_Bomb>().Explosion();
+                        currentForwardHit.GetComponent<Scr_Bomb>().StopAllCoroutines();
+                        currentForwardHit.GetComponent<Scr_Bomb>().Explosion();
                     }
                 }
                 else
@@ -135,10 +135,10 @@ public class scr_Bomb_Propagation : MonoBehaviour
                         Debug.Log("block");
                     }
 
-                    if (currentBackHit.GetComponent<scr_Bomb>() != null)
+                    if (currentBackHit.GetComponent<Scr_Bomb>() != null)
                     {
-                        currentBackHit.GetComponent<scr_Bomb>().StopAllCoroutines();
-                        currentBackHit.GetComponent<scr_Bomb>().Explosion();
+                        currentBackHit.GetComponent<Scr_Bomb>().StopAllCoroutines();
+                        currentBackHit.GetComponent<Scr_Bomb>().Explosion();
                         Debug.Log("Boum");
                     }
                     Debug.Log("Nothing");

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class TerrainPlacementAnimation : MonoBehaviour
+public class Scr_Terrain_Placement_Animation : MonoBehaviour
 {
     [SerializeField] private float timerBeforePlacement;
 

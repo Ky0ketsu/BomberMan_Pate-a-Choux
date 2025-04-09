@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class scr_Bomb : MonoBehaviour
+public class Scr_Bomb : MonoBehaviour
 {
     public GameObject owner;
     private Rigidbody rigid;
@@ -29,10 +29,10 @@ public class scr_Bomb : MonoBehaviour
     {
         if(owner != null)
         {
-            owner.GetComponent<scr_Player_Bombe>().stockBomb++;
+            owner.GetComponent<Scr_Player_Bombe>().stockBomb++;
         }
 
-        gameObject.GetComponent<scr_Bomb_Propagation>().Explosion();
+        gameObject.GetComponent<Scr_Bomb_Propagation>().Explosion();
 
         StartCoroutine(Animation());
     }
