@@ -19,6 +19,9 @@ MonoBehaviour:
     fadeInDuration: 5
     fadeOutDuration: 1
     tracks:
-    - clipTitle: basicdrumloop
-      clip: {fileID: 8300000, guid: 5454f333cf7acbb45b31255f66ebab8a, type: 3}
+    - clipTitle: PH_Music_Gameplay
+      clip: {fileID: 8300000, guid: 90889051da118d143af077b335406ec7, type: 3}
+      volume: 1
+    - clipTitle: PH_Msc_Menu
+      clip: {fileID: 8300000, guid: 731549165e249ac4cb7734b1efc3b717, type: 3}
       volume: 1
