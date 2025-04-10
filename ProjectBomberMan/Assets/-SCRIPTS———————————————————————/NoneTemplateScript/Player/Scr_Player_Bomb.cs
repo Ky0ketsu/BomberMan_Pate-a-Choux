@@ -15,6 +15,8 @@ public class Scr_Player_Bomb : MonoBehaviour
 
     public int stockBomb;
 
+    public bool frozenActive;
+
     private void Update()
     {
         if (Input.GetButtonDown("Bomb"))
@@ -23,6 +25,7 @@ public class Scr_Player_Bomb : MonoBehaviour
             {
                 Transform currentCase = hit.transform.GetChild(0);
                 Debug.Log(currentCase);
+
                 if (currentCase.childCount <= 0 && stockBomb > 0)
                 {
                     GameObject currentBomb = Instantiate(bombPrefab, currentCase);
@@ -30,6 +33,7 @@ public class Scr_Player_Bomb : MonoBehaviour
                     stockBomb--;
                     currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
                     currentBomb.GetComponent<Scr_Bomb_Propagation>().range = range;
+                    currentBomb.GetComponent<Scr_Bomb_FrozenActive>();
                 }
             }
         }

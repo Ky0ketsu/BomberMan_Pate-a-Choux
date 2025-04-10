@@ -13,6 +13,7 @@ public class Scr_Bomb : MonoBehaviour
 
     public Vector3 dir;
 
+
     public void Start()
     {
         rigid = GetComponent<Rigidbody>();
