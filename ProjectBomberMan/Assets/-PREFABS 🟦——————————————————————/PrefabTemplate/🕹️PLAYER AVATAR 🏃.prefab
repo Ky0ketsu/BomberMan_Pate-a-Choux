@@ -568,8 +568,9 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 524288
+  range: 1
   offset: {x: 0, y: 5, z: 0}
-  stockBomb: 0
+  stockBomb: 1
 --- !u!54 &6371353069162640122
 Rigidbody:
   m_ObjectHideFlags: 0

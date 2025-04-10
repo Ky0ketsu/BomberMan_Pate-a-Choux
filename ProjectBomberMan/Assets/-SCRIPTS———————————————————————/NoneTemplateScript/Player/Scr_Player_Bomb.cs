@@ -9,15 +9,11 @@ public class Scr_Player_Bomb : MonoBehaviour
     private GameObject CurrentBomb;
     public Transform bombParent;
     public LayerMask mask;
+    public int range;
 
     public Vector3 offset;
 
     public int stockBomb;
-
-    public void Start()
-    {
-        stockBomb = 1;
-    }
 
     private void Update()
     {
@@ -33,6 +29,7 @@ public class Scr_Player_Bomb : MonoBehaviour
                     currentBomb.transform.position = currentCase.position + offset;
                     stockBomb--;
                     currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
+                    currentBomb.GetComponent<Scr_Bomb_Propagation>().range = range;
                 }
             }
         }

@@ -7,6 +7,7 @@ public class Scr_Terrain_Placement_Animation : MonoBehaviour
 {
     [SerializeField] private float timerBeforePlacement;
 
+
     private void Start()
     {
         transform.localScale = Vector3.zero;
