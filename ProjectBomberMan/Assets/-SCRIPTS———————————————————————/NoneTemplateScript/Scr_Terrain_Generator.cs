@@ -20,7 +20,7 @@ public class Scr_Terrain_Generator : MonoBehaviour
     {
         if (terrainParent == null)
         {
-            GameObject currentTerrain = Instantiate(PresetList[Random.Range(0, PresetList.Length)]);
+            GameObject currentTerrain = Instantiate(PresetList[Random.Range(0, PresetList.Length)],terrainParent);
             currentTerrain.transform.position = Vector3.zero + offset;
         }
         
