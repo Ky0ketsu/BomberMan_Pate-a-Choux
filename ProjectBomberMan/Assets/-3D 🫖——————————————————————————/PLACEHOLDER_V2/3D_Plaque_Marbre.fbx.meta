@@ -3,7 +3,12 @@ guid: ae260e4c662e8b3408245608c1270a6c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Marbre
+    second: {fileID: 2100000, guid: d85769d68a497c94fb8d831da8e80941, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

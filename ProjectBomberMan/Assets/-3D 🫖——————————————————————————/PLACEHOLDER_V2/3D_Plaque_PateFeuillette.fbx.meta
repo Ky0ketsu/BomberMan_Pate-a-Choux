@@ -3,7 +3,12 @@ guid: 8d016984f04fc5145b375cc6cef552fe
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Pate Feuillet\xE9"
+    second: {fileID: 2100000, guid: 895bcf21a9df9dc4a86fd2789a590890, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
