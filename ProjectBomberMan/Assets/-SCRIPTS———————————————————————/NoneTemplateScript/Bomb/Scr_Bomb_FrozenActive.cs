@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using DG.Tweening;
-using TreeEditor;
+
 
 public class Scr_Bomb_FrozenActive : MonoBehaviour
 {
@@ -12,7 +10,7 @@ public class Scr_Bomb_FrozenActive : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            if(other.transform.position.x > transform.position.x)
+            /*if(other.transform.position.x > transform.position.x)
             {
                 if(other.transform.position.z > transform.position.z)
                 {
@@ -30,7 +28,7 @@ public class Scr_Bomb_FrozenActive : MonoBehaviour
                 {
 
                 }
-            }
+            }*/
         }
     }
 }

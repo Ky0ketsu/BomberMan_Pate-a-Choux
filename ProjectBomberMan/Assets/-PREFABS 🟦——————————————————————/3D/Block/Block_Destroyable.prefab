@@ -250,14 +250,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0, z: 0}
   powerUp:
-  - {fileID: 1696098582136247543, guid: f0f08ec825d1060488bdc21270267825, type: 3}
   - {fileID: 1696098582136247543, guid: e403d2ca8a2654a4b8845423a55846f0, type: 3}
-  - {fileID: 1696098582136247543, guid: 4c7532594ed91ea4eadec1b8e950bd57, type: 3}
-  - {fileID: 1696098582136247543, guid: 5c872e398415d414c9df3b3d7229fcc2, type: 3}
-  - {fileID: 1696098582136247543, guid: 4a12bafbdde202a43a9069356cee6d23, type: 3}
-  - {fileID: 1696098582136247543, guid: 90c54b4dee0c2fb4994edeed9896d878, type: 3}
   - {fileID: 1696098582136247543, guid: ba62cac2b6045f8439ddd62c600bd9df, type: 3}
-  - {fileID: 1696098582136247543, guid: 5a743e21018fd3e40aaa629cc6a608e5, type: 3}
   powerUpParent: {fileID: 0}
 --- !u!1001 &6000461439109337424
 PrefabInstance:

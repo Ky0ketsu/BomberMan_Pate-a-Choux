@@ -7,8 +7,6 @@ public class Scr_PowerUp_RangeUp : MonoBehaviour
     public GameObject particule;
     private Transform parentParticule;
 
-    public Component effectPowerUp;
-
     public void OnTriggerEnter(Collider other)
     {
         parentParticule = GameObject.Find("ParticuleParent").transform;
