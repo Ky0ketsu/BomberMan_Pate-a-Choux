@@ -6,13 +6,11 @@ public class MusicScenePlay : MonoBehaviour
 
     void OnEnable()
     {
-        EVENTS.OnSceneLoaded += SetPlaylist;
         EVENTS.OnGameStart += SetPlaylist;
     }
 
     void OnDisable()
     {
-        EVENTS.OnSceneLoaded -= SetPlaylist;
         EVENTS.OnGameStart -= SetPlaylist;
     }
 

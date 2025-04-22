@@ -10,18 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40ade8f64d82a7c4fb641157b75b125b, type: 3}
-  m_Name: Playlist ExempleScene
+  m_Name: Playlist_MortSubite
   m_EditorClassIdentifier: 
   playlist:
     looping: 1
     randomizeTracks: 0
     timeScale: 1
-    fadeInDuration: 5
+    fadeInDuration: 1
     fadeOutDuration: 1
     tracks:
-    - clipTitle: PH_Music_Gameplay
-      clip: {fileID: 8300000, guid: 90889051da118d143af077b335406ec7, type: 3}
-      volume: 1
-    - clipTitle: PH_Msc_Menu
-      clip: {fileID: 8300000, guid: 731549165e249ac4cb7734b1efc3b717, type: 3}
-      volume: 1
+    - clipTitle: Msc_Game_2
+      clip: {fileID: 8300000, guid: 4f7f848ee8ca3b2428813c09dfa7248d, type: 3}
+      volume: 0.5

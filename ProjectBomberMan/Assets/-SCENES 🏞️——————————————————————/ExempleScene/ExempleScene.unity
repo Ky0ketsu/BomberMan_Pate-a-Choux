@@ -2611,6 +2611,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1728713597}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1821896115
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 23772609469541669, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: scenePlaylist
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c01648e700a43c49b1682b9ad49eff2,
+        type: 2}
+    - target: {fileID: 2555121132212894410, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: m_Name
+      value: "\U0001F3B5SCENE MUSIC MORT SUBITE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320169356399439187, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320169356399439187, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320169356399439187, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320169356399439187, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320169356399439187, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320169356399439187, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320169356399439187, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320169356399439187, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320169356399439187, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320169356399439187, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 23d56e67a282d5541830ce5a2583ead6, type: 3}
 --- !u!4 &1835500548 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6054288793881633700, guid: e06860cb5e413ac40a12b8e64aa020fd,
@@ -3041,6 +3115,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 23772609469541669, guid: 23d56e67a282d5541830ce5a2583ead6,
+        type: 3}
+      propertyPath: scenePlaylist
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a85f33e6faafbf43bbf57ba05f26cf7,
+        type: 2}
     - target: {fileID: 2555121132212894410, guid: 23d56e67a282d5541830ce5a2583ead6,
         type: 3}
       propertyPath: m_Name
@@ -7962,6 +8042,7 @@ SceneRoots:
   - {fileID: 821256655}
   - {fileID: 2068312050}
   - {fileID: 4000021320453257949}
+  - {fileID: 1821896115}
   - {fileID: 1484127965}
   - {fileID: 4205108363445451735}
   - {fileID: 985670028}
