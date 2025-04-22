@@ -13,13 +13,11 @@ public class Scr_MortSubite : MonoBehaviour
     public GameObject blockPrefab;
     public Transform parent;
 
-    public LayerMask mask;
-
     private Vector3 currentDir;
 
     void Start()
     {
-        spawner.SetActive(false);
+        currentDir = new Vector3(2,0,0);
     }
 
     void OnEnable()
@@ -39,28 +37,52 @@ public class Scr_MortSubite : MonoBehaviour
     IEnumerator StartMortSubite()
     {
         yield return new WaitForSeconds(time);
-        spawner.SetActive(true);
         MortSubiteFonction();
     }
 
     private void MortSubiteFonction()
     {
         GameObject currentBlock = Instantiate(blockPrefab, parent);
-        transform.DOMove(transform.position + currentDir, delayBetweenBlock);
-        StartCoroutine(DelayBetweenBlock());
+        currentBlock.transform.position = spawner.transform.position;
+        if (nextMoveIsTp)
+        {
+            transform.DOMove(currentCheckpoint.GetComponentInParent<Scr_CheckpointDir>().nextPos.position, delayBetweenBlock);
+            nextMoveIsTp = false;
+        }
+        else transform.DOMove(transform.position + currentDir, delayBetweenBlock);
+
+        if (!isFinish)
+        {
+            StartCoroutine(DelayBetweenBlock());
+        }
+        else Debug.Log("Mort Subite Terminer");
+        
     }
+
+    private bool nextMoveIsTp;
+    private GameObject currentCheckpoint;
 
     public void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("CheckPoint"))
         {
-            currentDir = other.GetComponent<Scr_CheckpointDir>().dir;
+            currentCheckpoint = other.gameObject;
+            if(other.GetComponentInParent<Scr_CheckpointDir>().lastCheckpoint == true)
+            {
+                isFinish = true;
+            }
+            nextMoveIsTp = other.GetComponentInParent<Scr_CheckpointDir>().typeTp;
+            currentDir = other.GetComponentInParent<Scr_CheckpointDir>().dir;
         }
     }
+
+    private bool isFinish;
 
     IEnumerator DelayBetweenBlock()
     {
         yield return new WaitForSeconds(delayBetweenBlock);
+        MortSubiteFonction();
+        
     }
 
 }

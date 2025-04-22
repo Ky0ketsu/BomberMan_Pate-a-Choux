@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - CheckPoint
+  - FallingBlock
   layers:
   - Default
   - TransparentFX
