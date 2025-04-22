@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4788997355121572252}
   - component: {fileID: 415257569539209928}
   m_Layer: 0
-  m_Name: 3D_Bomb
+  m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,10 +59,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &4788997355121572252
 MonoBehaviour:
@@ -78,11 +78,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   timer: 3
-  mask:
-    serializedVersion: 2
-    m_Bits: 0
-  offset: {x: 0, y: 0, z: 0}
-  dir: {x: 0, y: 0, z: 0}
+  maxY: 4
+  minY: 0
 --- !u!114 &415257569539209928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +98,6 @@ MonoBehaviour:
     m_Bits: 1048576
   propagation: {fileID: 4749410917353711763, guid: d91eb81d035e63c429c95865adf1491e,
     type: 3}
-  propParent: {fileID: 8815572672430434247}
 --- !u!1 &3128868076090884526
 GameObject:
   m_ObjectHideFlags: 0

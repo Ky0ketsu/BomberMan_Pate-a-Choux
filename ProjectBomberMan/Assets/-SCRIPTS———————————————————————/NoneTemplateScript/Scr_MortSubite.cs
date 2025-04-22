@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class Scr_MortSubite : MonoBehaviour
 {
@@ -67,10 +68,7 @@ public class Scr_MortSubite : MonoBehaviour
         if(other.CompareTag("CheckPoint"))
         {
             currentCheckpoint = other.gameObject;
-            if(other.GetComponentInParent<Scr_CheckpointDir>().lastCheckpoint == true)
-            {
-                isFinish = true;
-            }
+            isFinish = other.GetComponentInParent<Scr_CheckpointDir>().lastCheckpoint;
             nextMoveIsTp = other.GetComponentInParent<Scr_CheckpointDir>().typeTp;
             currentDir = other.GetComponentInParent<Scr_CheckpointDir>().dir;
         }

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,18 +7,15 @@ using UnityEngine.UI;
 public class Scr_Bomb : MonoBehaviour
 {
     public GameObject owner;
-    private Rigidbody rigid;
     public float timer;
-    public LayerMask mask;
-    public Vector3 offset;
-
-    public Vector3 dir;
+    public float maxY, minY;
 
 
     public void Start()
     {
-        rigid = GetComponent<Rigidbody>();
         StartCoroutine(Timer());
+        transform.DOMoveY(maxY, 0.5f).SetEase(Ease.OutExpo);
+        transform.DOMoveY(minY, 1).SetEase(Ease.InExpo);
     }
 
     public IEnumerator Timer()
