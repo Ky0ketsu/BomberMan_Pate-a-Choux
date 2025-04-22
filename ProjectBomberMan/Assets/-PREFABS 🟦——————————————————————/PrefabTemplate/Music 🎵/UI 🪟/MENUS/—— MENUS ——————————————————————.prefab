@@ -3244,6 +3244,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3039339870834015149, guid: 6a2c42127b502764c96637af2e6c8cf3,
+        type: 3}
+      propertyPath: sound.clip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3163346667909808952, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -3450,7 +3455,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TargetGraphic
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4541053520237649618}
     - target: {fileID: 6741974001007207396, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -3564,7 +3569,7 @@ PrefabInstance:
     - target: {fileID: 7663760246250361852, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_fontSize
-      value: 27.55
+      value: 15.25
       objectReference: {fileID: 0}
     - target: {fileID: 7663760246250361852, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3619,7 +3624,7 @@ PrefabInstance:
     - target: {fileID: 8134635786135445813, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_fontSize
-      value: 30
+      value: 24.9
       objectReference: {fileID: 0}
     - target: {fileID: 8134635786135445813, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3694,7 +3699,7 @@ PrefabInstance:
     - target: {fileID: 8667135380878544845, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_fontSize
-      value: 30
+      value: 25.5
       objectReference: {fileID: 0}
     - target: {fileID: 8667135380878544845, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3747,6 +3752,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3490805814223331916}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4541053520237649618 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1113732133017042078, guid: 6a2c42127b502764c96637af2e6c8cf3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3490805814223331916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5038515960868762131
 PrefabInstance:
   m_ObjectHideFlags: 0

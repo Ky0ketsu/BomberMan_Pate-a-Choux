@@ -1338,6 +1338,16 @@ PrefabInstance:
       propertyPath: clickOnce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4999631699898198112, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d57bdb851ee1474aaa634e1f3a9fcbe, type: 3}
+    - target: {fileID: 4999631699898198112, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6606f5ff12a9f2a49a3b1c17c61a5239, type: 3}
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name
@@ -1658,6 +1668,11 @@ PrefabInstance:
       propertyPath: clickOnce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4999631699898198112, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea7a8abf0c1e4f446b81a57cb4a7fb20, type: 3}
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name
@@ -1889,6 +1904,11 @@ PrefabInstance:
       propertyPath: clickOnce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4999631699898198112, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5be222151911e354daff24ab1011d158, type: 3}
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name
@@ -2120,6 +2140,11 @@ PrefabInstance:
       propertyPath: clickOnce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4999631699898198112, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c343985f1376d054e8fd0647ad0ef9c1, type: 3}
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name

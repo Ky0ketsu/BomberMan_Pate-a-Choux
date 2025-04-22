@@ -1126,6 +1126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RETOUR Button Graphics
       objectReference: {fileID: 0}
+    - target: {fileID: 5747644594689293472, guid: 9101ee62cbb4c024095e742e34da13a0,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6606f5ff12a9f2a49a3b1c17c61a5239, type: 3}
     - target: {fileID: 5982882668673742733, guid: 9101ee62cbb4c024095e742e34da13a0,
         type: 3}
       propertyPath: m_Navigation.m_Mode
@@ -2504,6 +2509,11 @@ PrefabInstance:
       propertyPath: fr
       value: ANGLAIS
       objectReference: {fileID: 0}
+    - target: {fileID: 4999631699898198112, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea7a8abf0c1e4f446b81a57cb4a7fb20, type: 3}
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name
@@ -3332,6 +3342,11 @@ PrefabInstance:
       propertyPath: fr
       value: "R\xC9GLAGES PAR D\xC9FAUT"
       objectReference: {fileID: 0}
+    - target: {fileID: 4999631699898198112, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c343985f1376d054e8fd0647ad0ef9c1, type: 3}
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name
@@ -4128,6 +4143,11 @@ PrefabInstance:
       propertyPath: fr
       value: "FRAN\xC7AIS"
       objectReference: {fileID: 0}
+    - target: {fileID: 4999631699898198112, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5be222151911e354daff24ab1011d158, type: 3}
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name
