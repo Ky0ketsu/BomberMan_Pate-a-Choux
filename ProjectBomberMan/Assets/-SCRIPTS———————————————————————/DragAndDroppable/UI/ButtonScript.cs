@@ -33,7 +33,6 @@ public class ButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     bool clickEffect = false;
 
 
-
     void SelectButtonEffect()
     {
         EVENTS.InvokeUIElementSelected(button);
@@ -151,7 +150,7 @@ public class ButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnSelect(BaseEventData eventData)
     {
-        SelectButtonEffect();
+        if (Input.GetMouseButtonDown(0)==false) SelectButtonEffect();
     }
 
     public void OnDeselect(BaseEventData eventData)
