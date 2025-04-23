@@ -613,6 +613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   graphic: {fileID: 3839695463424431248}
+  colliders: {fileID: 0}
 --- !u!1 &4918180933543491476
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,8 +822,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feetSounds:
-  - {fileID: 8300000, guid: 5d858012f68ee3e43879e892e8c9e5ed, type: 3}
-  pitch: {x: 0.9, y: 1.05}
+  - {fileID: 8300000, guid: 1ba22a4e91fe7534cb59972f547b28c3, type: 3}
+  - {fileID: 8300000, guid: 744d0ec3b3c18f1469a83c9378ddf896, type: 3}
+  - {fileID: 8300000, guid: 10a826713d71b8b46a260603e3858271, type: 3}
+  - {fileID: 8300000, guid: fd1cc55f399612d47b7d0ada44722934, type: 3}
+  - {fileID: 8300000, guid: 1b7247498a266ab44869e57ad80dd2ce, type: 3}
+  pitch: {x: 1, y: 1}
   stepSize: 1.5
 --- !u!82 &3169480182097322982
 AudioSource:
