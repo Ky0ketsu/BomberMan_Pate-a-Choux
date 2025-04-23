@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7984231102681943568}
   - component: {fileID: 4942179666423096097}
   m_Layer: 0
-  m_Name: 3D_Power_Up_BombUp
+  m_Name: Power_Up_BombUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

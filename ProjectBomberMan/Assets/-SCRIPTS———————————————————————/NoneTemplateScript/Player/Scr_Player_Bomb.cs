@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Scr_Player_Bomb : MonoBehaviour
 {
-    public GameObject bombPrefab;
+    public GameObject bombPrefab, bombFrozenPrefab;
     private GameObject CurrentBomb;
     public Transform bombParent;
     public LayerMask mask;
@@ -16,6 +16,7 @@ public class Scr_Player_Bomb : MonoBehaviour
     public int stockBomb;
 
     public bool frozenActive;
+    private GameObject currentBomb;
 
     private void Update()
     {
@@ -28,12 +29,19 @@ public class Scr_Player_Bomb : MonoBehaviour
 
                 if (currentCase.childCount <= 0 && stockBomb > 0)
                 {
-                    GameObject currentBomb = Instantiate(bombPrefab, currentCase);
-                    currentBomb.transform.position = currentCase.position + offset;
+                    if(frozenActive)
+                    {
+                        currentBomb = Instantiate(bombFrozenPrefab, currentCase);
+                    }
+                    else
+                    {
+                        currentBomb = Instantiate(bombPrefab, currentCase);
+                    }
+
+                        currentBomb.transform.position = currentCase.position + offset;
                     stockBomb--;
                     currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
                     currentBomb.GetComponent<Scr_Bomb_Propagation>().range = range;
-                    currentBomb.GetComponent<Scr_Bomb_FrozenActive>();
                 }
             }
         }

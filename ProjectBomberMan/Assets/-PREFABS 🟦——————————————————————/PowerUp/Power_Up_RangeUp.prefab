@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 4522207212322274782}
   - component: {fileID: 8515971800091261980}
   m_Layer: 0
-  m_Name: 3D_Power_Up_RangeUp
+  m_Name: Power_Up_RangeUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
