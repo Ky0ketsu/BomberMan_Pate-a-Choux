@@ -17,11 +17,22 @@ public class Scr_PowerUp_RangeUp : MonoBehaviour
 
         if(other.CompareTag("Player"))
         {
-            GameObject currentParticule = Instantiate(particule, parentParticule);
-            currentParticule.transform.position = transform.position;
-
             other.GetComponent<Scr_Player_Bomb>().range++;
-            Destroy(gameObject);
+            Take();
         }
+
+        if(other.GetComponentInParent<Scr_Bomb_Frozen>() != null)
+        {
+            other.GetComponentInParent<Scr_Bomb_Propagation>().range++;
+            Take();
+        }
+    }
+
+    private void Take()
+    {
+        GameObject currentParticule = Instantiate(particule, parentParticule);
+        currentParticule.transform.position = transform.position;
+
+        Destroy(gameObject);
     }
 }
