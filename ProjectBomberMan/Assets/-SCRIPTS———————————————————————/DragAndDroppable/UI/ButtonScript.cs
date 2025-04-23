@@ -31,10 +31,11 @@ public class ButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     void Start(){buttonName = tmpro==null ? t.text : tmpro.text;}
     #endif
     bool clickEffect = false;
-
+    bool selected = true;
 
     void SelectButtonEffect()
     {
+        selected = true;
         EVENTS.InvokeUIElementSelected(button);
         if (buttonHover.clip) PlaySound(buttonHover.clip,buttonHover.volume);
         _transform.DOScale(hoverScale,scaleDuration).SetEase(scaleEasing).SetUpdate(true).OnComplete(SelectedPulseEffect);
@@ -42,6 +43,7 @@ public class ButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     void UnselectButtonEffect()
     {
+        selected = false;
         EVENTS.InvokeUIElementUnselect(button);
         EventSystemUnselectThis();
         StartCoroutine(WaitForUnselectEffect());
@@ -150,12 +152,12 @@ public class ButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnSelect(BaseEventData eventData)
     {
-        if (Input.GetMouseButtonDown(0)==false) SelectButtonEffect();
+        if (selected==false) SelectButtonEffect();
     }
 
     public void OnDeselect(BaseEventData eventData)
     {
-        UnselectButtonEffect();
+        if (selected) UnselectButtonEffect();
     }
 
     public void OnSubmit(BaseEventData eventData)
