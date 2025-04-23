@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -1001570878177267934}
   - component: {fileID: 5759902227016685318}
   m_Layer: 0
-  m_Name: 3D_Power_Up_Frozen
+  m_Name: Power_Up_Frozen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,6 +91,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particule: {fileID: 0}
   timeEffect: 10
+  graphics: {fileID: 7443204609103823956}
+  colliders: {fileID: 6588682984666414998}
 --- !u!1 &6588682984666414998
 GameObject:
   m_ObjectHideFlags: 0
