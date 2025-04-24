@@ -33,6 +33,11 @@ public class Scr_Bomb : MonoBehaviour
 
         gameObject.GetComponent<Scr_Bomb_Propagation>().Explosion();
 
+        if(transform.GetComponent<Scr_Bomb_CaramelExplosion>())
+        {
+            transform.GetComponent<Scr_Bomb_CaramelExplosion>().PlaceZone();
+        }
+
         StartCoroutine(Animation());
     }
 
