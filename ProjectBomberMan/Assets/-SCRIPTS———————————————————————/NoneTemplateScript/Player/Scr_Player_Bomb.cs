@@ -86,7 +86,7 @@ public class Scr_Player_Bomb : MonoBehaviour
 
                     currentBomb.transform.position = currentCase.position + offset;
                     stockBomb--;
-                    if(currentBomb.GetComponent<Scr_Bomb>() != null) currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
+                    currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
                     if(currentBomb.GetComponent<Scr_Bomb_Propagation>() != null) currentBomb.GetComponent<Scr_Bomb_Propagation>().range = range;
                 }
             }
