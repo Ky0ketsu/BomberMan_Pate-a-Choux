@@ -89,6 +89,9 @@ public class EVENTS
 
     public static event Action<float> OnTimeScaleChange;
     public static void InvokeTimeScaleChange(float newScale) {Debug.Log("⏱️TimeScaleChange "+newScale); OnTimeScaleChange?.Invoke(newScale);}
+
+    public static event Action OnVictory;
+    public static void InvokeVictory() {LogEventInConsole("Fin de partie"); OnVictory?.Invoke();}
     
     // <-- Add new game events here
 

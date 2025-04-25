@@ -9,7 +9,8 @@ public class PlayerMove : MonoBehaviour
     bool canRun=false;
     public bool CanFall{get{return canFall;}set{canFall=value;}}
     bool canFall=false;
-    [Range(0,100f)][SerializeField] float maxSpeed = 5f;
+    [Range(0,100f)]public float maxSpeed = 5f;
+    public float startMaxSpeed;
     Vector2 inputs;
     Vector3 movement, movementRelativeToCam;
     CharacterController character => GetComponent<CharacterController>();
@@ -31,6 +32,7 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
+        startMaxSpeed = maxSpeed;
         player = ReInput.players.GetPlayer(playerID);
         if (GAME.MANAGER.CurrentState==State.gameplay) EnableMoveSet();
     }

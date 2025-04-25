@@ -89,8 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496cb86970a44594896a7df426b4bd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 0}
-  timeEffect: 10
+  particule: {fileID: 6381260975465515825, guid: f5c32afe412690045aae03119b91588f,
+    type: 3}
+  timeEffect: 30
   graphics: {fileID: 7443204609103823956}
   colliders: {fileID: 6588682984666414998}
 --- !u!1 &6588682984666414998

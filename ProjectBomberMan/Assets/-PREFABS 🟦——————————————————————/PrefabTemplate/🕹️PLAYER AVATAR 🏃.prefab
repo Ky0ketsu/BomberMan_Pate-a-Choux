@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 8418058219000012885}
   m_Layer: 6
   m_Name: "\U0001F579\uFE0FPLAYER AVATAR \U0001F3C3"
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,6 +532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerID: 0
   maxSpeed: 5
+  startMaxSpeed: 0
 --- !u!114 &4392077597655153312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,7 +598,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombPrefab: {fileID: 118284845688184463, guid: 6267db36b714fdc408882d407987753f,
     type: 3}
-  bombFrozenPrefab: {fileID: 0}
+  bombFrozenPrefab: {fileID: 5450138995194350773, guid: 2d1a759b154a56a47a87b062fdc2d170,
+    type: 3}
   bombParent: {fileID: 0}
   mask:
     serializedVersion: 2
@@ -646,7 +648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   graphic: {fileID: 3839695463424431248}
-  colliders: {fileID: 0}
+  colliders: {fileID: 881939728881924885}
 --- !u!1 &4918180933543491476
 GameObject:
   m_ObjectHideFlags: 0

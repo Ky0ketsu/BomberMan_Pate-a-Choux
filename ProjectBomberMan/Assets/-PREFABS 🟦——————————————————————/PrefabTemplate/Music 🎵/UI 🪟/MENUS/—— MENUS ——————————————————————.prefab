@@ -550,7 +550,7 @@ PrefabInstance:
     - target: {fileID: 1525513936545270616, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
       propertyPath: m_Name
-      value: "R\xC9GLAGES PAR D\xC9FAUT Button Graphics"
+      value: RESET TO DEFAULT Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 1610461383066960566, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
@@ -2978,7 +2978,7 @@ PrefabInstance:
     - target: {fileID: 1022848315653779217, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_text
-      value: "D\xC9MARRER"
+      value: START
       objectReference: {fileID: 0}
     - target: {fileID: 1022848315653779217, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3244,6 +3244,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3039339870834015149, guid: 6a2c42127b502764c96637af2e6c8cf3,
+        type: 3}
+      propertyPath: sound.clip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3163346667909808952, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -3262,12 +3267,12 @@ PrefabInstance:
     - target: {fileID: 3326160017606543864, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_Name
-      value: "PARAM\xC8TRES Button Graphics"
+      value: SETTINGS Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 3789719278001879857, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_Name
-      value: QUITTER Button Graphics
+      value: QUIT Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 3947916482484858313, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3327,7 +3332,7 @@ PrefabInstance:
     - target: {fileID: 4338118774029063625, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_Name
-      value: "CR\xC9DITS Button Graphics"
+      value: CREDITS Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 4946003640431452913, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3404,7 +3409,7 @@ PrefabInstance:
     - target: {fileID: 5350877380203164949, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_Name
-      value: "D\xC9MARRER Button Graphics"
+      value: START Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 5350877380203164949, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3450,7 +3455,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TargetGraphic
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4541053520237649618}
     - target: {fileID: 6741974001007207396, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -3559,12 +3564,12 @@ PrefabInstance:
     - target: {fileID: 7663760246250361852, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_text
-      value: "PARAM\xC8TRES"
+      value: SETTINGS
       objectReference: {fileID: 0}
     - target: {fileID: 7663760246250361852, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_fontSize
-      value: 27.55
+      value: 15.25
       objectReference: {fileID: 0}
     - target: {fileID: 7663760246250361852, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3614,12 +3619,12 @@ PrefabInstance:
     - target: {fileID: 8134635786135445813, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_text
-      value: QUITTER
+      value: QUIT
       objectReference: {fileID: 0}
     - target: {fileID: 8134635786135445813, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_fontSize
-      value: 30
+      value: 24.9
       objectReference: {fileID: 0}
     - target: {fileID: 8134635786135445813, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3689,12 +3694,12 @@ PrefabInstance:
     - target: {fileID: 8667135380878544845, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_text
-      value: "CR\xC9DITS"
+      value: CREDITS
       objectReference: {fileID: 0}
     - target: {fileID: 8667135380878544845, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_fontSize
-      value: 30
+      value: 25.5
       objectReference: {fileID: 0}
     - target: {fileID: 8667135380878544845, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3747,6 +3752,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3490805814223331916}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4541053520237649618 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1113732133017042078, guid: 6a2c42127b502764c96637af2e6c8cf3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3490805814223331916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5038515960868762131
 PrefabInstance:
   m_ObjectHideFlags: 0
