@@ -8,7 +8,6 @@ public class Scr_PowerUp_Caramel : MonoBehaviour
     private Transform particuleParent;
 
     public float timeEffect;
-    public float timeToDeleteZone;
 
     private GameObject currentPlayer;
     public GameObject graphics, colliders;

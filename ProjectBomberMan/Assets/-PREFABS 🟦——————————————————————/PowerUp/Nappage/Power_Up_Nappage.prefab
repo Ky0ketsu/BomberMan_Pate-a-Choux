@@ -144,7 +144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particule: {fileID: 6381260975465515825, guid: 8a31d2e335eafca458e7729ccc619856,
     type: 3}
-  timeEffect: 0
+  timeEffect: 5
+  timeToDeleteZone: 6
   graphics: {fileID: 5926650089032233478}
   colliders: {fileID: 7198492247294994764}
 --- !u!1 &5073939103627249650

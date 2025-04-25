@@ -10,6 +10,8 @@ public class Scr_Bomb : MonoBehaviour
     public float timer;
     public float maxY, minY;
 
+    public GameObject caramelPrefab;
+
 
     public void Start()
     {
@@ -33,9 +35,11 @@ public class Scr_Bomb : MonoBehaviour
 
         gameObject.GetComponent<Scr_Bomb_Propagation>().Explosion();
 
-        if(transform.GetComponent<Scr_Bomb_CaramelExplosion>())
+        if(transform.GetComponent<Scr_Bomb_Caramel>())
         {
-            transform.GetComponent<Scr_Bomb_CaramelExplosion>().PlaceZone();
+            GameObject currentZone = Instantiate(caramelPrefab, GameObject.Find("TerrainParent").transform);
+            currentZone.transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+            currentZone.GetComponent<Scr_Bomb_CaramelExplosion>().PlaceZone(transform);
         }
 
         StartCoroutine(Animation());

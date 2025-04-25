@@ -16,7 +16,7 @@ public class Scr_PowerUp_BombeUp : MonoBehaviour
             GameObject currentParticule = Instantiate(particule, parentParticule);
             currentParticule.transform.position = transform.position;
 
-            other.GetComponent<Scr_Player_Bomb>().stockBomb++;
+            other.GetComponentInParent<Scr_Player_Bomb>().stockBomb++;
             Destroy(gameObject);
         }
     }
