@@ -1171,10 +1171,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1068672421022092722, guid: 5f89af95adabe1f4e9e5c27fb8a4b40f,
+        type: 3}
+      propertyPath: m_text
+      value: QUITTER
+      objectReference: {fileID: 0}
     - target: {fileID: 1189130023680104141, guid: 5f89af95adabe1f4e9e5c27fb8a4b40f,
         type: 3}
       propertyPath: m_Name
-      value: RESUME Button Graphics
+      value: REPRENDRE Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 2009058950189476959, guid: 5f89af95adabe1f4e9e5c27fb8a4b40f,
         type: 3}
@@ -1241,6 +1246,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3317951155090167356, guid: 5f89af95adabe1f4e9e5c27fb8a4b40f,
+        type: 3}
+      propertyPath: m_text
+      value: "PARAM\xC8TRES"
+      objectReference: {fileID: 0}
     - target: {fileID: 5270748393433948907, guid: 5f89af95adabe1f4e9e5c27fb8a4b40f,
         type: 3}
       propertyPath: m_fontSize
@@ -1249,7 +1259,12 @@ PrefabInstance:
     - target: {fileID: 5379389606809540534, guid: 5f89af95adabe1f4e9e5c27fb8a4b40f,
         type: 3}
       propertyPath: m_Name
-      value: QUIT Button Graphics
+      value: QUITTER Button Graphics
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121344946692459721, guid: 5f89af95adabe1f4e9e5c27fb8a4b40f,
+        type: 3}
+      propertyPath: m_text
+      value: REPRENDRE
       objectReference: {fileID: 0}
     - target: {fileID: 6386984005395989487, guid: 5f89af95adabe1f4e9e5c27fb8a4b40f,
         type: 3}
@@ -1294,7 +1309,7 @@ PrefabInstance:
     - target: {fileID: 7672017480960166968, guid: 5f89af95adabe1f4e9e5c27fb8a4b40f,
         type: 3}
       propertyPath: m_Name
-      value: SETTINGS Button Graphics
+      value: "PARAM\xC8TRES Button Graphics"
       objectReference: {fileID: 0}
     - target: {fileID: 8127043505480783845, guid: 5f89af95adabe1f4e9e5c27fb8a4b40f,
         type: 3}
@@ -1659,7 +1674,7 @@ PrefabInstance:
     - target: {fileID: 353001499575851389, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_Name
-      value: QUIT Button Graphics
+      value: QUITTER Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 435480147810802111, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -2009,7 +2024,7 @@ PrefabInstance:
     - target: {fileID: 884338778470283141, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_Name
-      value: CREDITS Button Graphics
+      value: "CR\xC9DITS Button Graphics"
       objectReference: {fileID: 0}
     - target: {fileID: 889122742964865529, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -2449,7 +2464,7 @@ PrefabInstance:
     - target: {fileID: 2070852414498625306, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_Name
-      value: RESET TO DEFAULT Button Graphics
+      value: "R\xC9GLAGES PAR D\xC9FAUT Button Graphics"
       objectReference: {fileID: 0}
     - target: {fileID: 2074390474276778600, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -2529,7 +2544,7 @@ PrefabInstance:
     - target: {fileID: 2186833577120754612, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_Name
-      value: SETTINGS Button Graphics
+      value: "PARAM\xC8TRES Button Graphics"
       objectReference: {fileID: 0}
     - target: {fileID: 2249298853562721592, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -3229,7 +3244,7 @@ PrefabInstance:
     - target: {fileID: 4310192508623076949, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_Name
-      value: FRENCH Button Graphics
+      value: "FRAN\xC7AIS Button Graphics"
       objectReference: {fileID: 0}
     - target: {fileID: 4332257299358402325, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -3329,7 +3344,7 @@ PrefabInstance:
     - target: {fileID: 4690597845989299141, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_Name
-      value: BACK Button Graphics
+      value: RETOUR Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 4784886337216131565, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -3594,7 +3609,7 @@ PrefabInstance:
     - target: {fileID: 5173045173613102041, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_Name
-      value: BACK Button Graphics
+      value: RETOUR Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 5203360514580295041, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -4914,12 +4929,12 @@ PrefabInstance:
     - target: {fileID: 8805654117944448857, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_Name
-      value: START Button Graphics
+      value: "D\xC9MARRER Button Graphics"
       objectReference: {fileID: 0}
     - target: {fileID: 8810793737762937414, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_Name
-      value: ENGLISH Button Graphics
+      value: ANGLAIS Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 8823039698967856052, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -5263,6 +5278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
+      propertyPath: m_text
+      value: BOUTON
+      objectReference: {fileID: 0}
+    - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
+        type: 3}
       propertyPath: m_fontSize
       value: 7
       objectReference: {fileID: 0}
@@ -5365,6 +5385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
+        type: 3}
+      propertyPath: m_Name
+      value: BOUTON Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 6904772261322917910, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
