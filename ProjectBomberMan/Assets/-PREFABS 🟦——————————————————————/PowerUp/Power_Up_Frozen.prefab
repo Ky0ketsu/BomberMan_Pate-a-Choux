@@ -91,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particule: {fileID: 6381260975465515825, guid: f5c32afe412690045aae03119b91588f,
     type: 3}
-  timeEffect: 30
+  timeEffect: 7
   graphics: {fileID: 7443204609103823956}
   colliders: {fileID: 6588682984666414998}
 --- !u!1 &6588682984666414998
@@ -219,6 +219,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4141909678576638081}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1b1c4bc4552342c49a5fb71d39c45c21,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3770317
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b1c4bc4552342c49a5fb71d39c45c21,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3770317
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b1c4bc4552342c49a5fb71d39c45c21,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3770317
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b1c4bc4552342c49a5fb71d39c45c21,
         type: 3}
       propertyPath: m_LocalPosition.x
