@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5565947614854418126
+--- !u!1001 &6293204648032355219
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,7 +11,27 @@ PrefabInstance:
     - target: {fileID: 118284845688184463, guid: 6267db36b714fdc408882d407987753f,
         type: 3}
       propertyPath: m_Name
-      value: Bomb_Version-Caramel Variant
+      value: Bomb_Version_Blitz Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 415257569539209928, guid: 6267db36b714fdc408882d407987753f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108975744851182502, guid: 6267db36b714fdc408882d407987753f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128868076090884526, guid: 6267db36b714fdc408882d407987753f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611732646122050023, guid: 6267db36b714fdc408882d407987753f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3988083610744559794, guid: 6267db36b714fdc408882d407987753f,
         type: 3}
@@ -63,36 +83,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4471694758671320389, guid: 6267db36b714fdc408882d407987753f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4788997355121572252, guid: 6267db36b714fdc408882d407987753f,
         type: 3}
-      propertyPath: caramelPrefab
-      value: 
-      objectReference: {fileID: 1135031926234062967, guid: 3e862148fe4a92f46a76970c4ba55e94,
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337147394594356121, guid: 6267db36b714fdc408882d407987753f,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515678678779224369, guid: 6267db36b714fdc408882d407987753f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6403958531417612728, guid: 6267db36b714fdc408882d407987753f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 118284845688184463, guid: 6267db36b714fdc408882d407987753f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2228242199585153187}
+      addedObject: {fileID: 1871821111370765689}
   m_SourcePrefab: {fileID: 100100000, guid: 6267db36b714fdc408882d407987753f, type: 3}
---- !u!1 &5519738232416948289 stripped
+--- !u!1 &6265016396497820956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 118284845688184463, guid: 6267db36b714fdc408882d407987753f,
     type: 3}
-  m_PrefabInstance: {fileID: 5565947614854418126}
+  m_PrefabInstance: {fileID: 6293204648032355219}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2228242199585153187
+--- !u!114 &1871821111370765689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5519738232416948289}
+  m_GameObject: {fileID: 6265016396497820956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b843a92b47b19141a4158a4a41e76c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 27f4a69ad094fed4587a993a0951c01f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  visualizeZonePrefab: {fileID: 0}
+  ExplosionZonePrefab: {fileID: 0}

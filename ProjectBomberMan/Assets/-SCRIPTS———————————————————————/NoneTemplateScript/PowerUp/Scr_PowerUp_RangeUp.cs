@@ -17,7 +17,7 @@ public class Scr_PowerUp_RangeUp : MonoBehaviour
 
         if(other.CompareTag("Player"))
         {
-            other.GetComponent<Scr_Player_Bomb>().range++;
+            other.GetComponentInParent<Scr_Player_Bomb>().range++;
             Take();
         }
 

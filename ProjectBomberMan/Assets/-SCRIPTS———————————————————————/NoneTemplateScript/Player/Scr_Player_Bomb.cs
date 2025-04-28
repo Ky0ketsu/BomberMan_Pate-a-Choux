@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Scr_Player_Bomb : MonoBehaviour
 {
-    public GameObject bombPrefab, bombFrozenPrefab, bombCaramelPrefab;
+    public GameObject bombPrefab, bombFrozenPrefab, bombCaramelPrefab, bombBlitzPrefab;
     private GameObject CurrentBomb;
     public Transform bombParent;
     public LayerMask mask;
@@ -18,6 +18,9 @@ public class Scr_Player_Bomb : MonoBehaviour
     public bool frozenActive;
     public bool caramelActive;
     private GameObject currentBomb;
+
+    public bool nextShootIsSpecial;
+    public bool blitzType;
 
     private bool canBomb;
 
@@ -54,26 +57,37 @@ public class Scr_Player_Bomb : MonoBehaviour
                     Transform currentCase = hit.transform.GetChild(0);
                     Debug.Log(currentCase);
 
-                    if (currentCase.childCount <= 0 && stockBomb > 0)
+                    if(!nextShootIsSpecial)
                     {
-                        if (frozenActive)
+                        if (currentCase.childCount <= 0 && stockBomb > 0)
                         {
-                            currentBomb = Instantiate(bombFrozenPrefab, currentCase);
-                        }
-                        if (caramelActive)
-                        {
-                            currentBomb = Instantiate(bombCaramelPrefab, currentCase);
-                        }
-                        else
-                        {
-                            currentBomb = Instantiate(bombPrefab, currentCase);
-                        }
+                            if (frozenActive)
+                            {
+                                currentBomb = Instantiate(bombFrozenPrefab, currentCase);
+                            }else
+                            if (caramelActive)
+                            {
+                                currentBomb = Instantiate(bombCaramelPrefab, currentCase);
+                            }
+                            else
+                            {
+                                currentBomb = Instantiate(bombPrefab, currentCase);
+                            }
 
-                        currentBomb.transform.position = currentCase.position + offset;
-                        stockBomb--;
-                        currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
-                        currentBomb.GetComponent<Scr_Bomb_Propagation>().range = range;
+                            
+                        }
+                    }else
+                    {
+                        if(blitzType)
+                        {
+                            currentBomb = Instantiate(bombBlitzPrefab, currentCase);
+                        }
                     }
+
+                    currentBomb.transform.position = currentCase.position + offset;
+                    stockBomb--;
+                    currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
+                    if(currentBomb.GetComponent<Scr_Bomb_Propagation>() != null) currentBomb.GetComponent<Scr_Bomb_Propagation>().range = range;
                 }
             }
         }
