@@ -7,6 +7,11 @@ public class MainMenuButtons : MonoBehaviour
         MENU.SCRIPT.NewGame();
     }
 
+    public void ShowLobby()
+    {
+        MENU.SCRIPT.LobbyMenu();
+    }
+
     public void SETTINGS()
     {
         MENU.SCRIPT.ShowSettingsFromMainMenu();

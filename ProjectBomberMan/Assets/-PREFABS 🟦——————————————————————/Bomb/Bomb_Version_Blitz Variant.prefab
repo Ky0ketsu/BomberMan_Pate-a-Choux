@@ -132,5 +132,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  visualizeZonePrefab: {fileID: 0}
+  visualizeZonePrefab: {fileID: 8359921446308805184, guid: fd0153e07009f3e458406b6aae6bdb6c,
+    type: 3}
   ExplosionZonePrefab: {fileID: 0}

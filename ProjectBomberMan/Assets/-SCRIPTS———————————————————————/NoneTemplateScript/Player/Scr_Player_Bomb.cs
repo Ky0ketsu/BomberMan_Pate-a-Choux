@@ -57,37 +57,43 @@ public class Scr_Player_Bomb : MonoBehaviour
                     Transform currentCase = hit.transform.GetChild(0);
                     Debug.Log(currentCase);
 
-                    if(!nextShootIsSpecial)
+                    if(stockBomb > 0)
                     {
-                        if (currentCase.childCount <= 0 && stockBomb > 0)
+                        if (!nextShootIsSpecial)
                         {
-                            if (frozenActive)
+                            if (currentCase.childCount <= 0)
                             {
-                                currentBomb = Instantiate(bombFrozenPrefab, currentCase);
-                            }else
-                            if (caramelActive)
-                            {
-                                currentBomb = Instantiate(bombCaramelPrefab, currentCase);
-                            }
-                            else
-                            {
-                                currentBomb = Instantiate(bombPrefab, currentCase);
-                            }
+                                if (frozenActive)
+                                {
+                                    currentBomb = Instantiate(bombFrozenPrefab, currentCase);
+                                }
+                                else
+                                if (caramelActive)
+                                {
+                                    currentBomb = Instantiate(bombCaramelPrefab, currentCase);
+                                }
+                                else
+                                {
+                                    currentBomb = Instantiate(bombPrefab, currentCase);
+                                }
 
-                            
+
+                            }
                         }
-                    }else
-                    {
-                        if(blitzType)
+                        else
                         {
-                            currentBomb = Instantiate(bombBlitzPrefab, currentCase);
+                            if (blitzType)
+                            {
+                                currentBomb = Instantiate(bombBlitzPrefab, currentCase);
+                            }
                         }
+
+                        currentBomb.transform.position = currentCase.position + offset;
+                        stockBomb--;
+                        currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
+                        if (currentBomb.GetComponent<Scr_Bomb_Propagation>() != null) currentBomb.GetComponent<Scr_Bomb_Propagation>().range = range;
+                        currentBomb = null;
                     }
-
-                    currentBomb.transform.position = currentCase.position + offset;
-                    stockBomb--;
-                    currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
-                    if(currentBomb.GetComponent<Scr_Bomb_Propagation>() != null) currentBomb.GetComponent<Scr_Bomb_Propagation>().range = range;
                 }
             }
         }
