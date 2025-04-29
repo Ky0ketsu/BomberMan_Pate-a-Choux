@@ -4,12 +4,13 @@ using Rewired;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMove : MonoBehaviour
 {
-    [Range(0,3)][SerializeField] int playerID = 0; // Rewired plugin
+    [Range(0,3)]public int playerID = 0; // Rewired plugin
     public bool CanRun{get{return canRun;}set{canRun=value;}}
     bool canRun=false;
     public bool CanFall{get{return canFall;}set{canFall=value;}}
     bool canFall=false;
-    [Range(0,100f)][SerializeField] float maxSpeed = 5f;
+    [Range(0,100f)]public float maxSpeed = 5f;
+    public float startMaxSpeed;
     Vector2 inputs;
     Vector3 movement, movementRelativeToCam;
     CharacterController character => GetComponent<CharacterController>();
@@ -31,6 +32,7 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
+        startMaxSpeed = maxSpeed;
         player = ReInput.players.GetPlayer(playerID);
         if (GAME.MANAGER.CurrentState==State.gameplay) EnableMoveSet();
     }
