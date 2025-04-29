@@ -329,7 +329,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222570184}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bf487a9bf52a3b419ff3ea6411580c4, type: 3}
   m_Name: 
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09c2c45993a87e4887c1e80c449692a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 30
+  time: 5000
   delayBetweenBlock: 0.5
   spawner: {fileID: 555405470}
   blockPrefab: {fileID: 3045429700672676053, guid: 060750102ec5b1646a38bc973444ecdc,
