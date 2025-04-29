@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -1001570878177267934}
   - component: {fileID: 5759902227016685318}
   m_Layer: 0
-  m_Name: 3D_Power_Up_Frozen
+  m_Name: Power_Up_Frozen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,8 +89,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496cb86970a44594896a7df426b4bd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 0}
-  timeEffect: 10
+  particule: {fileID: 6381260975465515825, guid: f5c32afe412690045aae03119b91588f,
+    type: 3}
+  timeEffect: 7
+  graphics: {fileID: 7443204609103823956}
+  colliders: {fileID: 6588682984666414998}
 --- !u!1 &6588682984666414998
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +219,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4141909678576638081}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1b1c4bc4552342c49a5fb71d39c45c21,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3770317
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b1c4bc4552342c49a5fb71d39c45c21,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3770317
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b1c4bc4552342c49a5fb71d39c45c21,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3770317
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b1c4bc4552342c49a5fb71d39c45c21,
         type: 3}
       propertyPath: m_LocalPosition.x

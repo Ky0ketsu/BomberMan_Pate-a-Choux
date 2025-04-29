@@ -10,13 +10,14 @@ using UnityEngine.EventSystems;
 public class MENU : MonoBehaviour
 {
     Player player;
-    [SerializeField] GameObject mainCanvas,menusList,inGameList,mainMenu,pauseMenu,settingsMenu,creditsMenu; //<-- Reference to all the menus and the in-game UI
+    [SerializeField] GameObject mainCanvas,menusList,inGameList,mainMenu,pauseMenu,settingsMenu,creditsMenu,lobbyMenu; //<-- Reference to all the menus and the in-game UI
     void AllMenus(bool wanted) // <-- Don't forget to add new menus here too
     {
         mainMenu.SetActive(wanted);
         pauseMenu.SetActive(wanted);
         settingsMenu.SetActive(wanted);
         creditsMenu.SetActive(wanted);
+        lobbyMenu.SetActive(wanted);
     }
 
 
@@ -170,10 +171,16 @@ public class MENU : MonoBehaviour
         StartCoroutine(TransitionToMenu(TransitionType.Iris,mainMenu,1f,1f,2f));
     }
 
-
+    // Go to lobby
+    public void LobbyMenu()
+    {
+        ShowNextMenu(lobbyMenu, 0.5f, 0, 0.5f);
+        EVENTS.InvokeLobby();
+    }
 
     public void NewGame()
     {
+        EVENTS.InvokeLobbyExit();
         StartCoroutine(NewGameRoutine());
     }
 
