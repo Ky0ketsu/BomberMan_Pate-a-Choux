@@ -92,6 +92,12 @@ public class EVENTS
 
     public static event Action OnVictory;
     public static void InvokeVictory() {LogEventInConsole("Fin de partie"); OnVictory?.Invoke();}
+
+    public static event Action OnLobby;
+    public static void InvokeLobby() {LogEventInConsole("Show Lobby"); OnLobby?.Invoke();}
+
+    public static event Action OnLobbyExit;
+    public static void InvokeLobbyExit() {LogEventInConsole("Exit Lobby"); OnLobbyExit?.Invoke();}
     
     // <-- Add new game events here
 

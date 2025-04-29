@@ -13,6 +13,7 @@ public class Scr_Bomb_Blitz : MonoBehaviour
     private GameObject currentVisualizeZone;
     private GameObject currentExplosionZone;
     private bool isShooting;
+    public Vector3 offsett;
 
     private Vector3 currentZonePosition;
 
@@ -38,9 +39,9 @@ public class Scr_Bomb_Blitz : MonoBehaviour
             if (Input.GetButtonDown("Right")) currentZonePosition = currentZonePosition + Vector3.right * 2;
             if (Input.GetButtonDown("Left")) currentZonePosition = currentZonePosition + Vector3.left * 2;
 
-            transform.DOMove(currentZonePosition, 0.1f).SetEase(Ease.InOutCubic);
+            currentVisualizeZone.transform.DOMove(currentZonePosition + offsett, 0.1f).SetEase(Ease.InOutCubic);
 
-            if (Input.GetButtonDown("Bomb")) Fire();
+            //if (Input.GetButtonDown("Bomb")) Fire();
         }
     }
 
