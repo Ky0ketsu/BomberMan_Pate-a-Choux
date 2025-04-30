@@ -10,7 +10,7 @@ public class Scr_ManagerPlayer : MonoBehaviour
     [SerializeField] private bool isPlay;
 
     public GameObject playerPrefab;
-    private GameObject[] players = new GameObject[4];
+    public bool[] players = new bool[4];
     public GameObject playerSlot;
 
 
@@ -19,6 +19,7 @@ public class Scr_ManagerPlayer : MonoBehaviour
         EVENTS.OnLobby += EnablePlayerAdd;
         EVENTS.OnLobbyExit += DisablePlayerAdd;
         EVENTS.OnVictory += DespawnPlayer;
+        EVENTS.OnGameStart +=
     }
 
     void OnDestroy()
@@ -44,7 +45,15 @@ public class Scr_ManagerPlayer : MonoBehaviour
         canInput = false;
     }
 
-    
+    private void Start()
+    {
+        foreach(Player player in ReInput.players.GetPlayers())
+        {
+            //Debug.Log(player.controllers.joystickCount);
+        }
+    }
+
+
 
     private void Update()
     {
@@ -59,23 +68,31 @@ public class Scr_ManagerPlayer : MonoBehaviour
 
     void JoinOrQuit(int player)
     {
-        if (ReInput.players.GetPlayer(player).GetButtonDown("Join"))
+        Player myPlayer = ReInput.players.GetPlayer(player);
+        if (myPlayer.GetButtonDown("Join"))
         {
-            if (players[player] == null)
+            if (players[player] == false)
             {
-                players[player] = Instantiate(playerPrefab, GameObject.Find("PlayerParent").transform);
-                players[player].GetComponent<PlayerMove>().playerID = player;
+                myPlayer.isPlaying = true;
+                players[player] = true;
                 playerSlot.transform.GetChild(player).GetComponent<Scr_Menu_Lobby_PlayerAnimation>().AnimationSpawn();
+                return;
             }
         }
-        if (ReInput.players.GetPlayer(player).GetButtonDown("Quit"))
+        if (myPlayer.GetButtonDown("Quit"))
         {
-            if (players[player] != null)
+            if (players[player] == true)
             {
-                Destroy(players[player]);
+                myPlayer.isPlaying = false;
+                players[player] = true;
                 playerSlot.transform.GetChild(player).GetComponent<Scr_Menu_Lobby_PlayerAnimation>().AnimationDespawn();
             }
         }
+    }
+
+    private void Spawn()
+    {
+
     }
 
     private void FixedUpdate()
@@ -85,18 +102,9 @@ public class Scr_ManagerPlayer : MonoBehaviour
 
     void CheckPlayerAlive()
     {
-        for (int i = 0; i < players.Length; i++)
+        foreach(bool players in players)
         {
-            GameObject currentPlayerCheck;
-            float currentPlayerAlive = 4;
-            if (players[i] == null)
-            {
-                currentPlayerAlive--;
-            }
-            else
-            {
-                currentPlayerCheck = players[i];
-            }
+            Debug.Log(players);
         }
     }
 
