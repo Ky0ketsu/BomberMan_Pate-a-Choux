@@ -11,7 +11,10 @@ public class Scr_ManagerPlayer : MonoBehaviour
 
     public GameObject playerPrefab;
     public bool[] players = new bool[4];
-    public GameObject playerSlot;
+    public GameObject playerSlotMenu;
+    private Transform playerParent;
+
+    public Vector3[] playerSpawnPos = new Vector3[4];
 
 
     void Awake()
@@ -19,7 +22,7 @@ public class Scr_ManagerPlayer : MonoBehaviour
         EVENTS.OnLobby += EnablePlayerAdd;
         EVENTS.OnLobbyExit += DisablePlayerAdd;
         EVENTS.OnVictory += DespawnPlayer;
-        EVENTS.OnGameStart +=
+        EVENTS.OnGameStart += Spawn;
     }
 
     void OnDestroy()
@@ -27,6 +30,7 @@ public class Scr_ManagerPlayer : MonoBehaviour
         EVENTS.OnLobby -= EnablePlayerAdd;
         EVENTS.OnLobbyExit -= DisablePlayerAdd;
         EVENTS.OnVictory -= DespawnPlayer;
+        EVENTS.OnGameStart -= Spawn;
     }
 
     void EnablePlayerAdd()
@@ -49,11 +53,9 @@ public class Scr_ManagerPlayer : MonoBehaviour
     {
         foreach(Player player in ReInput.players.GetPlayers())
         {
-            //Debug.Log(player.controllers.joystickCount);
+            Debug.Log(player.controllers.joystickCount);
         }
     }
-
-
 
     private void Update()
     {
@@ -75,7 +77,7 @@ public class Scr_ManagerPlayer : MonoBehaviour
             {
                 myPlayer.isPlaying = true;
                 players[player] = true;
-                playerSlot.transform.GetChild(player).GetComponent<Scr_Menu_Lobby_PlayerAnimation>().AnimationSpawn();
+                playerSlotMenu.transform.GetChild(player).GetComponent<Scr_Menu_Lobby_PlayerAnimation>().AnimationSpawn();
                 return;
             }
         }
@@ -84,15 +86,24 @@ public class Scr_ManagerPlayer : MonoBehaviour
             if (players[player] == true)
             {
                 myPlayer.isPlaying = false;
-                players[player] = true;
-                playerSlot.transform.GetChild(player).GetComponent<Scr_Menu_Lobby_PlayerAnimation>().AnimationDespawn();
+                players[player] = false;
+                playerSlotMenu.transform.GetChild(player).GetComponent<Scr_Menu_Lobby_PlayerAnimation>().AnimationDespawn();
             }
         }
     }
 
     private void Spawn()
     {
-
+        playerParent = GameObject.Find("PlayerParent").transform;
+        for (int i = 0; i < 3; i++)
+        {
+            if (players[i] == true)
+            {
+                GameObject currentPlayer = Instantiate(playerPrefab, playerSpawnPos[i],transform.rotation, playerParent);
+                currentPlayer.GetComponent<PlayerMove>().playerID = i;
+            }
+        }
+        isPlay = true;
     }
 
     private void FixedUpdate()
@@ -102,9 +113,14 @@ public class Scr_ManagerPlayer : MonoBehaviour
 
     void CheckPlayerAlive()
     {
-        foreach(bool players in players)
+        if(playerParent.childCount == 0)
         {
-            Debug.Log(players);
+            EVENTS.InvokeDefeat();
+            return;
+        }
+        if(playerParent.childCount == 1)
+        {
+            EVENTS.InvokeVictory();
         }
     }
 

@@ -600,8 +600,10 @@ MonoBehaviour:
     type: 3}
   bombFrozenPrefab: {fileID: 5450138995194350773, guid: 2d1a759b154a56a47a87b062fdc2d170,
     type: 3}
-  bombCaramelPrefab: {fileID: 0}
-  bombBlitzPrefab: {fileID: 0}
+  bombCaramelPrefab: {fileID: 5519738232416948289, guid: b70339f6a3bb0f54eac3584fd567c8d1,
+    type: 3}
+  bombBlitzPrefab: {fileID: 6265016396497820956, guid: 0a029a1a5a772fb48858c6b5d978d58d,
+    type: 3}
   bombParent: {fileID: 0}
   mask:
     serializedVersion: 2

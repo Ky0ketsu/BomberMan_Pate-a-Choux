@@ -91,7 +91,10 @@ public class EVENTS
     public static void InvokeTimeScaleChange(float newScale) {Debug.Log("⏱️TimeScaleChange "+newScale); OnTimeScaleChange?.Invoke(newScale);}
 
     public static event Action OnVictory;
-    public static void InvokeVictory() {LogEventInConsole("Fin de partie"); OnVictory?.Invoke();}
+    public static void InvokeVictory() {LogEventInConsole("Fin avec gagnant"); OnVictory?.Invoke();}
+
+    public static event Action OnDefeat;
+    public static void InvokeDefeat() { LogEventInConsole("Fin sans gagnant"); OnDefeat?.Invoke(); }
 
     public static event Action OnLobby;
     public static void InvokeLobby() {LogEventInConsole("Show Lobby"); OnLobby?.Invoke();}
