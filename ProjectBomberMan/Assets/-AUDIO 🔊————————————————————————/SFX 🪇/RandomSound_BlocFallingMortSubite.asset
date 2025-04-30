@@ -10,16 +10,6 @@ AudioContainerElement:
   m_AudioClip: {fileID: 8300000, guid: 5ea2777dbe45db44f83b0d2aba4cab86, type: 3}
   m_Volume: 0
   m_Enabled: 1
---- !u!1233149941 &-1283044968943994877
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Sfx_Bloc_Falling-003_{-1283044968943994877}
-  m_AudioClip: {fileID: 8300000, guid: 3f455b54dea4dfd4da30604b4c64bcc9, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
 --- !u!1307931743 &6418180475301049370
 AudioRandomContainer:
   m_ObjectHideFlags: 0
@@ -38,7 +28,6 @@ AudioRandomContainer:
   m_Elements:
   - {fileID: 6458037522508247173}
   - {fileID: -6758673100504546702}
-  - {fileID: -1283044968943994877}
   m_AvoidRepeatingLast: 0
   m_PlaybackMode: 1
   m_TriggerMode: 1

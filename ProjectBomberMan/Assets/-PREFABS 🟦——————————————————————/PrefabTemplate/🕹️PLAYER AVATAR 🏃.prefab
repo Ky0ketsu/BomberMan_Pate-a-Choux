@@ -600,6 +600,8 @@ MonoBehaviour:
     type: 3}
   bombFrozenPrefab: {fileID: 5450138995194350773, guid: 2d1a759b154a56a47a87b062fdc2d170,
     type: 3}
+  bombCaramelPrefab: {fileID: 0}
+  bombBlitzPrefab: {fileID: 0}
   bombParent: {fileID: 0}
   mask:
     serializedVersion: 2
@@ -608,6 +610,9 @@ MonoBehaviour:
   offset: {x: 0, y: 3, z: 0}
   stockBomb: 1
   frozenActive: 0
+  caramelActive: 0
+  nextShootIsSpecial: 0
+  blitzType: 0
 --- !u!54 &6371353069162640122
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -857,7 +862,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feetSounds:
-  - {fileID: 8300000, guid: 5d858012f68ee3e43879e892e8c9e5ed, type: 3}
+  - {fileID: 8300000, guid: 1ba22a4e91fe7534cb59972f547b28c3, type: 3}
+  - {fileID: 8300000, guid: 744d0ec3b3c18f1469a83c9378ddf896, type: 3}
+  - {fileID: 8300000, guid: 10a826713d71b8b46a260603e3858271, type: 3}
+  - {fileID: 8300000, guid: fd1cc55f399612d47b7d0ada44722934, type: 3}
+  - {fileID: 8300000, guid: 1b7247498a266ab44869e57ad80dd2ce, type: 3}
   pitch: {x: 0.9, y: 1.05}
   stepSize: 1.5
 --- !u!82 &3169480182097322982
