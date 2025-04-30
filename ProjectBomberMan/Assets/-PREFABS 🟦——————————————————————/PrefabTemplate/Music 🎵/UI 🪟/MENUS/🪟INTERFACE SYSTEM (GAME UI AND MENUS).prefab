@@ -1664,6 +1664,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 268413407085648349, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
+      propertyPath: m_text
+      value: RETOUR
+      objectReference: {fileID: 0}
+    - target: {fileID: 268413407085648349, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
       propertyPath: m_fontSize
       value: 30
       objectReference: {fileID: 0}
@@ -1716,6 +1721,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fr
       value: DEMARRER
+      objectReference: {fileID: 0}
+    - target: {fileID: 390573316293740993, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: RETOUR
       objectReference: {fileID: 0}
     - target: {fileID: 435480147810802111, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -2689,6 +2699,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2301571701137727292, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
+      propertyPath: m_text
+      value: "SENSIBILIT\xC9 SOURIS"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2301571701137727292, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
       propertyPath: m_fontSize
       value: 31.45
       objectReference: {fileID: 0}
@@ -3094,6 +3109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3463290241615532832, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
+      propertyPath: m_text
+      value: VOIX
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463290241615532832, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
       propertyPath: m_fontSize
       value: 36
       objectReference: {fileID: 0}
@@ -3319,6 +3339,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4017329944048924129, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
+      propertyPath: m_text
+      value: "G\xC9N\xC9RAL"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017329944048924129, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
       propertyPath: m_fontSize
       value: 56.1
       objectReference: {fileID: 0}
@@ -3342,6 +3367,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4085959090124654899, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: GRAPHISMES
+      objectReference: {fileID: 0}
     - target: {fileID: 4193169084849615127, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3361,6 +3391,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214258881588258705, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: MUSIQUE
       objectReference: {fileID: 0}
     - target: {fileID: 4214258881588258705, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -3447,6 +3482,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -470
       objectReference: {fileID: 0}
+    - target: {fileID: 4482765557775482946, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: ANGLAIS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485645131457760605, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: "D\xC9MARRER"
+      objectReference: {fileID: 0}
     - target: {fileID: 4485645131457760605, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_fontSize
@@ -3489,6 +3534,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4653869062834537337, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
+      propertyPath: m_text
+      value: QUITTER
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653869062834537337, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
       propertyPath: m_fontSize
       value: 30
       objectReference: {fileID: 0}
@@ -3524,6 +3574,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4810971563964677415, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
+      propertyPath: m_text
+      value: SONS INTERFACE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810971563964677415, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
       propertyPath: m_fontSize
       value: 36
       objectReference: {fileID: 0}
@@ -3546,6 +3601,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866672104121336249, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: "CONTR\xD4LES"
       objectReference: {fileID: 0}
     - target: {fileID: 4866672104121336249, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -3636,6 +3696,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062289427725053447, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: "PARAM\xC8TRES"
       objectReference: {fileID: 0}
     - target: {fileID: 5062289427725053447, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -3754,6 +3819,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5164308527060001500, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
+      propertyPath: m_text
+      value: LANGUE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164308527060001500, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
       propertyPath: m_fontSize
       value: 36
       objectReference: {fileID: 0}
@@ -3761,6 +3831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BACK Button Graphics
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203360514580295041, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: "CR\xC9DITS"
       objectReference: {fileID: 0}
     - target: {fileID: 5203360514580295041, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -4127,6 +4202,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -30
       objectReference: {fileID: 0}
+    - target: {fileID: 6204255768495544097, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: REMERCIEMENTS
+      objectReference: {fileID: 0}
     - target: {fileID: 6231489732742971030, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -4244,8 +4324,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6399303855795571998, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
+      propertyPath: m_text
+      value: "R\xC9GLAGES PAR D\xC9FAUT"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399303855795571998, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
       propertyPath: m_fontSize
       value: 20.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497269511738438064, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: "PARAM\xC8TRES"
       objectReference: {fileID: 0}
     - target: {fileID: 6497269511738438064, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -4306,6 +4396,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570692849553376480, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: "CR\xC9DITS"
       objectReference: {fileID: 0}
     - target: {fileID: 6570692849553376480, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -4431,6 +4526,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783100437754552580, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: SON
       objectReference: {fileID: 0}
     - target: {fileID: 6784646839127124645, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -4977,6 +5077,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 8073621794587077003, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: TEMPLATE DE PROJET UNITY PAR <B><color=yellow>KARL FAYETON</B>
+      objectReference: {fileID: 0}
     - target: {fileID: 8219810909658473525, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
       propertyPath: m_Name
@@ -5289,6 +5394,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8823039698967856052, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
+      propertyPath: m_text
+      value: "VOLUME G\xC9N\xC9RAL"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823039698967856052, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
       propertyPath: m_fontSize
       value: 36
       objectReference: {fileID: 0}
@@ -5336,6 +5446,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903521215841293085, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: EFFETS SONORES
       objectReference: {fileID: 0}
     - target: {fileID: 8903521215841293085, guid: 720c62b0ea16aac4ab64d8f6416d134a,
         type: 3}
@@ -5426,6 +5541,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197231144482890833, guid: 720c62b0ea16aac4ab64d8f6416d134a,
+        type: 3}
+      propertyPath: m_text
+      value: "FRAN\xC7AIS"
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3046806865792259253, guid: 720c62b0ea16aac4ab64d8f6416d134a, type: 3}
