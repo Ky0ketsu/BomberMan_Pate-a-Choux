@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playlist:
     looping: 1
-    randomizeTracks: 0
+    randomizeTracks: 1
     timeScale: 1
     fadeInDuration: 1
     fadeOutDuration: 1
     tracks:
-    - clipTitle: Msc_Menu
-      clip: {fileID: 8300000, guid: c45f8d79f9e6e0840a6ead18fbd01b6d, type: 3}
+    - clipTitle: Msc_Menu_V2
+      clip: {fileID: 8300000, guid: 326f010202ba54e40897eed27649f1ca, type: 3}
       volume: 0.7
