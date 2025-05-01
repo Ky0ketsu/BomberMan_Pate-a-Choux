@@ -11,7 +11,7 @@ public class Scr_PowerUp_BombeUp : MonoBehaviour
     {
         parentParticule = GameObject.Find("ParticuleParent").transform;
 
-        if(other.CompareTag("Player"))
+        if(other.GetComponentInParent<PlayerMove>())
         {
             GameObject currentParticule = Instantiate(particule, parentParticule);
             currentParticule.transform.position = transform.position;

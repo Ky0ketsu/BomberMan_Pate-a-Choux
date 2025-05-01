@@ -19,7 +19,7 @@ public class Scr_PowerUp_Caramel : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.GetComponentInParent<PlayerMove>())
         {
             GameObject currentParticule = Instantiate(particule, particuleParent);
             currentParticule.transform.position = transform.position;

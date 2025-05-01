@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,10 +13,13 @@ public class Scr_Bomb : MonoBehaviour
 
     public GameObject caramelPrefab;
 
+    public Transform graphics;
+
 
     public void Start()
     {
         StartCoroutine(Timer());
+        graphics.DOScale(new Vector3(1.3f, 1.3f, 1.3f), 0.2f).SetLoops(-1, LoopType.Yoyo);
         transform.DOMoveY(maxY, 0.5f).SetEase(Ease.OutExpo);
         transform.DOMoveY(minY, 1).SetEase(Ease.InExpo);
     }

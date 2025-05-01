@@ -8,7 +8,9 @@ public class Scr_Player_Death : MonoBehaviour
     public Transform graphic;
     public Transform colliders;
 
-    public void OnTriggerEnter(Collider other)
+    private Transform UnActivePlayerParent;
+
+    /*public void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("FallingBlock"))
         {
@@ -21,22 +23,23 @@ public class Scr_Player_Death : MonoBehaviour
             Death();
             BombDeath();
         }
-    }
+    }*/
 
-    private void FallingDeath()
+    public void FallingDeath()
     {
         graphic.DOScale(new Vector3(1.3f, 0.02f, 1.3f), 0.2f);
     }
 
-    private void BombDeath()
+    public void BombDeath()
     {
         graphic.DOScale(Vector3.zero, 1f).SetEase(Ease.InBounce);
     }
 
-    private void Death()
+    public void Death()
     {
         transform.GetComponent<PlayerMove>().CanRun = false;
         colliders.gameObject.SetActive(false);
         GetComponent<CharacterController>().enabled = false;
+        transform.parent = GameObject.Find("UnActivePlayerParent").transform;
     }
 }

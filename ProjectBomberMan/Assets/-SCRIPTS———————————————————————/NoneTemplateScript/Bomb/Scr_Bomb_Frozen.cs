@@ -26,7 +26,7 @@ public class Scr_Bomb_Frozen : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player") && canPush)
+        if(other.GetComponentInParent<PlayerMove>() && canPush)
         {
             distanceX = Vector3.Distance(new Vector3(other.transform.position.x, 0, 0), new Vector3(transform.position.x, 0, 0));
             distanceZ = Vector3.Distance(new Vector3(0, 0, other.transform.position.z), new Vector3(0, 0, transform.position.z));
