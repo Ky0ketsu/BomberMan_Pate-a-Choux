@@ -15,7 +15,7 @@ public class Scr_PowerUp_RangeUp : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
 
-        if(other.CompareTag("Player"))
+        if(other.GetComponentInParent<PlayerMove>())
         {
             other.GetComponentInParent<Scr_Player_Bomb>().range++;
             Take();

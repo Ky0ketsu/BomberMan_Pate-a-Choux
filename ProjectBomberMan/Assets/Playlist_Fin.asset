@@ -19,6 +19,6 @@ MonoBehaviour:
     fadeInDuration: 1
     fadeOutDuration: 1
     tracks:
-    - clipTitle: Msc_Fin
-      clip: {fileID: 8300000, guid: 47ff498d889c2724d898ae307a67d53c, type: 3}
+    - clipTitle: Msc_Fin_V2
+      clip: {fileID: 8300000, guid: 669c335bc7ac3a54eb35caa7b44cc9f3, type: 3}
       volume: 0.5

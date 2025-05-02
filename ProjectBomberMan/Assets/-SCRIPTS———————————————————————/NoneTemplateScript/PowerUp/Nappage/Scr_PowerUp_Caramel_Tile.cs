@@ -16,15 +16,16 @@ public class Scr_PowerUp_Caramel_Tile : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (other.GetComponentInParent<Scr_Player_Bomb>() != null)
+        if (other.GetComponentInParent<PlayerMove>())
         {
+            Debug.Log("Ralenti");
             other.GetComponentInParent<PlayerMove>().maxSpeed = other.GetComponentInParent<PlayerMove>().startMaxSpeed * 0.6f;
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.GetComponentInParent<Scr_Player_Bomb>() != null)
+        if (other.GetComponentInParent<PlayerMove>())
         {
             other.GetComponentInParent<PlayerMove>().maxSpeed = other.GetComponentInParent<PlayerMove>().startMaxSpeed;
         }

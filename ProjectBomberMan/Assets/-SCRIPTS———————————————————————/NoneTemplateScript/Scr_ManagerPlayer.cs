@@ -94,7 +94,7 @@ public class Scr_ManagerPlayer : MonoBehaviour
 
     private void Spawn()
     {
-        playerParent = GameObject.Find("PlayerParent").transform;
+        playerParent = GameObject.Find("ActivePlayerParent").transform;
         for (int i = 0; i < 3; i++)
         {
             if (players[i] == true)

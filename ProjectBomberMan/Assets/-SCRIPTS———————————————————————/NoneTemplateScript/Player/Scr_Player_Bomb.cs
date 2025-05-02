@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Rewired;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,6 +24,8 @@ public class Scr_Player_Bomb : MonoBehaviour
     public bool blitzType;
 
     private bool canBomb;
+
+    [SerializeField]private int playerID;
 
     public void Awake()
     {
@@ -50,7 +53,8 @@ public class Scr_Player_Bomb : MonoBehaviour
     {
         if(canBomb)
         {
-            if (Input.GetButtonDown("Bomb"))
+            playerID = transform.GetComponent<PlayerMove>().playerID;
+            if (ReInput.players.GetPlayer(playerID).GetButtonDown("Bomb"))
             {
                 if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2, transform.position.z), new Vector3(0, -1, 0), out RaycastHit hit, Mathf.Infinity, mask))
                 {
