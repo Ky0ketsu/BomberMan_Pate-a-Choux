@@ -1,5 +1,6 @@
 using UnityEngine;
 using Rewired;
+//using UnityEditor.Animations;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMove : MonoBehaviour
@@ -17,6 +18,10 @@ public class PlayerMove : MonoBehaviour
     PlayerLook lookScript => GetComponent<PlayerLook>();
     Player player; // Rewired plugin
 
+    public RuntimeAnimatorController[] animatorsChoux = new RuntimeAnimatorController[4];
+    public RuntimeAnimatorController[] animatorsEclair = new RuntimeAnimatorController[4];
+
+    public bool pushActive;
 
     void Awake()
     {
@@ -40,12 +45,22 @@ public class PlayerMove : MonoBehaviour
     void EnableMoveSet()
     {
         CanRun = CanFall = true;
+        /*if (playerID == 1 || playerID == 3) ApplyMove(1, 2);
+        if (playerID == 0 || playerID == 2) ApplyMove(0, 2);*/
     }
 
     void DisableMoveSet()
     {
         CanRun = CanFall = false;
     }
+
+    /*public void OnTriggerEnter(Collider other)
+    {
+        if(other.GetComponentInParent<PlayerMove>())
+        {
+            if(inputs.x < 0)
+        }
+    }*/
 
 
 
@@ -73,7 +88,36 @@ public class PlayerMove : MonoBehaviour
         GetInputs();
         movement.x = CanRun ? inputs.x * maxSpeed : 0;
         movement.z = CanRun ? inputs.y * maxSpeed : 0;
+
+        /*if(playerID == 1 || playerID == 3)
+        {
+            if (inputs.x <= -1) ApplyMove(1, 0);
+            if (inputs.x >= 1) ApplyMove(1, 1);
+            if (inputs.y <= -1) ApplyMove(1, 2);
+            if (inputs.y >= 1) ApplyMove(1, 3);
+        }
+        if(playerID == 0 || playerID == 2)
+        {
+            if (inputs.x <= -1) ApplyMove(0, 0);
+            if (inputs.x >= 1) ApplyMove(0, 1);
+            if (inputs.y <= -1) ApplyMove(0, 2);
+            if (inputs.y >= 1) ApplyMove(0, 3);
+        }*/
+        
     }
+
+    /*void ApplyMove(int type, int dir)
+    {
+        if(type == 0)
+        {
+            transform.GetComponent<Animator>().runtimeAnimatorController = animatorsEclair[dir];
+        }
+        if(type == 1)
+        {
+            transform.GetComponent<Animator>().runtimeAnimatorController = animatorsChoux[dir];
+        }
+        
+    }*/
 
     void ApplyMovement()
     {

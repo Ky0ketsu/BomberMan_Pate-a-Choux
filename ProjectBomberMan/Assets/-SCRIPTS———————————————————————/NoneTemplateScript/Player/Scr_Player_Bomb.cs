@@ -89,6 +89,7 @@ public class Scr_Player_Bomb : MonoBehaviour
                             if (blitzType)
                             {
                                 currentBomb = Instantiate(bombBlitzPrefab, currentCase);
+                                currentBomb.GetComponent<Scr_Bomb_Blitz>().owner = gameObject;
                             }
                         }
 

@@ -101,6 +101,7 @@ public class Scr_ManagerPlayer : MonoBehaviour
             {
                 GameObject currentPlayer = Instantiate(playerPrefab, playerSpawnPos[i],transform.rotation, playerParent);
                 currentPlayer.GetComponent<PlayerMove>().playerID = i;
+                currentPlayer.name = "Joueur " + (i+1);
             }
         }
         isPlay = true;
@@ -116,11 +117,13 @@ public class Scr_ManagerPlayer : MonoBehaviour
         if(playerParent.childCount == 0)
         {
             EVENTS.InvokeDefeat();
+            isPlay = false;
             return;
         }
         if(playerParent.childCount == 1)
         {
             EVENTS.InvokeVictory();
+            isPlay = false;
         }
     }
 

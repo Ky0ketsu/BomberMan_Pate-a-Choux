@@ -19,5 +19,12 @@ public class Scr_Block_Falling : MonoBehaviour
         colliders.SetActive(false);
     }
 
-    
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<PlayerMove>())
+        {
+            other.GetComponent<Scr_Player_Death>().Death();
+            other.GetComponent<Scr_Player_Death>().FallingDeath();
+        }
+    }
 }

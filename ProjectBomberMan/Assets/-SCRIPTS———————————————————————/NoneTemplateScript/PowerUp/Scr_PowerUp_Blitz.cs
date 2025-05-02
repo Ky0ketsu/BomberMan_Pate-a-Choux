@@ -14,7 +14,7 @@ public class Scr_PowerUp_Blitz : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.GetComponentInParent<PlayerMove>())
         {
             GameObject currentParticule = Instantiate(particulePrefab, particuleParent);
             currentParticule.transform.position = transform.position;

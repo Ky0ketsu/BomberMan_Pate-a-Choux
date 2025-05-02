@@ -10,7 +10,7 @@ using UnityEngine.EventSystems;
 public class MENU : MonoBehaviour
 {
     Player player;
-    [SerializeField] GameObject mainCanvas,menusList,inGameList,mainMenu,pauseMenu,settingsMenu,creditsMenu,lobbyMenu; //<-- Reference to all the menus and the in-game UI
+    [SerializeField] GameObject mainCanvas,menusList,inGameList,mainMenu,pauseMenu,settingsMenu,creditsMenu,lobbyMenu,victoryMenu,defeatMenu; //<-- Reference to all the menus and the in-game UI
     void AllMenus(bool wanted) // <-- Don't forget to add new menus here too
     {
         mainMenu.SetActive(wanted);
@@ -18,6 +18,8 @@ public class MENU : MonoBehaviour
         settingsMenu.SetActive(wanted);
         creditsMenu.SetActive(wanted);
         lobbyMenu.SetActive(wanted);
+        victoryMenu.SetActive(wanted);
+        defeatMenu.SetActive(wanted);
     }
 
 
@@ -52,6 +54,7 @@ public class MENU : MonoBehaviour
         EVENTS.OnGamePause += EnableUIInputs;
         EVENTS.OnMenuExit += DisableUIInputs;
         EVENTS.OnGameResume += DisableUIInputs;
+        EVENTS.OnVictory += VictoryMenu;
     }
 
     void OnDisable()
@@ -66,6 +69,7 @@ public class MENU : MonoBehaviour
         EVENTS.OnGamePause -= EnableUIInputs;
         EVENTS.OnMenuExit -= DisableUIInputs;
         EVENTS.OnGameResume -= DisableUIInputs;
+        EVENTS.OnVictory -= VictoryMenu;
     }
 
     void Start()
@@ -100,8 +104,6 @@ public class MENU : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(null);
     }
-
-
 
     bool PlayerPressDirections()
     {
@@ -171,12 +173,26 @@ public class MENU : MonoBehaviour
         StartCoroutine(TransitionToMenu(TransitionType.Iris,mainMenu,1f,1f,2f));
     }
 
-    // Go to lobby
+    // Debut de mon code
     public void LobbyMenu()
     {
         ShowNextMenu(lobbyMenu, 0.5f, 0, 0.5f);
         EVENTS.InvokeLobby();
     }
+
+    public void VictoryMenu()
+    {
+        ShowNextMenu(victoryMenu, 0.5f, 0, 0.5f);
+        StartCoroutine(VictoryRoutine());
+    }
+
+    IEnumerator VictoryRoutine()
+    {
+        yield return new WaitForSeconds(0.55f);
+        victoryMenu.GetComponent<Scr_Menu_Victory>().Victory();
+    }
+
+    //fin de mon code
 
     public void NewGame()
     {

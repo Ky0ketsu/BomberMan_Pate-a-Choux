@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Rewired;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,37 +13,57 @@ public class Scr_Bomb_Blitz : MonoBehaviour
 
     private GameObject currentVisualizeZone;
     private GameObject currentExplosionZone;
-    private bool isShooting;
+    private bool canAim;
     public Vector3 offsett;
 
     private Vector3 currentZonePosition;
 
+    private Player player;
+
     private void Start()
     {
-        owner = GetComponent<Scr_Bomb>().owner;
-        StartShoot();
+        StartAim();
     }
 
-    public void StartShoot()
+    public void StartAim()
     {
         owner.GetComponent<PlayerMove>().CanRun = false;
         currentVisualizeZone = Instantiate(visualizeZonePrefab, transform);
-        isShooting = true;
+        currentZonePosition = transform.position;
+        canAim = true;
+        canShoot = false;
+        player = ReInput.players.GetPlayer(owner.GetComponent<PlayerMove>().playerID);
+        StartCoroutine(DelayBeforeCanShoot());
     }
+    private bool canShoot;
+
 
     private void Update()
     {
-        if(isShooting)
+        if(canAim)
         {
-            if (Input.GetButtonDown("Back")) currentZonePosition = currentZonePosition + Vector3.back * 2;
-            if (Input.GetButtonDown("Forward")) currentZonePosition = currentZonePosition + Vector3.forward * 2;
-            if (Input.GetButtonDown("Right")) currentZonePosition = currentZonePosition + Vector3.right * 2;
-            if (Input.GetButtonDown("Left")) currentZonePosition = currentZonePosition + Vector3.left * 2;
-
-            currentVisualizeZone.transform.DOMove(currentZonePosition + offsett, 0.1f).SetEase(Ease.InOutCubic);
-
-            //if (Input.GetButtonDown("Bomb")) Fire();
+            if (player.GetAxis("MoveVertical") < 0) currentZonePosition = currentZonePosition + Vector3.back * 2; DelayBetweenAim(); canAim = false; currentVisualizeZone.transform.DOMove(currentZonePosition + offsett, 0.1f).SetEase(Ease.InOutCubic);
+            if (player.GetAxis("MoveVertical") > 0) currentZonePosition = currentZonePosition + Vector3.forward * 2; DelayBetweenAim(); canAim = false; currentVisualizeZone.transform.DOMove(currentZonePosition + offsett, 0.1f).SetEase(Ease.InOutCubic);
+            if (player.GetAxis("MoveHorizontal") > 0) currentZonePosition = currentZonePosition + Vector3.right * 2; DelayBetweenAim(); canAim = false; currentVisualizeZone.transform.DOMove(currentZonePosition + offsett, 0.1f).SetEase(Ease.InOutCubic);
+            if (player.GetAxis("MoveHorizontal") < 0) currentZonePosition = currentZonePosition + Vector3.left * 2; DelayBetweenAim(); canAim = false; currentVisualizeZone.transform.DOMove(currentZonePosition + offsett, 0.1f).SetEase(Ease.InOutCubic);
         }
+
+        if(player.GetButtonDown("Bomb") && canShoot)
+        {
+            Debug.Log("Blitz");
+        }
+    }
+
+    IEnumerator DelayBetweenAim()
+    {
+        yield return new WaitForSeconds(0.1f);
+        canAim = true;
+    }
+    
+    IEnumerator DelayBeforeCanShoot()
+    {
+        yield return new WaitForSeconds(1f);
+        canShoot = true;
     }
 
     
