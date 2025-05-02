@@ -21,4 +21,4 @@ MonoBehaviour:
     tracks:
     - clipTitle: Msc_Menu_V2
       clip: {fileID: 8300000, guid: 326f010202ba54e40897eed27649f1ca, type: 3}
-      volume: 0.7
+      volume: 0.3
