@@ -81,15 +81,6 @@ public class Scr_ManagerPlayer : MonoBehaviour
                 return;
             }
         }
-        if (myPlayer.GetButtonDown("Quit"))
-        {
-            if (players[player] == true)
-            {
-                myPlayer.isPlaying = false;
-                players[player] = false;
-                playerSlotMenu.transform.GetChild(player).GetComponent<Scr_Menu_Lobby_PlayerAnimation>().AnimationDespawn();
-            }
-        }
     }
 
     private void Spawn()
@@ -116,12 +107,14 @@ public class Scr_ManagerPlayer : MonoBehaviour
     {
         if(playerParent.childCount == 0)
         {
+            EVENTS.InvokeGameplayExit();
             EVENTS.InvokeDefeat();
             isPlay = false;
             return;
         }
         if(playerParent.childCount == 1)
         {
+            EVENTS.InvokeGameplayExit();
             EVENTS.InvokeVictory();
             isPlay = false;
         }
