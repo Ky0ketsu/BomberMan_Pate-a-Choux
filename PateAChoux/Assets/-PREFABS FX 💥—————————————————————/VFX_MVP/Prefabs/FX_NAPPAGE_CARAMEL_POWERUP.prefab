@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3013060130898870604
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1743287464539913569}
+    m_Modifications:
+    - target: {fileID: 2967423122266297713, guid: 5f30cedd373c6b44da5d02d62f776fbf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967423122266297713, guid: 5f30cedd373c6b44da5d02d62f776fbf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967423122266297713, guid: 5f30cedd373c6b44da5d02d62f776fbf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967423122266297713, guid: 5f30cedd373c6b44da5d02d62f776fbf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967423122266297713, guid: 5f30cedd373c6b44da5d02d62f776fbf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967423122266297713, guid: 5f30cedd373c6b44da5d02d62f776fbf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967423122266297713, guid: 5f30cedd373c6b44da5d02d62f776fbf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967423122266297713, guid: 5f30cedd373c6b44da5d02d62f776fbf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967423122266297713, guid: 5f30cedd373c6b44da5d02d62f776fbf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967423122266297713, guid: 5f30cedd373c6b44da5d02d62f776fbf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402925016133966775, guid: 5f30cedd373c6b44da5d02d62f776fbf,
+        type: 3}
+      propertyPath: m_Name
+      value: VFX_NAPPAGE_CARAMEL_POWERUP
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f30cedd373c6b44da5d02d62f776fbf, type: 3}
+--- !u!4 &71755924828066877 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2967423122266297713, guid: 5f30cedd373c6b44da5d02d62f776fbf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3013060130898870604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3376354302481916156
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6089237566075303425, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
+      propertyPath: m_Name
+      value: FX_NAPPAGE_CARAMEL_POWERUP
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 71755924828066877}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4811bc64d2d12d749a0af386f0ce3ed1, type: 3}
+--- !u!4 &1743287464539913569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3376354302481916156}
+  m_PrefabAsset: {fileID: 0}
