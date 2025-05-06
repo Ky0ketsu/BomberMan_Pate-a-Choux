@@ -1357,6 +1357,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2122356038091010640, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122356038091010640, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c343985f1376d054e8fd0647ad0ef9c1, type: 3}
+    - target: {fileID: 2122356038091010640, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2158494414253390626, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1656,6 +1671,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSize
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2792482115985248181, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2792482115985248181, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5be222151911e354daff24ab1011d158, type: 3}
+    - target: {fileID: 2792482115985248181, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.volume
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2794930881438429482, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -4727,6 +4757,26 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 454.4
       objectReference: {fileID: 0}
+    - target: {fileID: 8757880886476039216, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d57bdb851ee1474aaa634e1f3a9fcbe, type: 3}
+    - target: {fileID: 8757880886476039216, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea7a8abf0c1e4f446b81a57cb4a7fb20, type: 3}
+    - target: {fileID: 8757880886476039216, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757880886476039216, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8762909741520598017, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -4817,10 +4867,40 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8818027680040024575, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818027680040024575, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 842f842f8f56fb34b9f20cacff010d25, type: 3}
+    - target: {fileID: 8818027680040024575, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8837290094940351015, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
       value: QUIT Button Graphics
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975091017526897123, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975091017526897123, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6606f5ff12a9f2a49a3b1c17c61a5239, type: 3}
+    - target: {fileID: 8975091017526897123, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.volume
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9000728074189071778, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
