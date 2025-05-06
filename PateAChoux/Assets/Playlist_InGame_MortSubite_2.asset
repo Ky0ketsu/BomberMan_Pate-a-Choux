@@ -19,6 +19,6 @@ MonoBehaviour:
     fadeInDuration: 1
     fadeOutDuration: 1
     tracks:
-    - clipTitle: Msc_MortSubite_2_V2
-      clip: {fileID: 8300000, guid: d8d3089101e91ce4292cc013d175c80d, type: 3}
-      volume: 0.1
+    - clipTitle: Msc_MortSubite_2
+      clip: {fileID: 8300000, guid: 8c8390a21a2e69a4da864f39ec6d3216, type: 3}
+      volume: 1

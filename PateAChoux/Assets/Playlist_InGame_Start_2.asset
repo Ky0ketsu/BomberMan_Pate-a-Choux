@@ -19,6 +19,6 @@ MonoBehaviour:
     fadeInDuration: 1
     fadeOutDuration: 1
     tracks:
-    - clipTitle: Msc_Gameplay_2_V2
-      clip: {fileID: 8300000, guid: b4e8fbfcc9262d34fbbb0e6cfce32327, type: 3}
-      volume: 0.1
+    - clipTitle: Msc_GamePlay_2
+      clip: {fileID: 8300000, guid: 2a2cee9b7231dc643b88e019d16c97da, type: 3}
+      volume: 1

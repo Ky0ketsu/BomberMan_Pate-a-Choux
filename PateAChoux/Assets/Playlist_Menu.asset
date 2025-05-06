@@ -19,6 +19,6 @@ MonoBehaviour:
     fadeInDuration: 1
     fadeOutDuration: 1
     tracks:
-    - clipTitle: Msc_Menu_V2
-      clip: {fileID: 8300000, guid: 326f010202ba54e40897eed27649f1ca, type: 3}
-      volume: 0.3
+    - clipTitle: Msc_Menu
+      clip: {fileID: 8300000, guid: 2f4f2bef9d4d72d44b3a47a873e3f73d, type: 3}
+      volume: 1
