@@ -180,9 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09c2c45993a87e4887c1e80c449692a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 5000
+  time: 10
   delayBetweenBlock: 0.5
-  spawner: {fileID: 3410023202718227642}
   blockPrefab: {fileID: 3045429700672676053, guid: 060750102ec5b1646a38bc973444ecdc,
     type: 3}
   parent: {fileID: 2312929036409978793}

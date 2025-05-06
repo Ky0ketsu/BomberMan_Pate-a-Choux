@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6054288793881633700}
-  - component: {fileID: 5494469997538014094}
+  - component: {fileID: 937625973144881808}
   m_Layer: 0
   m_Name: CheckPoint
   m_TagString: CheckPoint
@@ -140,7 +140,7 @@ Transform:
   - {fileID: 1613004473867586884}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5494469997538014094
+--- !u!114 &937625973144881808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,10 +149,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 9061788153421421110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0203cf36424eb54e994a62bb0cbf39e, type: 3}
+  m_Script: {fileID: 11500000, guid: 179e1b07d7dec6c4fa476101a8f91a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: {x: 0, y: 0, z: 0}
-  typeTp: 0
-  nextPos: {fileID: 0}
-  lastCheckpoint: 0
+  dir:
+  - {x: 2, y: 0, z: 0}
+  - {x: 0, y: 0, z: -2}
+  - {x: -2, y: 0, z: 0}
+  - {x: 0, y: 0, z: 2}
+  dirWanted: {x: 0, y: 0, z: 0}
+  nextMoveIsTp: 0
+  lastMove: 0
+  col: {fileID: 7894756909995425218}
