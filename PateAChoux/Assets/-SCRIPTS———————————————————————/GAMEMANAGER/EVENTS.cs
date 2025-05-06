@@ -101,6 +101,9 @@ public class EVENTS
 
     public static event Action OnLobbyExit;
     public static void InvokeLobbyExit() { LogEventInConsole("Exit Lobby"); OnLobbyExit?.Invoke(); }
+
+    public static event Action OnMortSubite;
+    public static void InvokeMortSubite() { LogEventInConsole("La Mort Subite Commence"); OnMortSubite?.Invoke(); }
     // <-- Add new game events here
 
 } // SCRIPT END
