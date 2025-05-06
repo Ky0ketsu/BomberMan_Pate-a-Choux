@@ -1,14 +1,34 @@
 using System.Collections;
 using UnityEngine;
 
-public class Dalle : MonoBehaviour, IFlamable
+public class Dalle : MonoBehaviour
 {
     float burning;
     [SerializeField] LayerMask burnableLayers;
     Collider[] allocColliders = new Collider[10];
     [SerializeField] GameObject flames;
     [SerializeField] GameObject fx_StartBurn;
-    bool propagateBurn = true;
+    [SerializeField] bool propagateBurn = true;
+    [SerializeField] public Cardinal directionMortSubite = Cardinal.East;
+    public int column, row;
+
+    public int GetRow()
+    {
+        return row;
+    }
+
+    public int GetColumn() { return column; }
+
+    public void SetCoordinates(int myrow, int mycolumn)
+    {
+        column = mycolumn;
+        row = myrow;
+    }
+
+    public Cardinal GetDirectionMortSubite()
+    { return directionMortSubite; }
+
+
 
     public bool BurnFor(float duration)
     {
@@ -43,11 +63,14 @@ public class Dalle : MonoBehaviour, IFlamable
         StopBurn();
     }
 
+
+    public bool suddenDeathHappened = false;
+
+    public void MortSubite()
+    {
+        if (suddenDeathHappened) return;
+        suddenDeathHappened = true;
+        GetComponent<Scr_Block_Falling>().fallBlock();
+    }
     
 } // FIN DU SCRIPT
-
-public interface IFlamable
-{
-    public bool BurnFor(float duration);
-    public void StopBurn();
-}

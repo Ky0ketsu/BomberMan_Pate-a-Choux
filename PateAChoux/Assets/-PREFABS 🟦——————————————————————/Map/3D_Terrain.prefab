@@ -44,6 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8476794809349926039}
+  - component: {fileID: 2870461547904410838}
   m_Layer: 0
   m_Name: 3D_Terrain
   m_TagString: Untagged
@@ -65,11 +66,24 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6402877146044043407}
-  - {fileID: 495148194357816328}
+  - {fileID: 446007378624926790}
   - {fileID: 8190111624957893558}
   - {fileID: 5263049016549568696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2870461547904410838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051315603203175410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f09c2c45993a87e4887c1e80c449692a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 10
 --- !u!1 &2567899576320060202
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +556,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 293591135474631260}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &494113994103937978
+--- !u!1001 &447235144397792244
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -593,18 +607,18 @@ PrefabInstance:
     - target: {fileID: 561804533639482831, guid: 3e4b6883013f0b54f8fbfb8d44397039,
         type: 3}
       propertyPath: m_Name
-      value: Terrain_Case
+      value: Terrain_Case (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e4b6883013f0b54f8fbfb8d44397039, type: 3}
---- !u!4 &495148194357816328 stripped
+--- !u!4 &446007378624926790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1245366615996338, guid: 3e4b6883013f0b54f8fbfb8d44397039,
     type: 3}
-  m_PrefabInstance: {fileID: 494113994103937978}
+  m_PrefabInstance: {fileID: 447235144397792244}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &506956656029310267
 PrefabInstance:
