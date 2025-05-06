@@ -3095,7 +3095,7 @@ PrefabInstance:
     - target: {fileID: 5162888368695160191, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: buttonClick.volume
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162888368695160191, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -3262,6 +3262,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5743057436026563377, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: playlist
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ae734ea1a2bfea4baf41dc921655a3f,
+        type: 2}
     - target: {fileID: 5764259325831122907, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_fontSize
@@ -4770,7 +4776,7 @@ PrefabInstance:
     - target: {fileID: 8757880886476039216, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: buttonClick.volume
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8757880886476039216, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}

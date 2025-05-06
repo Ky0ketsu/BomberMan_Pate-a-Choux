@@ -9,7 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8320169356399439187}
+  - component: {fileID: 8797318676532964443}
+  - component: {fileID: 8463549264437851338}
   - component: {fileID: 23772609469541669}
+  - component: {fileID: 4301273661557858241}
+  - component: {fileID: 8770032982212516149}
+  - component: {fileID: 6741331777202040148}
   m_Layer: 0
   m_Name: "\U0001F3B5SCENE MUSIC"
   m_TagString: Untagged
@@ -32,7 +37,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &23772609469541669
+--- !u!114 &8797318676532964443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,4 +49,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586f6a2c79d199a4e998c9709a5e645e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenePlaylist: {fileID: 11400000, guid: ef91c25892cd5104694d1a4b00f294be, type: 2}
+--- !u!114 &8463549264437851338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2555121132212894410}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586f6a2c79d199a4e998c9709a5e645e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenePlaylist: {fileID: 11400000, guid: a3f2edc0860ad0047abce1d4319d29ef, type: 2}
+--- !u!114 &23772609469541669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2555121132212894410}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586f6a2c79d199a4e998c9709a5e645e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   scenePlaylist: {fileID: 11400000, guid: 7ae734ea1a2bfea4baf41dc921655a3f, type: 2}
+--- !u!114 &4301273661557858241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2555121132212894410}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586f6a2c79d199a4e998c9709a5e645e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenePlaylist: {fileID: 11400000, guid: cd582679c7516494da6cfd27016d3885, type: 2}
+--- !u!114 &8770032982212516149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2555121132212894410}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586f6a2c79d199a4e998c9709a5e645e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenePlaylist: {fileID: 11400000, guid: 1ccdcc576925c8544b839e5bed2704ad, type: 2}
+--- !u!114 &6741331777202040148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2555121132212894410}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586f6a2c79d199a4e998c9709a5e645e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenePlaylist: {fileID: 11400000, guid: 861bdc982f4e27e4c93bdd82ca0693ac, type: 2}
