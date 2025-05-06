@@ -10,7 +10,6 @@ public class Scr_MortSubite : MonoBehaviour
     public float time;
     public float delayBetweenBlock;
 
-    public GameObject spawner;
     public GameObject blockPrefab;
     public Transform parent;
 
@@ -44,21 +43,27 @@ public class Scr_MortSubite : MonoBehaviour
     private void MortSubiteFonction()
     {
         GameObject currentBlock = Instantiate(blockPrefab, parent);
-        currentBlock.transform.position = spawner.transform.position;
+        currentBlock.transform.position = transform.position;
         if (nextMoveIsTp)
         {
-            transform.DOMove(currentCheckpoint.GetComponentInParent<Scr_CheckpointDir>().nextPos.position, delayBetweenBlock);
+            transform.DOMove(currentCheckpoint.GetComponentInParent<Scr_CheckPoint>().nextCheckPoint.transform.position, delayBetweenBlock);
             nextMoveIsTp = false;
         }
         else transform.DOMove(transform.position + currentDir, delayBetweenBlock);
 
         if (!isFinish)
         {
-            StartCoroutine(DelayBetweenBlock());
+            Invoke("DelayBeforeNewBlock", delayBetweenBlock);
         }
         else Debug.Log("Mort Subite Terminer");
         
     }
+
+    private void DelayBeforeNewBlock()
+    {
+        MortSubiteFonction();
+    }
+
 
     private bool nextMoveIsTp;
     private GameObject currentCheckpoint;
@@ -68,19 +73,12 @@ public class Scr_MortSubite : MonoBehaviour
         if(other.CompareTag("CheckPoint"))
         {
             currentCheckpoint = other.gameObject;
-            isFinish = other.GetComponentInParent<Scr_CheckpointDir>().lastCheckpoint;
-            nextMoveIsTp = other.GetComponentInParent<Scr_CheckpointDir>().typeTp;
-            currentDir = other.GetComponentInParent<Scr_CheckpointDir>().dir;
+            isFinish = other.GetComponentInParent<Scr_CheckPoint>().lastMove;
+            nextMoveIsTp = other.GetComponentInParent<Scr_CheckPoint>().nextMoveIsTp;
+            currentDir = other.GetComponentInParent<Scr_CheckPoint>().dirWanted;
         }
     }
 
     private bool isFinish;
-
-    IEnumerator DelayBetweenBlock()
-    {
-        yield return new WaitForSeconds(delayBetweenBlock);
-        MortSubiteFonction();
-        
-    }
 
 }
