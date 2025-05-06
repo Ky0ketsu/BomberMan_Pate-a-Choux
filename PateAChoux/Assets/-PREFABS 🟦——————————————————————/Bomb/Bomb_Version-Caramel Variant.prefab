@@ -13,6 +13,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb_Version-Caramel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 415257569539209928, guid: 6267db36b714fdc408882d407987753f,
+        type: 3}
+      propertyPath: mask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3988083610744559794, guid: 6267db36b714fdc408882d407987753f,
         type: 3}
       propertyPath: m_LocalPosition.x
