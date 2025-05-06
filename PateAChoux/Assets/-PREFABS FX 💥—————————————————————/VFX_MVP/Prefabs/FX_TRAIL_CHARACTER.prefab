@@ -64,7 +64,8 @@ PrefabInstance:
       value: FX_TRAIL_CHARACTER
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7578891522599990498, guid: 4811bc64d2d12d749a0af386f0ce3ed1, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3957079603222224285, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
         type: 3}
