@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-3601139029880194236
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_Bloc_Spawn-001_{-3601139029880194236}
+  m_AudioClip: {fileID: 8300000, guid: 482a9c74dc86a364b9b99d2a394678d8, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1920398297516574563
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_Bloc_Spawn-005_{-1920398297516574563}
+  m_AudioClip: {fileID: 8300000, guid: 51a8c6aa113b55c47babae44bf953af9, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4751345188654084618
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_Bloc_Spawn-002_{4751345188654084618}
+  m_AudioClip: {fileID: 8300000, guid: 5882712308298b34eb94409cd5226507, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5853972000413654046
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_Bloc_Spawn-003_{5853972000413654046}
+  m_AudioClip: {fileID: 8300000, guid: 930ca1768211ccb45b55e73d5425ad92, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Random_Bloc_Spawn
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: 0, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -3601139029880194236}
+  - {fileID: 4751345188654084618}
+  - {fileID: 5853972000413654046}
+  - {fileID: 6437621615401248763}
+  - {fileID: -1920398297516574563}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 1
+  m_TriggerMode: 1
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 1
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 0
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &6437621615401248763
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_Bloc_Spawn-004_{6437621615401248763}
+  m_AudioClip: {fileID: 8300000, guid: deff0e36c16187e4c9cbcce6428df835, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
