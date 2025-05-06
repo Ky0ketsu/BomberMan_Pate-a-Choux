@@ -985,7 +985,7 @@ PrefabInstance:
     - target: {fileID: 960390711721777583, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
-      value: "FRAN\xC7AIS Button Graphics"
+      value: FRENCH Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 976261117759405048, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -1385,7 +1385,7 @@ PrefabInstance:
     - target: {fileID: 2164129306577464237, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_fontSize
-      value: 48.2
+      value: 69.95
       objectReference: {fileID: 0}
     - target: {fileID: 2215627520128375675, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -1415,7 +1415,7 @@ PrefabInstance:
     - target: {fileID: 2342876384697035612, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
-      value: REPRENDRE Button Graphics
+      value: RESUME Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 2392620765358024515, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -1572,6 +1572,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2579583835364069778, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579583835364069778, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea7a8abf0c1e4f446b81a57cb4a7fb20, type: 3}
+    - target: {fileID: 2579583835364069778, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2601719212611228396, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1630,12 +1645,12 @@ PrefabInstance:
     - target: {fileID: 2772574842766441740, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_text
-      value: Pas de Gagnant
+      value: No Winner
       objectReference: {fileID: 0}
     - target: {fileID: 2772574842766441740, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_fontSize
-      value: 149.15
+      value: 242.05
       objectReference: {fileID: 0}
     - target: {fileID: 2787604381078342635, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -1700,7 +1715,7 @@ PrefabInstance:
     - target: {fileID: 2943716497298033742, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
-      value: "PARAM\xC8TRES Button Graphics"
+      value: SETTINGS Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 3005029463903257282, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -1710,7 +1725,7 @@ PrefabInstance:
     - target: {fileID: 3043934509322383584, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
-      value: "R\xC9GLAGES PAR D\xC9FAUT Button Graphics"
+      value: RESET TO DEFAULT Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 3047432982512883090, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -1811,6 +1826,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSize
       value: 454.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3140481129796843136, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3140481129796843136, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6606f5ff12a9f2a49a3b1c17c61a5239, type: 3}
+    - target: {fileID: 3140481129796843136, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.volume
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3162281911681552846, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -2062,6 +2092,21 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3589502180476325283, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589502180476325283, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5be222151911e354daff24ab1011d158, type: 3}
+    - target: {fileID: 3589502180476325283, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3597680896993234271, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -2075,7 +2120,7 @@ PrefabInstance:
     - target: {fileID: 3631313063004864135, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
-      value: QUITTER Button Graphics
+      value: QUIT Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 3641125031736639237, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -2347,6 +2392,21 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4139837920775037787, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139837920775037787, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c343985f1376d054e8fd0647ad0ef9c1, type: 3}
+    - target: {fileID: 4139837920775037787, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4166352735223149894, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2515,7 +2575,7 @@ PrefabInstance:
     - target: {fileID: 4235303866793922687, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
-      value: "CR\xC9DITS Button Graphics"
+      value: CREDITS Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 4239527098334686723, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -2670,7 +2730,7 @@ PrefabInstance:
     - target: {fileID: 4528260830562070563, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_fontSize
-      value: 78.8
+      value: 84.15
       objectReference: {fileID: 0}
     - target: {fileID: 4533367900604489170, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -2992,6 +3052,26 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 5162888368695160191, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d57bdb851ee1474aaa634e1f3a9fcbe, type: 3}
+    - target: {fileID: 5162888368695160191, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6606f5ff12a9f2a49a3b1c17c61a5239, type: 3}
+    - target: {fileID: 5162888368695160191, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162888368695160191, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5229600205226233536, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3095,12 +3175,12 @@ PrefabInstance:
     - target: {fileID: 5526172686541992099, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
-      value: "D\xC9MARRER Button Graphics"
+      value: START Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 5531868650738122172, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
-      value: ANGLAIS Button Graphics
+      value: ENGLISH Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 5565664553516862172, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -3297,10 +3377,25 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5867595230359334005, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867595230359334005, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea7a8abf0c1e4f446b81a57cb4a7fb20, type: 3}
+    - target: {fileID: 5867595230359334005, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5913636940221396360, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_fontSize
-      value: 76.25
+      value: 109.85
       objectReference: {fileID: 0}
     - target: {fileID: 5927876105625768814, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -3510,7 +3605,7 @@ PrefabInstance:
     - target: {fileID: 6519885821465014697, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
-      value: "PARAM\xC8TRES Button Graphics"
+      value: SETTINGS Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 6563796586865355597, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -3815,7 +3910,7 @@ PrefabInstance:
     - target: {fileID: 7273401460544270680, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_fontSize
-      value: 57.6
+      value: 83.95
       objectReference: {fileID: 0}
     - target: {fileID: 7300047040037515037, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -4120,7 +4215,7 @@ PrefabInstance:
     - target: {fileID: 7830052425034683978, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_fontSize
-      value: 27.55
+      value: 39.95
       objectReference: {fileID: 0}
     - target: {fileID: 7831652227848019878, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -4345,7 +4440,7 @@ PrefabInstance:
     - target: {fileID: 8163132967053943843, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
-      value: RETOUR Button Graphics
+      value: BACK Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 8185608391195448583, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -4372,6 +4467,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 8192883207245428731, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonClick.clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192883207245428731, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: buttonHover.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5be222151911e354daff24ab1011d158, type: 3}
     - target: {fileID: 8204513101091463931, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -4525,7 +4630,7 @@ PrefabInstance:
     - target: {fileID: 8509202138959389827, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_fontSize
-      value: 45
+      value: 48.05
       objectReference: {fileID: 0}
     - target: {fileID: 8514926727848881828, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -4615,7 +4720,7 @@ PrefabInstance:
     - target: {fileID: 8618560239884727359, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
-      value: RETOUR Button Graphics
+      value: BACK Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 8729743407773622138, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -4715,7 +4820,7 @@ PrefabInstance:
     - target: {fileID: 8837290094940351015, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_Name
-      value: QUITTER Button Graphics
+      value: QUIT Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 9000728074189071778, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -4828,7 +4933,11 @@ PrefabInstance:
     - {fileID: 5479350227369992263, guid: c6b26752e8dc0b34ab30cc91105625db, type: 3}
     - {fileID: 5286275220804154490, guid: c6b26752e8dc0b34ab30cc91105625db, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3243446609253712177, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8173004063955108639}
   m_SourcePrefab: {fileID: 100100000, guid: c6b26752e8dc0b34ab30cc91105625db, type: 3}
 --- !u!1 &1199257532670273449 stripped
 GameObject:
@@ -4836,6 +4945,56 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3779095870153040274}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1833248904072487075 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3243446609253712177, guid: c6b26752e8dc0b34ab30cc91105625db,
+    type: 3}
+  m_PrefabInstance: {fileID: 3779095870153040274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8173004063955108639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833248904072487075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2068672013871249450 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2938437779858151864, guid: c6b26752e8dc0b34ab30cc91105625db,
