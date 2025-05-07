@@ -8,23 +8,6 @@ public class Scr_Player_Death : MonoBehaviour
     public Transform graphic;
     public Transform colliders;
 
-    private Transform UnActivePlayerParent;
-
-    /*public void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("FallingBlock"))
-        {
-            Death();
-            FallingDeath();
-        }
-
-        if(other.CompareTag("Bomb"))
-        {
-            Death();
-            BombDeath();
-        }
-    }*/
-
     public void FallingDeath()
     {
         graphic.DOScale(new Vector3(1.3f, 0.02f, 1.3f), 0.2f);

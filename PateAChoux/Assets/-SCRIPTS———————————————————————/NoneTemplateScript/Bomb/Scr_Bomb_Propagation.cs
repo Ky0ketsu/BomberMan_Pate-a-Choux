@@ -23,7 +23,7 @@ public class Scr_Bomb_Propagation : MonoBehaviour
         {
             if(canLeft)
             {
-                if (Physics.Raycast(transform.position, Vector3.left, out RaycastHit hitLeft,i * 2, mask))
+                if (Physics.Raycast(transform.position + Vector3.up, Vector3.left, out RaycastHit hitLeft,i * 2, mask))
                 {
                     canLeft = false;
                     GameObject currentLeftHit = hitLeft.transform.gameObject;
@@ -52,7 +52,7 @@ public class Scr_Bomb_Propagation : MonoBehaviour
 
             if(canRight)
             {
-                if (Physics.Raycast(transform.position, Vector3.right, out RaycastHit hitRight,i * 2, mask))
+                if (Physics.Raycast(transform.position + Vector3.up, Vector3.right, out RaycastHit hitRight,i * 2, mask))
                 {
                     canRight = false;
                     GameObject currentRightHit = hitRight.transform.gameObject;
@@ -81,7 +81,7 @@ public class Scr_Bomb_Propagation : MonoBehaviour
 
             if(canForward)
             {
-                if (Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hitForward,i* 2, mask))
+                if (Physics.Raycast(transform.position + Vector3.up, Vector3.forward, out RaycastHit hitForward,i* 2, mask))
                 {
                     canForward = false;
                     GameObject currentForwardHit = hitForward.transform.gameObject;
@@ -110,7 +110,7 @@ public class Scr_Bomb_Propagation : MonoBehaviour
 
             if(canBack)
             {
-                if (Physics.Raycast(transform.position, Vector3.back, out RaycastHit hitBack,i * 2, mask))
+                if (Physics.Raycast(transform.position + Vector3.up, Vector3.back, out RaycastHit hitBack,i * 2, mask))
                 {
                     canBack = false;
                     GameObject currentBackHit = hitBack.transform.gameObject ;

@@ -6,30 +6,16 @@ using UnityEngine;
 
 public class Scr_PowerUp_Frozen : MonoBehaviour
 {
-    public GameObject particule;
-    private Transform particuleParent;
+    [SerializeField] private float timeEffect;
 
-    public float timeEffect;
-
-    private GameObject currentPlayer;
-    public GameObject graphics, colliders;
-
-    private void Start()
+    
+    private bool waitToEffect;
+    private void Update()
     {
-        particuleParent = GameObject.Find("ParticuleParent").transform;
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if(other.GetComponentInParent<PlayerMove>())
+        if (waitToEffect && GetComponent<Scr_PowerUp_Default>().player != null)
         {
-            GameObject currentParticule = Instantiate(particule, particuleParent);
-            currentParticule.transform.position = transform.position;
-
-            currentPlayer = other.gameObject;
-            graphics.SetActive(false); colliders.SetActive(false);
-
-            other.GetComponentInParent<Scr_Player_Bomb>().frozenActive = true;
+            GetComponent<Scr_PowerUp_Default>().player.GetComponent<Scr_Player_Bomb>().frozenActive = true;
+            waitToEffect = false;
             StartCoroutine(TimeEffect());
         }
     }
@@ -37,7 +23,7 @@ public class Scr_PowerUp_Frozen : MonoBehaviour
     IEnumerator TimeEffect()
     {
         yield return new WaitForSeconds(timeEffect);
-        currentPlayer.GetComponentInParent<Scr_Player_Bomb>().frozenActive = false;
+        GetComponent<Scr_PowerUp_Default>().GetComponent<Scr_Player_Bomb>().frozenActive = false;
         Destroy(gameObject);
     }
 }

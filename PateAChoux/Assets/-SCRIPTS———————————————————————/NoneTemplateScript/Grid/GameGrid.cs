@@ -37,12 +37,8 @@ public class GameGrid : MonoBehaviour
         }
     }
 
-    [SerializeField] Vector2 spawnerPos;
-    [SerializeField] Vector2 currentDir;
-    private int currentSpawnerID;
-    private bool nextMoveIsTp;
-    private bool isFinish;
-    public float delayBetweenBlock;
+
+    [SerializeField]float delayBetweenBlock;
     bool suddenDeathHappened = false;
 
     public void StartMortSubite()
@@ -62,7 +58,7 @@ public class GameGrid : MonoBehaviour
         {
             currentBlock.MortSubite();
 
-            float chrono = 0.1f;
+            float chrono = delayBetweenBlock;
             while (chrono > 0)
             {
                 if (GAME.MANAGER.CurrentState == State.gameplay) chrono -= Time.deltaTime;

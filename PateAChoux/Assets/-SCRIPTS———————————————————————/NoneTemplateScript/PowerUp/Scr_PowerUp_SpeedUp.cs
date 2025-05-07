@@ -4,22 +4,13 @@ using UnityEngine;
 
 public class Scr_PowerUp_SpeedUp : MonoBehaviour
 {
-    public GameObject particule;
-    private Transform parentParticule;
-
-    public void OnTriggerEnter(Collider other)
+    private bool waitToEffect;
+    private void Update()
     {
-        parentParticule = GameObject.Find("ParticuleParent").transform;
-
-        var player = other.GetComponentInParent<PlayerMove>();
-        /*if (player)
+        if (waitToEffect && GetComponent<Scr_PowerUp_Default>().player != null)
         {
-            GameObject currentParticule = Instantiate(particule, parentParticule);
-            currentParticule.transform.position = transform.position;
-
-            player.startMaxSpeed *= 1.2f;
-            player.maxSpeed = player.startMaxSpeed;
-            Destroy(gameObject);
-        }*/
+            GetComponent<Scr_PowerUp_Default>().player.GetComponent<PlayerMove>().speedUp++;
+            waitToEffect = false;
+        }
     }
 }

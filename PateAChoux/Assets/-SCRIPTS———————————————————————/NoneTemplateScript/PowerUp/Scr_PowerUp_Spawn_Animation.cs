@@ -10,9 +10,6 @@ public class Scr_PowerUp_Spawn_Animation : MonoBehaviour
 
     public void Start()
     {
-        animationDelay = 0.5f;
-        animationTime = 1;
-
         transform.localScale = Vector3.zero;
         StartCoroutine(Animation());
     }

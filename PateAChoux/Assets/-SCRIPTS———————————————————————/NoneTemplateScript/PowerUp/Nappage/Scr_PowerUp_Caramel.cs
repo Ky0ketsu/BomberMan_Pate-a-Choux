@@ -4,30 +4,16 @@ using UnityEngine;
 
 public class Scr_PowerUp_Caramel : MonoBehaviour
 {
-    public GameObject particule;
-    private Transform particuleParent;
+    [SerializeField] private float timeEffect;
 
-    public float timeEffect;
 
-    private GameObject currentPlayer;
-    public GameObject graphics, colliders;
-
-    private void Start()
+    private bool waitToEffect;
+    private void Update()
     {
-        particuleParent = GameObject.Find("ParticuleParent").transform;
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponentInParent<PlayerMove>())
+        if (waitToEffect && GetComponent<Scr_PowerUp_Default>().player != null)
         {
-            GameObject currentParticule = Instantiate(particule, particuleParent);
-            currentParticule.transform.position = transform.position;
-
-            currentPlayer = other.gameObject;
-            graphics.SetActive(false); colliders.SetActive(false);
-
-            other.GetComponentInParent<Scr_Player_Bomb>().caramelActive = true;
+            GetComponent<Scr_PowerUp_Default>().player.GetComponent<Scr_Player_Bomb>().frozenActive = true;
+            waitToEffect = false;
             StartCoroutine(TimeEffect());
         }
     }
@@ -35,8 +21,7 @@ public class Scr_PowerUp_Caramel : MonoBehaviour
     IEnumerator TimeEffect()
     {
         yield return new WaitForSeconds(timeEffect);
-        currentPlayer.GetComponentInParent<Scr_Player_Bomb>().caramelActive = false;
+        GetComponent<Scr_PowerUp_Default>().GetComponent<Scr_Player_Bomb>().caramelActive = false;
         Destroy(gameObject);
     }
-
 }

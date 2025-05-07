@@ -11,6 +11,9 @@ public class Dalle : MonoBehaviour
     [SerializeField] bool propagateBurn = true;
     [SerializeField] public Cardinal directionMortSubite = Cardinal.East;
     public int column, row;
+    [SerializeField] bool unbreakable = false;
+    [SerializeField] public Transform slotBomb;
+    [SerializeField] private GameObject blockunbreakable;
 
     public int GetRow()
     {
@@ -23,6 +26,13 @@ public class Dalle : MonoBehaviour
     {
         column = mycolumn;
         row = myrow;
+
+    }
+
+    private void Start()
+    {
+        if(unbreakable) blockunbreakable.SetActive(true);
+        else blockunbreakable.SetActive(false);
     }
 
     public Cardinal GetDirectionMortSubite()

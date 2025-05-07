@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2184992955558118294}
   - component: {fileID: 4747632468824145479}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8537603641874696045}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5276188233698273070}
   - component: {fileID: 7899640492745267589}
-  m_Layer: 20
+  m_Layer: 15
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2510967303831926430}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 5289788389670971401}
   - component: {fileID: 1861456944977500723}
   - component: {fileID: 6636709979121792921}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Block_Destroyable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,11 +250,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0, z: 0}
   powerUp:
-  - {fileID: 1696098582136247543, guid: e403d2ca8a2654a4b8845423a55846f0, type: 3}
-  - {fileID: 1696098582136247543, guid: ba62cac2b6045f8439ddd62c600bd9df, type: 3}
-  - {fileID: 1696098582136247543, guid: 5a743e21018fd3e40aaa629cc6a608e5, type: 3}
-  - {fileID: 1696098582136247543, guid: 5c872e398415d414c9df3b3d7229fcc2, type: 3}
-  - {fileID: 1696098582136247543, guid: 4a12bafbdde202a43a9069356cee6d23, type: 3}
+  - {fileID: 7578274317261650410, guid: 680ef0739e6dd474f8a705ec582cbaed, type: 3}
+  - {fileID: 9018452160510952871, guid: 5480697e1c1d76b42b667a35249dad26, type: 3}
+  - {fileID: 2331513696514501390, guid: 4707700d05bdafe49aebf72aceda7f1b, type: 3}
+  - {fileID: 2533981182013517390, guid: 20eb877d6141a5e4489b5e71fb7edffa, type: 3}
+  - {fileID: 873240416237919634, guid: 448c90c329b43fb44b2fc1b69beb001b, type: 3}
+  probability: 100
   powerUpParent: {fileID: 0}
 --- !u!1001 &6000461439109337424
 PrefabInstance:
@@ -318,6 +319,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 3D_Block_Destructible
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6693ba44158b7704b9057fba8eccf049,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

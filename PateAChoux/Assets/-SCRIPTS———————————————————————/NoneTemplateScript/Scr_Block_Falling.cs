@@ -11,6 +11,7 @@ public class Scr_Block_Falling : MonoBehaviour
 
     public void Awake()
     {
+        block.transform.localScale = Vector3.zero;
         block.SetActive(false);
     }
 
@@ -20,20 +21,28 @@ public class Scr_Block_Falling : MonoBehaviour
         fallen = true;
         Debug.Log("coucou");
         block.SetActive(true);
-        block.transform.DOMove(new Vector3(transform.position.x, 0, transform.position.z), time).SetEase(Ease.InExpo).OnComplete(DelayToDisable);
+        block.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.InCubic);
+        block.transform.DORotate(new Vector3(0, block.transform.localEulerAngles.y + 90, 0), 0.2f).SetEase(Ease.InCubic);
+        block.transform.DOMove(block.transform.position + Vector3.up * 2, 0.2f).SetEase(Ease.InOutExpo).OnComplete(FallBlockStep2);
+    }
+
+    private void FallBlockStep2()
+    {
+        block.transform.DOMove(new Vector3(transform.position.x, 0, transform.position.z), 0.3f).SetEase(Ease.InExpo).OnComplete(DelayToDisable);
+        block.transform.DORotate(new Vector3(0, block.transform.localEulerAngles.y + 90, 0), 0.2f).SetEase(Ease.InCubic);
     }
 
     private void DelayToDisable()
     {
-       //colliders.SetActive(false);
+       colliders.SetActive(false);
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerMove>())
+        if (other.GetComponentInParent<PlayerMove>())
         {
-            other.GetComponent<Scr_Player_Death>().Death();
-            other.GetComponent<Scr_Player_Death>().FallingDeath();
+            other.GetComponentInParent<Scr_Player_Death>().Death();
+            other.GetComponentInParent<Scr_Player_Death>().FallingDeath();
         }
     }
 }

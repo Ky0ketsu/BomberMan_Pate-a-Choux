@@ -15,7 +15,7 @@ public class PlayerMove : MonoBehaviour
     CharacterController character => GetComponent<CharacterController>();
     PlayerLook lookScript => GetComponent<PlayerLook>();
     Player player; // Rewired plugin
-
+    [HideInInspector] public int speedUp = 0;
 
     void Awake()
     {
@@ -61,6 +61,13 @@ public class PlayerMove : MonoBehaviour
         if (inputs.sqrMagnitude>1f) inputs.Normalize(); // avoir diagonals bigger than 1 (pythagoras)
     }
 
+    private float slowValue = 1;
+    public void SetSpeed(bool slow)
+    {
+        if (slow == true) slowValue = 0.6f;
+        else slowValue = 1;
+    }
+
     void VerticalMovement()
     {
         movement.y= CanFall ? -60f : 0; // very simple fall with constant speed
@@ -69,8 +76,8 @@ public class PlayerMove : MonoBehaviour
     void HorizontalMovement()
     {
         GetInputs();
-        movement.x = CanRun ? inputs.x * maxSpeed : 0;
-        movement.z = CanRun ? inputs.y * maxSpeed : 0;
+        movement.x = CanRun ? inputs.x * ((maxSpeed + (0.5f * speedUp)) * slowValue) : 0;
+        movement.z = CanRun ? inputs.y * ((maxSpeed + (0.5f * speedUp)) * slowValue) : 0;
     }
 
     void ApplyMovement()

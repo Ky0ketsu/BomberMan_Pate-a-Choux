@@ -19,8 +19,7 @@ public class Scr_PowerUp_Blitz : MonoBehaviour
             GameObject currentParticule = Instantiate(particulePrefab, particuleParent);
             currentParticule.transform.position = transform.position;
 
-            other.GetComponentInParent<Scr_Player_Bomb>().nextShootIsSpecial = true;
-            other.GetComponentInParent<Scr_Player_Bomb>().blitzType = true;
+            other.GetComponentInParent<Scr_Player_Bomb>().blitzActive = true;
 
             Delete();
         }

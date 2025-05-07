@@ -4,35 +4,18 @@ using UnityEngine;
 
 public class Scr_PowerUp_RangeUp : MonoBehaviour
 {
-    public GameObject particule;
-    private Transform parentParticule;
-
-    private void Start()
+    private bool waitToEffect;
+    private void Update()
     {
-        parentParticule = GameObject.Find("ParticuleParent").transform;
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-
-        if(other.GetComponentInParent<PlayerMove>())
+        if (waitToEffect && GetComponent<Scr_PowerUp_Default>().player != null)
         {
-            other.GetComponentInParent<Scr_Player_Bomb>().range++;
-            Take();
+            GetComponent<Scr_PowerUp_Default>().player.GetComponent<PlayerMove>().speedUp++;
+            waitToEffect = false;
         }
 
-        if(other.GetComponentInParent<Scr_Bomb_Frozen>() != null)
+        if(waitToEffect && GetComponent<Scr_PowerUp_Default>().frozen != null)
         {
-            other.GetComponentInParent<Scr_Bomb_Propagation>().range++;
-            Take();
+            GetComponent<Scr_PowerUp_Default>().frozen.GetComponent<Scr_Bomb_Propagation>().range++;
         }
-    }
-
-    private void Take()
-    {
-        GameObject currentParticule = Instantiate(particule, parentParticule);
-        currentParticule.transform.position = transform.position;
-
-        Destroy(gameObject);
     }
 }
