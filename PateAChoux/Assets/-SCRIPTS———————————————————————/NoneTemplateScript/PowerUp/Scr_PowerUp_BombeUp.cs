@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Scr_PowerUp_BombeUp : MonoBehaviour
 {
-    private bool waitToEffect;
+    private bool effectUse = false;
     private void Update()
     {
-        if(waitToEffect && GetComponent<Scr_PowerUp_Default>().player != null)
+        if(!effectUse && GetComponent<Scr_PowerUp_Default>().player != null)
         {
             GetComponent<Scr_PowerUp_Default>().player.GetComponent<Scr_Player_Bomb>().stockBomb++;
-            waitToEffect = false;
+            effectUse = true;
         }
     }
 }

@@ -10,8 +10,7 @@ public class Scr_Block_Breakable : MonoBehaviour
     public void Explode()
     {
         particulParent = GameObject.Find("ParticuleParent").transform;
-        GameObject particule = Instantiate(particuleDestroy, particulParent);
-        particule.transform.position = transform.position;
+        GameObject particule = Instantiate(particuleDestroy,transform.position ,transform.rotation,particulParent);
 
         gameObject.GetComponent<Scr_PowerUp_Spawn>().SpawnPowerUp();
         Destroy(gameObject);

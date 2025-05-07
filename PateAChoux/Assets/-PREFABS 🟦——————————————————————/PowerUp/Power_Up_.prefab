@@ -143,8 +143,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -160,8 +160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68730ff01bf05ef4f8d4d3d5dc7929de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationDelay: 0
-  animationTime: 0
+  animationDelay: 0.7
+  animationTime: 1
+  particule: {fileID: 8816474758065035005, guid: b86c010e13136274e8157fdf3e523efa,
+    type: 3}
 --- !u!114 &4522522018809846807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,9 +179,13 @@ MonoBehaviour:
   particule: {fileID: 8816474758065035005, guid: 4d8fd6cecf63f654095c02c074232db2,
     type: 3}
   player: {fileID: 0}
+  frozen: {fileID: 0}
+  blitz: {fileID: 0}
   delay: 5
   graphics: {fileID: 5528687877593816392}
   colliders: {fileID: 7098652347377315126}
+  canGetByFrozen: 0
+  canGetByBlitz: 0
 --- !u!1 &5528687877593816392
 GameObject:
   m_ObjectHideFlags: 0

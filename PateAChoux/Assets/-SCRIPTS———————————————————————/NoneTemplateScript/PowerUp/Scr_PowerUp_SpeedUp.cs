@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Scr_PowerUp_SpeedUp : MonoBehaviour
 {
-    private bool waitToEffect;
+    private bool effectUse = false;
     private void Update()
     {
-        if (waitToEffect && GetComponent<Scr_PowerUp_Default>().player != null)
+        if (!effectUse && GetComponent<Scr_PowerUp_Default>().player != null)
         {
             GetComponent<Scr_PowerUp_Default>().player.GetComponent<PlayerMove>().speedUp++;
-            waitToEffect = false;
+            effectUse = true;
         }
     }
 }

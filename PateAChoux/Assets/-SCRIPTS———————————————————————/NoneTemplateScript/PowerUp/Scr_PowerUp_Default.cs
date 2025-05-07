@@ -6,7 +6,7 @@ public class Scr_PowerUp_Default : MonoBehaviour
 {
     public GameObject particule;
     private Transform parentParticule;
-    [HideInInspector] public GameObject player, frozen, blitz;
+    [HideInInspector] public GameObject player, frozen, blitz = null;
     [SerializeField] float delay;
     [SerializeField] GameObject graphics, colliders;
 

@@ -9,13 +9,13 @@ public class Scr_PowerUp_Frozen : MonoBehaviour
     [SerializeField] private float timeEffect;
 
     
-    private bool waitToEffect;
+    private bool effectUse = false;
     private void Update()
     {
-        if (waitToEffect && GetComponent<Scr_PowerUp_Default>().player != null)
+        if (!effectUse && GetComponent<Scr_PowerUp_Default>().player != null)
         {
             GetComponent<Scr_PowerUp_Default>().player.GetComponent<Scr_Player_Bomb>().frozenActive = true;
-            waitToEffect = false;
+            effectUse = true;
             StartCoroutine(TimeEffect());
         }
     }
@@ -23,7 +23,7 @@ public class Scr_PowerUp_Frozen : MonoBehaviour
     IEnumerator TimeEffect()
     {
         yield return new WaitForSeconds(timeEffect);
-        GetComponent<Scr_PowerUp_Default>().GetComponent<Scr_Player_Bomb>().frozenActive = false;
+        GetComponent<Scr_PowerUp_Default>().player.GetComponent<Scr_Player_Bomb>().frozenActive = false;
         Destroy(gameObject);
     }
 }

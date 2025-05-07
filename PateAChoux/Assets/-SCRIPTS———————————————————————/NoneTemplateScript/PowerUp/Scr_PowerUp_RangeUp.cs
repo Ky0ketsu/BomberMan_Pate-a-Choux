@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class Scr_PowerUp_RangeUp : MonoBehaviour
 {
-    private bool waitToEffect;
+    private bool effectUse = false;
+
     private void Update()
     {
-        if (waitToEffect && GetComponent<Scr_PowerUp_Default>().player != null)
+        if (!effectUse && GetComponent<Scr_PowerUp_Default>().player != null)
         {
-            GetComponent<Scr_PowerUp_Default>().player.GetComponent<PlayerMove>().speedUp++;
-            waitToEffect = false;
+            GetComponent<Scr_PowerUp_Default>().player.GetComponent<Scr_Player_Bomb>().range++;
+            effectUse = true;
         }
 
-        if(waitToEffect && GetComponent<Scr_PowerUp_Default>().frozen != null)
+        if(!effectUse && GetComponent<Scr_PowerUp_Default>().frozen != null)
         {
             GetComponent<Scr_PowerUp_Default>().frozen.GetComponent<Scr_Bomb_Propagation>().range++;
+            effectUse = true;
         }
     }
 }

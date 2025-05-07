@@ -76,8 +76,8 @@ public class PlayerMove : MonoBehaviour
     void HorizontalMovement()
     {
         GetInputs();
-        movement.x = CanRun ? inputs.x * ((maxSpeed + (0.5f * speedUp)) * slowValue) : 0;
-        movement.z = CanRun ? inputs.y * ((maxSpeed + (0.5f * speedUp)) * slowValue) : 0;
+        movement.x = CanRun ? inputs.x * ((maxSpeed + (1 * speedUp)) * slowValue) : 0;
+        movement.z = CanRun ? inputs.y * ((maxSpeed + (1 * speedUp)) * slowValue) : 0;
     }
 
     void ApplyMovement()
