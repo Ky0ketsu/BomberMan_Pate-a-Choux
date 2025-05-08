@@ -13,7 +13,7 @@ public class Dalle : MonoBehaviour
     public int column, row;
     [SerializeField] bool unbreakable = false;
     [SerializeField] public Transform slotBomb;
-    [SerializeField] private GameObject blockunbreakable;
+    [SerializeField] private GameObject blockUnbreakable;
 
     public int GetRow()
     {
@@ -31,8 +31,8 @@ public class Dalle : MonoBehaviour
 
     private void Start()
     {
-        if(unbreakable) blockunbreakable.SetActive(true);
-        else blockunbreakable.SetActive(false);
+        if(unbreakable) blockUnbreakable.SetActive(true);
+        else blockUnbreakable.SetActive(false);
     }
 
     public Cardinal GetDirectionMortSubite()

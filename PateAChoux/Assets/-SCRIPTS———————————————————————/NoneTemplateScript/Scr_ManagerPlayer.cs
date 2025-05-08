@@ -107,14 +107,14 @@ public class Scr_ManagerPlayer : MonoBehaviour
     {
         if(playerParent.childCount == 0)
         {
-            EVENTS.InvokeGameplayExit();
+            GAME.MANAGER.SwitchTo(State.waiting);
             EVENTS.InvokeDefeat();
             isPlay = false;
             return;
         }
         if(playerParent.childCount == 1)
         {
-            EVENTS.InvokeGameplayExit();
+            GAME.MANAGER.SwitchTo(State.waiting);
             EVENTS.InvokeVictory();
             isPlay = false;
         }

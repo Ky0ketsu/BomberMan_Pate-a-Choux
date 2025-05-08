@@ -38,7 +38,7 @@ public class Scr_Bomb_Propagation : MonoBehaviour
 
             if (currentBackHit.GetComponentInParent<Scr_Block_Breakable>() != null)
             {
-                currentBackHit.GetComponentInParent<Scr_Block_Breakable>().Explode();
+                currentBackHit.GetComponentInParent<Scr_Block_Breakable>().Explode(true);
                 currentBackHit = Instantiate(propagation, transform);
                 currentBackHit.transform.localPosition = Vector3.zero;
                 currentBackHit.transform.position += dir * 2 * distance;

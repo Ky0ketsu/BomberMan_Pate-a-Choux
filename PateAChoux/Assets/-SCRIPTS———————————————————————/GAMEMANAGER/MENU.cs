@@ -275,6 +275,7 @@ public class MENU : MonoBehaviour
     public void Back()
     {
         Debug.Log("BACK");
+        if (menuHistory[0] == victoryMenu || menuHistory[0] == defeatMenu) return;
         Unselect();
         if (GAME.MANAGER.CurrentState==State.paused)
         {

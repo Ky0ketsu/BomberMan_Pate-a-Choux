@@ -6,11 +6,11 @@ using UnityEngine;
 public class Scr_Terrain_Placement_Animation : MonoBehaviour
 {
     [SerializeField] private float timerBeforePlacement;
-
+    Transform graphics => transform.Find("Graphics");
 
     private void Start()
     {
-        transform.localScale = Vector3.zero;
+        graphics.localScale = Vector3.zero;
         timerBeforePlacement = (transform.localPosition.x + transform.localPosition.z) / 20 + 1.5f;
         StartCoroutine(AnimationPlacement());
     }
@@ -18,7 +18,8 @@ public class Scr_Terrain_Placement_Animation : MonoBehaviour
     IEnumerator AnimationPlacement()
     {
         yield return new WaitForSeconds(timerBeforePlacement);
-        transform.DOScale(Vector3.one, 2).SetEase(Ease.OutBounce);
+        graphics.DOKill();
+        graphics.DOScale(Vector3.one, 2).SetEase(Ease.OutBounce).From(0);
     }
 
 

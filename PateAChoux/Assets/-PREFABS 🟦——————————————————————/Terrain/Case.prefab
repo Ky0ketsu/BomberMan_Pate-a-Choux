@@ -264,7 +264,7 @@ MonoBehaviour:
   row: 0
   unbreakable: 0
   slotBomb: {fileID: 5885989797553582623}
-  blockunbreakable: {fileID: 7943148997134840164}
+  blockUnbreakable: {fileID: 7943148997134840164}
   suddenDeathHappened: 0
 --- !u!114 &3917718242874185465
 MonoBehaviour:
@@ -279,7 +279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
-  colliders: {fileID: 0}
+  colliders: {fileID: 4500249657624225436}
+  graphics: {fileID: 4565493595524020732}
   block: {fileID: 7214748646456728622}
 --- !u!1 &7009225581780990775
 GameObject:
@@ -576,6 +577,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6df5ff6c3da76ae469305c6e6c82732c, type: 3}
+--- !u!1 &4500249657624225436 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8081846687566371431, guid: 6df5ff6c3da76ae469305c6e6c82732c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5646499660337806587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4565493595524020732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8144621088048661767, guid: 6df5ff6c3da76ae469305c6e6c82732c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5646499660337806587}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5284011020764775786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 506920495625763217, guid: 6df5ff6c3da76ae469305c6e6c82732c,

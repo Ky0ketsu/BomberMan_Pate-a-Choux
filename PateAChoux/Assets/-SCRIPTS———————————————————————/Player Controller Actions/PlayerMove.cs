@@ -52,6 +52,7 @@ public class PlayerMove : MonoBehaviour
         HorizontalMovement();
         VerticalMovement();
         ApplyMovement();
+        ApplyAnimation();
     }
 
     void GetInputs()
@@ -59,6 +60,24 @@ public class PlayerMove : MonoBehaviour
         inputs.x = player.GetAxis("MoveHorizontal");
         inputs.y = player.GetAxis("MoveVertical");
         if (inputs.sqrMagnitude>1f) inputs.Normalize(); // avoir diagonals bigger than 1 (pythagoras)
+    }
+
+    private GameObject currentAnim;
+
+    void ApplyAnimation()
+    {
+        if(movement.x > 0)
+        {
+            
+        }
+        else if (movement.x < 0)
+        {
+
+        }
+        else
+        {
+
+        }
     }
 
     private float slowValue = 1;

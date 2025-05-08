@@ -233,10 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496cb86970a44594896a7df426b4bd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 0}
-  timeEffect: 0
-  graphics: {fileID: 0}
-  colliders: {fileID: 0}
+  timeEffect: 10
 --- !u!4 &8868105993106272719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5374332219512483209, guid: 39c88d0fd367a5449b2dae3fb987c3cc,
