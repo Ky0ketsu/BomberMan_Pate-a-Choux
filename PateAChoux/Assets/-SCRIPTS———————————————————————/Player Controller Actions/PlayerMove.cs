@@ -66,9 +66,9 @@ public class PlayerMove : MonoBehaviour
 
     void ApplyAnimation()
     {
-        if(movement.x > 0)
+        if(movement.x )
         {
-            
+
         }
         else if (movement.x < 0)
         {
