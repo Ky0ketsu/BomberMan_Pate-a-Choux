@@ -132,7 +132,7 @@ PrefabInstance:
     - target: {fileID: 1628041049980400941, guid: 4ca0935799c1811418395be7e463730b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.0323668
+      value: -7.9676332
       objectReference: {fileID: 0}
     - target: {fileID: 1628041049980400941, guid: 4ca0935799c1811418395be7e463730b,
         type: 3}
@@ -142,7 +142,7 @@ PrefabInstance:
     - target: {fileID: 1628041049980400941, guid: 4ca0935799c1811418395be7e463730b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.021459222
+      value: 6.021459
       objectReference: {fileID: 0}
     - target: {fileID: 1628041049980400941, guid: 4ca0935799c1811418395be7e463730b,
         type: 3}
@@ -183,6 +183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Power_Up_Blitz Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061088733937205955, guid: 4ca0935799c1811418395be7e463730b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -452,6 +457,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Power_Up_FrozenChouxPastry Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 873240416237919634, guid: 448c90c329b43fb44b2fc1b69beb001b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6680298803124955772, guid: 448c90c329b43fb44b2fc1b69beb001b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -593,6 +603,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Power_Up_NappageDeCaramel Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533981182013517390, guid: 20eb877d6141a5e4489b5e71fb7edffa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8323194873136699808, guid: 20eb877d6141a5e4489b5e71fb7edffa,
         type: 3}
@@ -1341,6 +1356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Power_Up_ChouBouleTout
+      objectReference: {fileID: 0}
+    - target: {fileID: 430516976748314909, guid: a3015886582740046aec36d05203c583,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6148239494102464243, guid: a3015886582740046aec36d05203c583,
         type: 3}
