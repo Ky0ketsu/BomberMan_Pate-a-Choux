@@ -6,6 +6,9 @@ public class Scr_Block_FallingTrigger : MonoBehaviour
 {
     public void OnTriggerEnter(Collider other)
     {
+
+        Debug.Log("ecraser");
+
         if(other.GetComponentInParent<PlayerMove>())
         {
             other.GetComponentInParent<Scr_Player_Death>().Death();

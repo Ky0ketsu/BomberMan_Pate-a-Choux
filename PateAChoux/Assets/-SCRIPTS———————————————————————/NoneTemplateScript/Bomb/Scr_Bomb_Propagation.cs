@@ -19,6 +19,7 @@ public class Scr_Bomb_Propagation : MonoBehaviour
 
     public void Explosion()
     {
+        Instantiate(propagation, transform.position + Vector3.up, transform.rotation, transform);
         for (int i = 1; i < range+1; i++)
         {
             if(canLeft) Propagation(Vector3.left, i);

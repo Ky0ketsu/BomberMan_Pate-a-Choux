@@ -50,7 +50,7 @@ public class Footsteps : MonoBehaviour
         lastStepPosition = transform.position;
         if (currentStepSize<stepSize) currentStepSize = stepSize;
         source.pitch = Random.Range(pitch.x, pitch.y);
-        source.PlayOneShot(feetSounds[Random.Range(0,feetSounds.Length)], volume);
+        //source.PlayOneShot(feetSounds[Random.Range(0,feetSounds.Length)], volume);
     }
 
     void Air()

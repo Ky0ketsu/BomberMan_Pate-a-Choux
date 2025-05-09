@@ -21,7 +21,6 @@ public class Scr_Block_Falling : MonoBehaviour
     {
         if (fallen) return;
         fallen = true;
-        Debug.Log("coucou");
         block.SetActive(true);
         graphics.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.InCubic);
         graphics.transform.DORotate(new Vector3(0, block.transform.localEulerAngles.y + 90, 0), 0.2f).SetEase(Ease.InCubic);
@@ -36,6 +35,12 @@ public class Scr_Block_Falling : MonoBehaviour
 
     private void DelayToDisable()
     {
-       colliders.SetActive(false);
+        StartCoroutine(DelCol());
+    }
+
+    IEnumerator DelCol()
+    {
+        yield return new WaitForSeconds(0.1f);
+        colliders.SetActive(false);
     }
 }

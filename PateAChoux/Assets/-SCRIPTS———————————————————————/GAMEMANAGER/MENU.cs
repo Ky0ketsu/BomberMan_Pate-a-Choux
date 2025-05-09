@@ -55,6 +55,7 @@ public class MENU : MonoBehaviour
         EVENTS.OnMenuExit += DisableUIInputs;
         EVENTS.OnGameResume += DisableUIInputs;
         EVENTS.OnVictory += VictoryMenu;
+        EVENTS.OnDefeat += DefeatMenu;
     }
 
     void OnDisable()
@@ -70,6 +71,7 @@ public class MENU : MonoBehaviour
         EVENTS.OnMenuExit -= DisableUIInputs;
         EVENTS.OnGameResume -= DisableUIInputs;
         EVENTS.OnVictory -= VictoryMenu;
+        EVENTS.OnDefeat -= DefeatMenu;
     }
 
     void Start()
@@ -189,6 +191,11 @@ public class MENU : MonoBehaviour
     void ActiveVictoryMenu()
     {
         victoryMenu.GetComponent<Scr_Menu_Victory>().Victory();
+    }
+
+    public void DefeatMenu()
+    {
+        ShowNextMenu(defeatMenu, 0.5f, 0, 0.5f);
     }
 
     //fin de mon code

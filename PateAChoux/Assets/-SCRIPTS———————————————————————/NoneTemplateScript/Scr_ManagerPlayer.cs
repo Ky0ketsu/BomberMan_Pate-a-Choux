@@ -16,12 +16,13 @@ public class Scr_ManagerPlayer : MonoBehaviour
 
     public Vector3[] playerSpawnPos = new Vector3[4];
 
+    [SerializeField] public int[] win = new int[4];
+
 
     void Awake()
     {
         EVENTS.OnLobby += EnablePlayerAdd;
         EVENTS.OnLobbyExit += DisablePlayerAdd;
-        EVENTS.OnVictory += DespawnPlayer;
         EVENTS.OnGameStart += Spawn;
     }
 
@@ -29,7 +30,6 @@ public class Scr_ManagerPlayer : MonoBehaviour
     {
         EVENTS.OnLobby -= EnablePlayerAdd;
         EVENTS.OnLobbyExit -= DisablePlayerAdd;
-        EVENTS.OnVictory -= DespawnPlayer;
         EVENTS.OnGameStart -= Spawn;
     }
 
@@ -66,6 +66,7 @@ public class Scr_ManagerPlayer : MonoBehaviour
             JoinOrQuit(2);
             JoinOrQuit(3);
         }
+        if (isPlay) CheckPlayerAlive();
     }
 
     void JoinOrQuit(int player)
@@ -98,30 +99,35 @@ public class Scr_ManagerPlayer : MonoBehaviour
         isPlay = true;
     }
 
-    private void FixedUpdate()
-    {
-        if(isPlay) CheckPlayerAlive();
-    }
-
     void CheckPlayerAlive()
     {
-        if(playerParent.childCount == 0)
+        if(!isPlay) return;
+
+        if(playerParent.childCount <= 1)
+        {
+            isPlay = false;
+            StartCoroutine(DelayToRecheck());
+        }
+    }
+
+    IEnumerator DelayToRecheck()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if (playerParent.childCount == 0)
         {
             GAME.MANAGER.SwitchTo(State.waiting);
             EVENTS.InvokeDefeat();
-            isPlay = false;
-            return;
         }
-        if(playerParent.childCount == 1)
+        if (playerParent.childCount == 1)
         {
             GAME.MANAGER.SwitchTo(State.waiting);
             EVENTS.InvokeVictory();
-            isPlay = false;
+            AddScore(playerParent.GetChild(0).GetComponent<PlayerMove>().playerID);
         }
     }
 
-    private void DespawnPlayer()
+    private void AddScore(int ID)
     {
-        
+        win[ID]++;
     }
 }

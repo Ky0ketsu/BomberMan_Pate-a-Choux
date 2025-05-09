@@ -12,7 +12,7 @@ public class Scr_PowerUp_Caramel : MonoBehaviour
     {
         if (!effectUse && GetComponent<Scr_PowerUp_Default>().player != null)
         {
-            GetComponent<Scr_PowerUp_Default>().player.GetComponent<Scr_Player_Bomb>().frozenActive = true;
+            GetComponent<Scr_PowerUp_Default>().player.GetComponent<Scr_Player_Bomb>().caramelActive = true;
             effectUse = true;
             StartCoroutine(TimeEffect());
         }
@@ -22,6 +22,5 @@ public class Scr_PowerUp_Caramel : MonoBehaviour
     {
         yield return new WaitForSeconds(timeEffect);
         GetComponent<Scr_PowerUp_Default>().player.GetComponent<Scr_Player_Bomb>().caramelActive = false;
-        Destroy(gameObject);
     }
 }

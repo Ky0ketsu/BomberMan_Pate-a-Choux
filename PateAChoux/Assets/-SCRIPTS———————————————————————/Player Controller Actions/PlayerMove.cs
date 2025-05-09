@@ -18,6 +18,7 @@ public class PlayerMove : MonoBehaviour
     [HideInInspector] public int speedUp = 0;
 
     [SerializeField] private GameObject[] animationSprite = new GameObject[4];
+    [HideInInspector] public bool chouxBouleToutActive;
 
     void Awake()
     {
@@ -38,7 +39,10 @@ public class PlayerMove : MonoBehaviour
 
         for (int i = 0; i < animationSprite.Length; i++)
         {
-            animationSprite[i] = transform.Find("GRAPHICS"). Find("PlayerAnimation").GetChild(playerID).GetChild(i).gameObject;
+            if(i != playerID) transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(i).gameObject.SetActive(false);
+            else transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(i).gameObject.SetActive(true);
+
+            animationSprite[i] = transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(playerID).GetChild(i).gameObject;
         }
     }
 
@@ -73,21 +77,21 @@ public class PlayerMove : MonoBehaviour
 
     void CheckAnimation()
     {
-        float currentDirX = movement.x;
-        float currentDirY = movement.y;
+        float currentDirX = inputs.x;
+        float currentDirY = inputs.y;
         
 
         if(currentDirX < 0) currentDirX = -currentDirX;  
-        if (currentDirY < 0) currentDirY = -currentDirY;
+        if(currentDirY < 0) currentDirY = -currentDirY;
 
         if (currentDirX < currentDirY)
         {
-            if (movement.y < 0) ApplyAnimation(3);
+            if (inputs.y < 0) ApplyAnimation(3);
             else ApplyAnimation(1);
         }
         else if (currentDirY < currentDirX)
         {
-            if (movement.x < 0) ApplyAnimation(2);
+            if (inputs.x < 0) ApplyAnimation(2);
             else ApplyAnimation(0);
         }
         else ApplyAnimation(1);

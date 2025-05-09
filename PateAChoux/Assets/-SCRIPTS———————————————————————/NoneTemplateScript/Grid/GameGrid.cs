@@ -72,7 +72,7 @@ public class GameGrid : MonoBehaviour
                 case Cardinal.West: nextColumn--; break;
                 case Cardinal.East: nextColumn++; break;
             }
-            Debug.Log(nextRow + " " + nextColumn);
+            //Debug.Log(nextRow + " " + nextColumn);
             currentBlock = gridRows[nextRow].gridColumns[nextColumn];
         }
     }

@@ -65,6 +65,7 @@ public class Scr_Player_Bomb : MonoBehaviour
                         {
                             CreateBomb(bombBlitzPrefab);
                             currentBomb.GetComponent<Scr_Bomb_Blitz>().owner = gameObject;
+                            canBomb = false;
                         }
                         else CreateBomb(bombPrefab);
                     }

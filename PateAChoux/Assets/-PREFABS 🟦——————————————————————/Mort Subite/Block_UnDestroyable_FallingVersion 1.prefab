@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2152416794101648753}
   - component: {fileID: 6664724244701668348}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 2769145606644437321}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1.9999999, y: 1.3, z: 1.9999999}
+  m_LocalPosition: {x: 0, y: 1.24, z: 0}
+  m_LocalScale: {x: 1.9999999, y: 2.6, z: 1.9999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4960081939648456897}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 506920495625763217}
   - component: {fileID: 5031506455696885334}
   - component: {fileID: 5385341741349922650}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Block_UnDestroyable_FallingVersion 1
   m_TagString: FallingBlock
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!114 &5385341741349922650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3187885821129758142}
   - component: {fileID: 5294328021698178413}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6914518134188123343}
   - component: {fileID: 1914705544791096847}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (3)
   m_TagString: FallingBlock
   m_Icon: {fileID: 0}
@@ -285,8 +285,8 @@ Transform:
   m_GameObject: {fileID: 5029473828460858122}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1.9999999, y: 1.3, z: 1.9999999}
+  m_LocalPosition: {x: 0, y: 1.21, z: 0}
+  m_LocalScale: {x: 1.9999999, y: 2.6, z: 1.9999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4960081939648456897}
@@ -321,7 +321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4960081939648456897}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9155747221180562967}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,6 +439,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 3D_Block_Indestructible
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d4079aa9591562442bb775cb4a6b71d9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
