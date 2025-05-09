@@ -368,10 +368,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\U0001F579PLAYER 1 AVATAR \u2B05"
       objectReference: {fileID: 0}
+    - target: {fileID: 8436266895796835929, guid: 9e6b10282269c94429a1c698bae63a79,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8587216448919951147, guid: 9e6b10282269c94429a1c698bae63a79,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.477792
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8587216448919951147, guid: 9e6b10282269c94429a1c698bae63a79,
         type: 3}
@@ -381,7 +386,7 @@ PrefabInstance:
     - target: {fileID: 8587216448919951147, guid: 9e6b10282269c94429a1c698bae63a79,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.3227415
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8587216448919951147, guid: 9e6b10282269c94429a1c698bae63a79,
         type: 3}

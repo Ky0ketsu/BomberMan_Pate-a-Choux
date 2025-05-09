@@ -17,6 +17,8 @@ public class PlayerMove : MonoBehaviour
     Player player; // Rewired plugin
     [HideInInspector] public int speedUp = 0;
 
+    [SerializeField] private GameObject[] animationSprite = new GameObject[4];
+
     void Awake()
     {
         EVENTS.OnGameplay += EnableMoveSet;
@@ -33,6 +35,11 @@ public class PlayerMove : MonoBehaviour
     {
         player = ReInput.players.GetPlayer(playerID);
         if (GAME.MANAGER.CurrentState==State.gameplay) EnableMoveSet();
+
+        for (int i = 0; i < animationSprite.Length; i++)
+        {
+            animationSprite[i] = transform.Find("GRAPHICS"). Find("PlayerAnimation").GetChild(playerID).GetChild(i).gameObject;
+        }
     }
 
     void EnableMoveSet()
@@ -52,7 +59,7 @@ public class PlayerMove : MonoBehaviour
         HorizontalMovement();
         VerticalMovement();
         ApplyMovement();
-        ApplyAnimation();
+        CheckAnimation();
     }
 
     void GetInputs()
@@ -64,19 +71,42 @@ public class PlayerMove : MonoBehaviour
 
     private GameObject currentAnim;
 
-    void ApplyAnimation()
+    void CheckAnimation()
     {
-        if(movement.x )
-        {
+        float currentDirX = movement.x;
+        float currentDirY = movement.y;
+        
 
+        if(currentDirX < 0) currentDirX = -currentDirX;  
+        if (currentDirY < 0) currentDirY = -currentDirY;
+
+        if (currentDirX < currentDirY)
+        {
+            if (movement.y < 0) ApplyAnimation(3);
+            else ApplyAnimation(1);
         }
-        else if (movement.x < 0)
+        else if (currentDirY < currentDirX)
         {
-
+            if (movement.x < 0) ApplyAnimation(2);
+            else ApplyAnimation(0);
         }
-        else
-        {
+        else ApplyAnimation(1);
 
+
+    }
+
+    private void ApplyAnimation(int animationID)
+    {
+        for (int i = 0; i < animationSprite.Length; i++)
+        {
+            if(i != animationID)
+            {
+                animationSprite[i].SetActive(false);
+            }
+            else
+            {
+                animationSprite[i].SetActive(true);
+            }
         }
     }
 
