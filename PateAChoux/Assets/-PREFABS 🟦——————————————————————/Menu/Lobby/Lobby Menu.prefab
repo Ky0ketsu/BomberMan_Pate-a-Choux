@@ -137,6 +137,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668e4fd920c494d438e2f7c683a0d241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7630840505867639422
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +429,7 @@ PrefabInstance:
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_text
-      value: START
+      value: DEMARRER
       objectReference: {fileID: 0}
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
@@ -544,7 +549,7 @@ PrefabInstance:
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name
-      value: START Button Graphics
+      value: DEMARRER Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 6459998953733841741, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}

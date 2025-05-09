@@ -255,7 +255,7 @@ MonoBehaviour:
   - {fileID: 2331513696514501390, guid: 4707700d05bdafe49aebf72aceda7f1b, type: 3}
   - {fileID: 2533981182013517390, guid: 20eb877d6141a5e4489b5e71fb7edffa, type: 3}
   - {fileID: 873240416237919634, guid: 448c90c329b43fb44b2fc1b69beb001b, type: 3}
-  probability: 20
+  probability: 40
   powerUpParent: {fileID: 0}
 --- !u!1001 &6000461439109337424
 PrefabInstance:
