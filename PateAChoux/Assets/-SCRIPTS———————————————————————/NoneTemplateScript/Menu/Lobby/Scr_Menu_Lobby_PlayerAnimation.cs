@@ -7,15 +7,17 @@ public class Scr_Menu_Lobby_PlayerAnimation : MonoBehaviour
 {
     public GameObject player;
     public float time;
+    public Vector3 startScale;
 
     public void Start()
     {
+        startScale = player.transform.localScale;
         player.transform.localScale = Vector3.zero;
     }
 
     public void AnimationSpawn()
     {
-        player.transform.DOScale(Vector3.one, time).SetEase(Ease.OutBounce);
+        player.transform.DOScale(startScale, time).SetEase(Ease.OutBounce);
     }
 
     public void AnimationDespawn()

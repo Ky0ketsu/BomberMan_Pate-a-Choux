@@ -64,8 +64,6 @@ public class Scr_Player_Bomb : MonoBehaviour
                         else if (blitzActive)
                         {
                             CreateBomb(bombBlitzPrefab);
-                            currentBomb.GetComponent<Scr_Bomb_Blitz>().owner = gameObject;
-                            currentBomb.GetComponent<Scr_Bomb_Blitz>().StartAim();
                             canBomb = false;
                         }
                         else CreateBomb(bombPrefab);
@@ -83,6 +81,8 @@ public class Scr_Player_Bomb : MonoBehaviour
         stockBomb--;
         if(currentBomb.GetComponent<Scr_Bomb>() != null) currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
         if(currentBomb.GetComponent<Scr_Bomb_Propagation>() != null) currentBomb.GetComponent<Scr_Bomb_Propagation>().range = range;
+        if(currentBomb.GetComponent<Scr_Bomb_Blitz>() != null) currentBomb.GetComponent<Scr_Bomb_Blitz>().owner = gameObject;
+        if(currentBomb.GetComponent<Scr_Bomb_Blitz>() != null) currentBomb.GetComponent<Scr_Bomb_Blitz>().StartAim();
         currentBomb = null;
     }
 

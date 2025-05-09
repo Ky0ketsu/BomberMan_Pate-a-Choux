@@ -179,6 +179,7 @@ public class MENU : MonoBehaviour
     public void LobbyMenu()
     {
         ShowNextMenu(lobbyMenu, 0.5f, 0, 0.5f);
+        lobbyMenu.GetComponent<Scr_Menu_Lobby_PrintScore>().PrintScore();
         EVENTS.InvokeLobby();
     }
 
