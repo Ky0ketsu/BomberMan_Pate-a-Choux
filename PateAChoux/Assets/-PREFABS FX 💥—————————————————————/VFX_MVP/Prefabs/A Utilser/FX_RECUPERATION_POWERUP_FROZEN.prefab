@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3376354302481916156
+--- !u!1001 &5044364006821066996
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -58,10 +58,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2108480646099358825, guid: 4d8fd6cecf63f654095c02c074232db2,
+        type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 66dbf4d3e44e3f34797d7eb1faff9b6f, type: 3}
+    - target: {fileID: 2108480646099358825, guid: 4d8fd6cecf63f654095c02c074232db2,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 66dbf4d3e44e3f34797d7eb1faff9b6f, type: 3}
     - target: {fileID: 8816474758065035005, guid: 4d8fd6cecf63f654095c02c074232db2,
         type: 3}
       propertyPath: m_Name
-      value: FX_TRAIL_CHARACTER
+      value: FX_RECUPERATION_POWERUP_FROZEN
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
