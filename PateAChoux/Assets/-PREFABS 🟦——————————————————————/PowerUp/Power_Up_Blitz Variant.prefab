@@ -359,5 +359,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3909b3b3c500ede4c8c42e3e2e8af2d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particulePrefab: {fileID: 0}
-  particuleParent: {fileID: 0}
+  timeEffect: 0
