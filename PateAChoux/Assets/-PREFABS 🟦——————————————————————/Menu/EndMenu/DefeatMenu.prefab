@@ -33,6 +33,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 3546623556357934487, guid: a903e18420b22f94fbaf52f84e8138bf,
+        type: 3}
+      propertyPath: m_text
+      value: Menu Principal
+      objectReference: {fileID: 0}
     - target: {fileID: 4267728678580102768, guid: a903e18420b22f94fbaf52f84e8138bf,
         type: 3}
       propertyPath: m_Pivot.x
@@ -137,6 +142,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452098621795964819, guid: a903e18420b22f94fbaf52f84e8138bf,
+        type: 3}
+      propertyPath: m_Name
+      value: Menu Principal Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 8956322603511694273, guid: a903e18420b22f94fbaf52f84e8138bf,
         type: 3}
