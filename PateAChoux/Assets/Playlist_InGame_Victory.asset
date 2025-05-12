@@ -21,4 +21,4 @@ MonoBehaviour:
     tracks:
     - clipTitle: Msc_Fin
       clip: {fileID: 8300000, guid: 9f4ca63ae1eec69439ff3cfa0a54e16e, type: 3}
-      volume: 1
+      volume: 0.5

@@ -4,30 +4,16 @@ using UnityEngine;
 
 public class Scr_PowerUp_Blitz : MonoBehaviour
 {
-    public GameObject particulePrefab;
-    public Transform particuleParent;
+    [SerializeField] private float timeEffect;
 
-    private void Start()
-    {
-        particuleParent = GameObject.Find("ParticuleParent").transform;   
-    }
 
-    public void OnTriggerEnter(Collider other)
+    private bool effectUse = false;
+    private void Update()
     {
-        if(other.GetComponentInParent<PlayerMove>())
+        if (!effectUse && GetComponent<Scr_PowerUp_Default>().player != null)
         {
-            GameObject currentParticule = Instantiate(particulePrefab, particuleParent);
-            currentParticule.transform.position = transform.position;
-
-            other.GetComponentInParent<Scr_Player_Bomb>().nextShootIsSpecial = true;
-            other.GetComponentInParent<Scr_Player_Bomb>().blitzType = true;
-
-            Delete();
+            GetComponent<Scr_PowerUp_Default>().player.GetComponent<Scr_Player_Bomb>().blitzActive = true;
+            effectUse = true;
         }
-    }
-
-    private void Delete()
-    {
-        Destroy(gameObject);
     }
 }

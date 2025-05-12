@@ -15,7 +15,10 @@ public class PlayerMove : MonoBehaviour
     CharacterController character => GetComponent<CharacterController>();
     PlayerLook lookScript => GetComponent<PlayerLook>();
     Player player; // Rewired plugin
+    [HideInInspector] public int speedUp = 0;
 
+    [SerializeField] private GameObject[] animationSprite = new GameObject[4];
+    [HideInInspector] public bool chouxBouleToutActive;
 
     void Awake()
     {
@@ -33,6 +36,14 @@ public class PlayerMove : MonoBehaviour
     {
         player = ReInput.players.GetPlayer(playerID);
         if (GAME.MANAGER.CurrentState==State.gameplay) EnableMoveSet();
+
+        for (int i = 0; i < animationSprite.Length; i++)
+        {
+            if(i != playerID) transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(i).gameObject.SetActive(false);
+            else transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(i).gameObject.SetActive(true);
+
+            animationSprite[i] = transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(playerID).GetChild(i).gameObject;
+        }
     }
 
     void EnableMoveSet()
@@ -52,6 +63,7 @@ public class PlayerMove : MonoBehaviour
         HorizontalMovement();
         VerticalMovement();
         ApplyMovement();
+        CheckAnimation();
     }
 
     void GetInputs()
@@ -59,6 +71,54 @@ public class PlayerMove : MonoBehaviour
         inputs.x = player.GetAxis("MoveHorizontal");
         inputs.y = player.GetAxis("MoveVertical");
         if (inputs.sqrMagnitude>1f) inputs.Normalize(); // avoir diagonals bigger than 1 (pythagoras)
+    }
+
+    private GameObject currentAnim;
+
+    void CheckAnimation()
+    {
+        float currentDirX = inputs.x;
+        float currentDirY = inputs.y;
+        
+
+        if(currentDirX < 0) currentDirX = -currentDirX;  
+        if(currentDirY < 0) currentDirY = -currentDirY;
+
+        if (currentDirX < currentDirY)
+        {
+            if (inputs.y < 0) ApplyAnimation(3);
+            else ApplyAnimation(1);
+        }
+        else if (currentDirY < currentDirX)
+        {
+            if (inputs.x < 0) ApplyAnimation(2);
+            else ApplyAnimation(0);
+        }
+        else ApplyAnimation(1);
+
+
+    }
+
+    private void ApplyAnimation(int animationID)
+    {
+        for (int i = 0; i < animationSprite.Length; i++)
+        {
+            if(i != animationID)
+            {
+                animationSprite[i].SetActive(false);
+            }
+            else
+            {
+                animationSprite[i].SetActive(true);
+            }
+        }
+    }
+
+    private float slowValue = 1;
+    public void SetSpeed(bool slow)
+    {
+        if (slow == true) slowValue = 0.6f;
+        else slowValue = 1;
     }
 
     void VerticalMovement()
@@ -69,8 +129,8 @@ public class PlayerMove : MonoBehaviour
     void HorizontalMovement()
     {
         GetInputs();
-        movement.x = CanRun ? inputs.x * maxSpeed : 0;
-        movement.z = CanRun ? inputs.y * maxSpeed : 0;
+        movement.x = CanRun ? inputs.x * ((maxSpeed + (1 * speedUp)) * slowValue) : 0;
+        movement.z = CanRun ? inputs.y * ((maxSpeed + (1 * speedUp)) * slowValue) : 0;
     }
 
     void ApplyMovement()

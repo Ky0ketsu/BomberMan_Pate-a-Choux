@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4788997355121572252}
   - component: {fileID: 415257569539209928}
   - component: {fileID: 1033127879628896711}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   range: 3
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32768
   propagation: {fileID: 4749410917353711763, guid: d91eb81d035e63c429c95865adf1491e,
     type: 3}
 --- !u!114 &1033127879628896711
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 2106872432659094911}
   - component: {fileID: 3484696364675212788}
   - component: {fileID: 8335599858552277575}
-  m_Layer: 20
+  m_Layer: 15
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8624797137781918065}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3921109020594181659}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 5671944263534114551}
   - component: {fileID: 3809356060151529444}
   - component: {fileID: 9108020754169761705}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8815572672430434247}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Propagation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,6 +412,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6254576130858204229, guid: 33c6735417120184d9d186e68c2e74ce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: -5837281319386787164, guid: 33c6735417120184d9d186e68c2e74ce,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -421,6 +426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -3405854752569977387, guid: 33c6735417120184d9d186e68c2e74ce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -2049737453377104652, guid: 33c6735417120184d9d186e68c2e74ce,
         type: 3}
@@ -432,10 +442,40 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.041704465
       objectReference: {fileID: 0}
+    - target: {fileID: -796405223544375651, guid: 33c6735417120184d9d186e68c2e74ce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -784650179717640560, guid: 33c6735417120184d9d186e68c2e74ce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 129404931406686489, guid: 33c6735417120184d9d186e68c2e74ce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 365620478866528466, guid: 33c6735417120184d9d186e68c2e74ce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 447454830454006307, guid: 33c6735417120184d9d186e68c2e74ce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 33c6735417120184d9d186e68c2e74ce,
         type: 3}
       propertyPath: m_Name
       value: 3D_Bomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33c6735417120184d9d186e68c2e74ce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3845409997556301914, guid: 33c6735417120184d9d186e68c2e74ce,
         type: 3}

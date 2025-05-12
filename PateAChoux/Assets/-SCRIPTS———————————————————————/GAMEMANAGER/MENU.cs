@@ -55,6 +55,7 @@ public class MENU : MonoBehaviour
         EVENTS.OnMenuExit += DisableUIInputs;
         EVENTS.OnGameResume += DisableUIInputs;
         EVENTS.OnVictory += VictoryMenu;
+        EVENTS.OnDefeat += DefeatMenu;
     }
 
     void OnDisable()
@@ -70,6 +71,7 @@ public class MENU : MonoBehaviour
         EVENTS.OnMenuExit -= DisableUIInputs;
         EVENTS.OnGameResume -= DisableUIInputs;
         EVENTS.OnVictory -= VictoryMenu;
+        EVENTS.OnDefeat -= DefeatMenu;
     }
 
     void Start()
@@ -191,6 +193,11 @@ public class MENU : MonoBehaviour
         victoryMenu.GetComponent<Scr_Menu_Victory>().Victory();
     }
 
+    public void DefeatMenu()
+    {
+        ShowNextMenu(defeatMenu, 0.5f, 0, 0.5f);
+    }
+
     //fin de mon code
 
     public void NewGame()
@@ -275,6 +282,7 @@ public class MENU : MonoBehaviour
     public void Back()
     {
         Debug.Log("BACK");
+        if (menuHistory[0] == victoryMenu || menuHistory[0] == defeatMenu) return;
         Unselect();
         if (GAME.MANAGER.CurrentState==State.paused)
         {

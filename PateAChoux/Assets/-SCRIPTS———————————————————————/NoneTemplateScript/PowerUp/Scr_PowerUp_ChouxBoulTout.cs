@@ -4,23 +4,16 @@ using UnityEngine;
 
 public class Scr_PowerUp_ChouxBoulTout : MonoBehaviour
 {
-    public GameObject particule;
-    private Transform parentParticule;
+    [SerializeField] private float timeEffect;
 
-    public float timeEffect;
-    private GameObject player;
 
-    public void OnTriggerEnter(Collider other)
+    private bool effectUse = false;
+    private void Update()
     {
-        parentParticule = GameObject.Find("ParticuleParent").transform;
-
-        if (other.GetComponentInParent<PlayerMove>())
+        if (!effectUse && GetComponent<Scr_PowerUp_Default>().player != null)
         {
-            GameObject currentParticule = Instantiate(particule, parentParticule);
-            currentParticule.transform.position = transform.position;
-
-            
-            player = other.gameObject;
+            GetComponent<Scr_PowerUp_Default>().player.GetComponent<PlayerMove>().chouxBouleToutActive = true;
+            effectUse = true;
             StartCoroutine(TimeEffect());
         }
     }
@@ -28,7 +21,6 @@ public class Scr_PowerUp_ChouxBoulTout : MonoBehaviour
     IEnumerator TimeEffect()
     {
         yield return new WaitForSeconds(timeEffect);
-        
-        Destroy(gameObject);
+        GetComponent<Scr_PowerUp_Default>().player.GetComponent<PlayerMove>().chouxBouleToutActive = false;
     }
 }

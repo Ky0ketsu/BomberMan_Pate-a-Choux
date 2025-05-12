@@ -3906,6 +3906,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7357383156959104938}
     m_Modifications:
+    - target: {fileID: 522259777005742045, guid: 9b10d2c8b099aae4e9ca15c5f0ea7e7c,
+        type: 3}
+      propertyPath: m_text
+      value: Menu Principal
+      objectReference: {fileID: 0}
     - target: {fileID: 823932606149077243, guid: 9b10d2c8b099aae4e9ca15c5f0ea7e7c,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -4041,6 +4046,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4849445783766711769, guid: 9b10d2c8b099aae4e9ca15c5f0ea7e7c,
+        type: 3}
+      propertyPath: m_Name
+      value: Menu Principal Button Graphics
+      objectReference: {fileID: 0}
     - target: {fileID: 5353772949923195275, guid: 9b10d2c8b099aae4e9ca15c5f0ea7e7c,
         type: 3}
       propertyPath: m_Name
@@ -4143,6 +4153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546623556357934487, guid: a903e18420b22f94fbaf52f84e8138bf,
+        type: 3}
+      propertyPath: m_text
+      value: Menu Principal
       objectReference: {fileID: 0}
     - target: {fileID: 4267728678580102768, guid: a903e18420b22f94fbaf52f84e8138bf,
         type: 3}
@@ -4258,6 +4273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: -13.371414
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452098621795964819, guid: a903e18420b22f94fbaf52f84e8138bf,
+        type: 3}
+      propertyPath: m_Name
+      value: Menu Principal Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 8956322603511694273, guid: a903e18420b22f94fbaf52f84e8138bf,
         type: 3}

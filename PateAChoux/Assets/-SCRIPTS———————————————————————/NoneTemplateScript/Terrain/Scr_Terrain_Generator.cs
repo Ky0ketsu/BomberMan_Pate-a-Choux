@@ -22,11 +22,14 @@ public class Scr_Terrain_Generator : MonoBehaviour
 
     public void GenerateTerrain()
     {
-        Debug.Log("Terrain");
-        if (terrainParent == null)
+        if (terrainParent != null)
         {
             GameObject currentTerrain = Instantiate(PresetList[Random.Range(0, PresetList.Length)],terrainParent);
             currentTerrain.transform.position = Vector3.zero + offset;
+        }
+        else
+        {
+            Debug.Log("Pas de Terrain");
         }
         
     }

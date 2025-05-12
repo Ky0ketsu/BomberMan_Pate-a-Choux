@@ -1,23 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Rewired;
 using UnityEngine;
 
 public class Scr_PowerUp_BombeUp : MonoBehaviour
 {
-    public GameObject particule;
-    private Transform parentParticule;
-
-    public void OnTriggerEnter(Collider other)
+    private bool effectUse = false;
+    private void Update()
     {
-        parentParticule = GameObject.Find("ParticuleParent").transform;
-
-        if(other.GetComponentInParent<PlayerMove>())
+        if(!effectUse && GetComponent<Scr_PowerUp_Default>().player != null)
         {
-            GameObject currentParticule = Instantiate(particule, parentParticule);
-            currentParticule.transform.position = transform.position;
-
-            other.GetComponentInParent<Scr_Player_Bomb>().stockBomb++;
-            Destroy(gameObject);
+            GetComponent<Scr_PowerUp_Default>().player.GetComponent<Scr_Player_Bomb>().stockBomb++;
+            effectUse = true;
         }
     }
 }

@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class Scr_Player_Bomb : MonoBehaviour
 {
     public GameObject bombPrefab, bombFrozenPrefab, bombCaramelPrefab, bombBlitzPrefab;
-    private GameObject CurrentBomb;
+    private GameObject currentBomb;
+    private Transform currentCase;
     public Transform bombParent;
     public LayerMask mask;
     public int range;
@@ -16,12 +17,7 @@ public class Scr_Player_Bomb : MonoBehaviour
 
     public int stockBomb;
 
-    public bool frozenActive;
-    public bool caramelActive;
-    private GameObject currentBomb;
-
-    public bool nextShootIsSpecial;
-    public bool blitzType;
+    public bool frozenActive, caramelActive, blitzActive;
 
     private bool canBomb;
 
@@ -54,56 +50,40 @@ public class Scr_Player_Bomb : MonoBehaviour
         if(canBomb)
         {
             playerID = transform.GetComponent<PlayerMove>().playerID;
-            if (ReInput.players.GetPlayer(playerID).GetButtonDown("Bomb"))
+            if (ReInput.players.GetPlayer(playerID).GetButtonDown("Bomb") && stockBomb > 0)
             {
                 if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2, transform.position.z), new Vector3(0, -1, 0), out RaycastHit hit, Mathf.Infinity, mask))
                 {
-                    Transform currentCase = hit.transform.GetChild(0);
+                    currentCase = hit.transform.GetComponentInParent<Dalle>().slotBomb;
                     Debug.Log(currentCase);
 
-                    if(stockBomb > 0)
+                    if (currentCase.childCount <= 0)
                     {
-                        if (!nextShootIsSpecial)
+                        if (frozenActive) CreateBomb(bombFrozenPrefab);
+                        else if (caramelActive) CreateBomb(bombCaramelPrefab);
+                        else if (blitzActive)
                         {
-                            if (currentCase.childCount <= 0)
-                            {
-                                if (frozenActive)
-                                {
-                                    currentBomb = Instantiate(bombFrozenPrefab, currentCase);
-                                }
-                                else
-                                if (caramelActive)
-                                {
-                                    currentBomb = Instantiate(bombCaramelPrefab, currentCase);
-                                }
-                                else
-                                {
-                                    currentBomb = Instantiate(bombPrefab, currentCase);
-                                }
-
-
-                            }
+                            CreateBomb(bombBlitzPrefab);
+                            currentBomb.GetComponent<Scr_Bomb_Blitz>().owner = gameObject;
+                            currentBomb.GetComponent<Scr_Bomb_Blitz>().StartAim();
+                            canBomb = false;
                         }
-                        else
-                        {
-                            if (blitzType)
-                            {
-                                currentBomb = Instantiate(bombBlitzPrefab, currentCase);
-                                currentBomb.GetComponent<Scr_Bomb_Blitz>().owner = gameObject;
-                            }
-                        }
-
-                        currentBomb.transform.position = currentCase.position + offset;
-                        stockBomb--;
-                        currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
-                        if (currentBomb.GetComponent<Scr_Bomb_Propagation>() != null) currentBomb.GetComponent<Scr_Bomb_Propagation>().range = range;
-                        currentBomb = null;
+                        else CreateBomb(bombPrefab);
                     }
                 }
             }
         }
     }
     
-    
+    private void CreateBomb(GameObject bomb)
+    {
+        currentBomb = Instantiate (bomb, currentCase);
+
+        currentBomb.transform.position = currentCase.position + offset;
+        stockBomb--;
+        if(currentBomb.GetComponent<Scr_Bomb>() != null) currentBomb.GetComponent<Scr_Bomb>().owner = gameObject;
+        if(currentBomb.GetComponent<Scr_Bomb_Propagation>() != null) currentBomb.GetComponent<Scr_Bomb_Propagation>().range = range;
+        currentBomb = null;
+    }
 
 }

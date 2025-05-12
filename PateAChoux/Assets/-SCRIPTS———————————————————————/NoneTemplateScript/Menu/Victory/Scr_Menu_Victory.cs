@@ -24,6 +24,5 @@ public class Scr_Menu_Victory : MonoBehaviour
     private void PrintWinner(int ID)
     {
         player.GetComponent<Image>().sprite = players[ID];
-        Debug.Log("sssssssssssss");
     }
 }

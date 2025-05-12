@@ -6,11 +6,14 @@ public class Scr_Block_Falling : MonoBehaviour
 {
     public float time;
     public GameObject colliders;
+    public GameObject graphics;
     public GameObject block;
     bool fallen = false;
 
     public void Awake()
     {
+        colliders.SetActive(true);
+        colliders.transform.localScale = Vector3.zero;
         block.SetActive(false);
     }
 
@@ -18,22 +21,26 @@ public class Scr_Block_Falling : MonoBehaviour
     {
         if (fallen) return;
         fallen = true;
-        Debug.Log("coucou");
         block.SetActive(true);
-        block.transform.DOMove(new Vector3(transform.position.x, 0, transform.position.z), time).SetEase(Ease.InExpo).OnComplete(DelayToDisable);
+        graphics.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.InCubic);
+        graphics.transform.DORotate(new Vector3(0, block.transform.localEulerAngles.y + 90, 0), 0.2f).SetEase(Ease.InCubic);
+        block.transform.DOMove(block.transform.position + Vector3.up * 2, 0.2f).SetEase(Ease.InOutExpo).OnComplete(FallBlockStep2);
+    }
+
+    private void FallBlockStep2()
+    {
+        block.transform.DOMove(new Vector3(transform.position.x, 0, transform.position.z), 0.3f).SetEase(Ease.InExpo).OnComplete(DelayToDisable);
+        graphics.transform.DORotate(new Vector3(0, block.transform.localEulerAngles.y + 90, 0), 0.2f).SetEase(Ease.InCubic);
     }
 
     private void DelayToDisable()
     {
-       //colliders.SetActive(false);
+        StartCoroutine(DelCol());
     }
 
-    public void OnTriggerEnter(Collider other)
+    IEnumerator DelCol()
     {
-        if (other.GetComponent<PlayerMove>())
-        {
-            other.GetComponent<Scr_Player_Death>().Death();
-            other.GetComponent<Scr_Player_Death>().FallingDeath();
-        }
+        yield return new WaitForSeconds(0.1f);
+        colliders.SetActive(false);
     }
 }

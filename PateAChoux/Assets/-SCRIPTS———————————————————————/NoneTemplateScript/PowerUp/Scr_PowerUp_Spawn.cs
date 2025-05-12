@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class Scr_PowerUp_Spawn : MonoBehaviour
 {
-    public Vector3 offset;
+    [SerializeField]private Vector3 offset;
     public GameObject[] powerUp;
+
+    [SerializeField] int probability;
     
     
     public Transform powerUpParent;
 
     public void SpawnPowerUp()
     {
+        powerUpParent = GameObject.Find("PowerUpParent").transform;
+
         int prob = Random.Range(0, 100);
-        if (prob <= 20)
+        if (prob <= probability)
         {
-            GameObject currentPowerUp = Instantiate(powerUp[Random.Range(0, powerUp.Length)], powerUpParent);
-            currentPowerUp.transform.position = transform.position + offset;
+            Instantiate(powerUp[Random.Range(0, powerUp.Length)],transform.position + offset,transform.rotation, powerUpParent);
         }   
     }
 }
