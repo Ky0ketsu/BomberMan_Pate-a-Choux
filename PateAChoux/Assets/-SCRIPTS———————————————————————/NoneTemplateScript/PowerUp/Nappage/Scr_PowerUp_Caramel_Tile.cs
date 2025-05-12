@@ -13,4 +13,14 @@ public class Scr_PowerUp_Caramel_Tile : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.GetComponentInParent<PlayerMove>() != null) other.GetComponentInParent<PlayerMove>().SetSpeed(true);
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if(other.GetComponentInParent<PlayerMove>() != null) other.GetComponentInChildren<PlayerMove>().SetSpeed(false);
+    }
 }

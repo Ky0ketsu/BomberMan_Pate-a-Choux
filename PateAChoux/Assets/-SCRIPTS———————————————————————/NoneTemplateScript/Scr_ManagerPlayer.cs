@@ -18,9 +18,12 @@ public class Scr_ManagerPlayer : MonoBehaviour
 
     [SerializeField] public int[] win = new int[4];
 
+    public static Scr_ManagerPlayer acces;
 
     void Awake()
     {
+        acces = this;
+
         EVENTS.OnLobby += EnablePlayerAdd;
         EVENTS.OnLobbyExit += DisablePlayerAdd;
         EVENTS.OnGameStart += Spawn;
@@ -82,6 +85,13 @@ public class Scr_ManagerPlayer : MonoBehaviour
                 return;
             }
         }
+        /*
+        if(myPlayer == null)
+        {
+            myPlayer.isPlaying=false;
+            players[player] = false;
+            playerSlotMenu.transform.GetChild(player).GetComponent<Scr_Menu_Lobby_PlayerAnimation>().AnimationDespawn();
+        }*/
     }
 
     private void Spawn()
