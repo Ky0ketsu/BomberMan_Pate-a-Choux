@@ -10,6 +10,16 @@ AudioContainerElement:
   m_AudioClip: {fileID: 8300000, guid: 6e489fbac8ba0d747b3e48390183467e, type: 3}
   m_Volume: 0
   m_Enabled: 1
+--- !u!1233149941 &-5355700297026985989
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_Bloc_Destruction-004_{-5355700297026985989}
+  m_AudioClip: {fileID: 8300000, guid: df57cd8fb5a5fc747a1019895608805d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
 --- !u!1233149941 &-1283044968943994877
 AudioContainerElement:
   m_ObjectHideFlags: 1
@@ -39,6 +49,8 @@ AudioRandomContainer:
   - {fileID: 6458037522508247173}
   - {fileID: -6758673100504546702}
   - {fileID: -1283044968943994877}
+  - {fileID: -5355700297026985989}
+  - {fileID: 9114202430124567238}
   m_AvoidRepeatingLast: 0
   m_PlaybackMode: 1
   m_TriggerMode: 1
@@ -56,5 +68,15 @@ AudioContainerElement:
   m_PrefabAsset: {fileID: 0}
   m_Name: SFX_Bloc_Destruction-001_{6458037522508247173}
   m_AudioClip: {fileID: 8300000, guid: c40fccf3d764fa5409307bad7d17f4ec, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &9114202430124567238
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_Bloc_Destruction-005_{9114202430124567238}
+  m_AudioClip: {fileID: 8300000, guid: 763978f7bae1b0d46904f39ced8cda70, type: 3}
   m_Volume: 0
   m_Enabled: 1
