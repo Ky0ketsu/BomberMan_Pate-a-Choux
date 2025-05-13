@@ -49,6 +49,6 @@ MonoBehaviour:
   - {fileID: 659002466733301183, guid: 3fb167aef59866a46961843f5ba63306, type: 3}
   - {fileID: 659002466733301183, guid: 97e9780ddf8c9564da28d871c7ee4ae0, type: 3}
   - {fileID: 659002466733301183, guid: 0ab6e8ddca73e604790036a56c33197e, type: 3}
-  duration: 10
+  duration: 3
   currentSize: 0
   parent: {fileID: 0}

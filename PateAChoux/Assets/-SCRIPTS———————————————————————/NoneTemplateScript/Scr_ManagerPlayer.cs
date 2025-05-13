@@ -85,13 +85,13 @@ public class Scr_ManagerPlayer : MonoBehaviour
                 return;
             }
         }
-        /*
+
         if(myPlayer == null)
         {
             myPlayer.isPlaying=false;
             players[player] = false;
             playerSlotMenu.transform.GetChild(player).GetComponent<Scr_Menu_Lobby_PlayerAnimation>().AnimationDespawn();
-        }*/
+        }
     }
 
     private void Spawn()

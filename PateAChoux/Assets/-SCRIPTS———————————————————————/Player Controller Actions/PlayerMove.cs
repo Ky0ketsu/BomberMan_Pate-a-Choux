@@ -99,8 +99,15 @@ public class PlayerMove : MonoBehaviour
 
     }
 
+    [HideInInspector] public Vector3[] dir = new Vector3[4];
+
     private void ApplyAnimation(int animationID)
     {
+        for (int y = 0; y < dir.Length; y++)
+        {
+            
+        }
+
         for (int i = 0; i < animationSprite.Length; i++)
         {
             if(i != animationID)

@@ -203,8 +203,22 @@ public class MENU : MonoBehaviour
 
     public void NewGame()
     {
-        EVENTS.InvokeLobbyExit();
-        StartCoroutine(NewGameRoutine());
+        float currentPlayer = 0;
+        for (int i = 0; i < Scr_ManagerPlayer.acces.players.Length; i++)
+        {
+            if (Scr_ManagerPlayer.acces.players[i] == true) currentPlayer++;
+        }
+
+        if (currentPlayer <= 1)
+        {
+            Debug.Log("IL FAUT PLUS DE JOUEUR");
+        }
+        else
+        {
+            EVENTS.InvokeLobbyExit();
+            StartCoroutine(NewGameRoutine());
+        }
+        
     }
 
     IEnumerator NewGameRoutine()

@@ -13,6 +13,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Power_Up_SpeedUp Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4522522018809846807, guid: 39c88d0fd367a5449b2dae3fb987c3cc,
+        type: 3}
+      propertyPath: particule
+      value: 
+      objectReference: {fileID: 8816474758065035005, guid: 528e593457f79ac4db1c7b1d70358982,
+        type: 3}
     - target: {fileID: 7868230112940668474, guid: 39c88d0fd367a5449b2dae3fb987c3cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -94,7 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2989642d33c514b9d607f2f2296855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 0}
 --- !u!4 &6292860981870118739 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5374332219512483209, guid: 39c88d0fd367a5449b2dae3fb987c3cc,

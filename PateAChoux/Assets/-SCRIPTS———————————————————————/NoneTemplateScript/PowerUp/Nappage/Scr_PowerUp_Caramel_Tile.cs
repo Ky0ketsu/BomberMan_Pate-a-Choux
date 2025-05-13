@@ -21,6 +21,6 @@ public class Scr_PowerUp_Caramel_Tile : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if(other.GetComponentInParent<PlayerMove>() != null) other.GetComponentInChildren<PlayerMove>().SetSpeed(false);
+        if(other.GetComponentInParent<PlayerMove>() != null) other.GetComponentInParent<PlayerMove>().SetSpeed(false);
     }
 }

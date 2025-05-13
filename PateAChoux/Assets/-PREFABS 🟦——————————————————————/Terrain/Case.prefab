@@ -282,6 +282,8 @@ MonoBehaviour:
   colliders: {fileID: 833203636418181105}
   graphics: {fileID: 4565493595524020732}
   block: {fileID: 7214748646456728622}
+  particule: {fileID: 8816474758065035005, guid: 7ad396e20c10a1c4682ad9c18860baa4,
+    type: 3}
 --- !u!1 &7009225581780990775
 GameObject:
   m_ObjectHideFlags: 0

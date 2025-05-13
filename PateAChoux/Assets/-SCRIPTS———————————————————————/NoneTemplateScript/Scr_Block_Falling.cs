@@ -10,10 +10,11 @@ public class Scr_Block_Falling : MonoBehaviour
     public GameObject block;
     bool fallen = false;
 
+    [SerializeField] private GameObject particule;
+
     public void Awake()
     {
         colliders.SetActive(true);
-        colliders.transform.localScale = Vector3.zero;
         block.SetActive(false);
     }
 
@@ -35,12 +36,13 @@ public class Scr_Block_Falling : MonoBehaviour
 
     private void DelayToDisable()
     {
+        Instantiate(particule, block.transform.position, transform.rotation, GameObject.Find("ParticuleParent").transform);
         StartCoroutine(DelCol());
     }
 
     IEnumerator DelCol()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         colliders.SetActive(false);
     }
 }

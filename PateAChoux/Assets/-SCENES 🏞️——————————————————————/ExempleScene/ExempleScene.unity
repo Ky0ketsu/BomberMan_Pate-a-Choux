@@ -382,7 +382,7 @@ PrefabInstance:
     - target: {fileID: 1621383267718823314, guid: dd713a5c71757c64db730ee3bcd60ab9,
         type: 3}
       propertyPath: m_Shadows.m_Strength
-      value: 0.685
+      value: 0.701
       objectReference: {fileID: 0}
     - target: {fileID: 7178967240146030932, guid: dd713a5c71757c64db730ee3bcd60ab9,
         type: 3}
@@ -1338,7 +1338,6 @@ PrefabInstance:
     - {fileID: 23772609469541669, guid: 23d56e67a282d5541830ce5a2583ead6, type: 3}
     - {fileID: 8463549264437851338, guid: 23d56e67a282d5541830ce5a2583ead6, type: 3}
     - {fileID: 4301273661557858241, guid: 23d56e67a282d5541830ce5a2583ead6, type: 3}
-    - {fileID: 8797318676532964443, guid: 23d56e67a282d5541830ce5a2583ead6, type: 3}
     - {fileID: 6741331777202040148, guid: 23d56e67a282d5541830ce5a2583ead6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

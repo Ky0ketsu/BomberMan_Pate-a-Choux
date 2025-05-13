@@ -19,7 +19,7 @@ public class Scr_Player_Bomb : MonoBehaviour
 
     public bool frozenActive, caramelActive, blitzActive;
 
-    private bool canBomb;
+    [HideInInspector]public bool canBomb;
 
     [SerializeField]private int playerID;
 

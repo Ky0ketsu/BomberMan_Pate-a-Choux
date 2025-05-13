@@ -11,6 +11,7 @@ public class Scr_Bomb_Propagation : MonoBehaviour
     private bool canLeft, canRight, canForward, canBack;
 
     public GameObject propagation;
+    [SerializeField] private GameObject particule;
 
     private void Start()
     {
@@ -20,6 +21,8 @@ public class Scr_Bomb_Propagation : MonoBehaviour
     public void Explosion()
     {
         Instantiate(propagation, transform.position + Vector3.up, transform.rotation, transform);
+        Instantiate(particule, transform.position + Vector3.up, transform.rotation, GameObject.Find("ParticuleParent").transform);
+
         for (int i = 1; i < range+1; i++)
         {
             if(canLeft) Propagation(Vector3.left, i);
@@ -43,6 +46,7 @@ public class Scr_Bomb_Propagation : MonoBehaviour
                 currentBackHit = Instantiate(propagation, transform);
                 currentBackHit.transform.localPosition = Vector3.zero;
                 currentBackHit.transform.position += dir * 2 * distance;
+                Instantiate(particule, currentBackHit.transform.position, transform.rotation, GameObject.Find("ParticuleParent").transform);
             }
 
             if (currentBackHit.GetComponentInParent<Scr_Bomb>() != null)

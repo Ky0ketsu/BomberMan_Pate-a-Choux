@@ -9,6 +9,7 @@ public class Scr_Player_Death : MonoBehaviour
     public Transform colliders;
     static int playerAlive;
     bool alive = true;
+    [SerializeField] private GameObject particule;
 
     private void Awake()
     {
@@ -43,8 +44,10 @@ public class Scr_Player_Death : MonoBehaviour
         Debug.Log(gameObject.name + " est mort");
         playerAlive--;
         transform.GetComponent<PlayerMove>().CanRun = false;
+        transform.GetComponent<Scr_Player_Bomb>().canBomb = false;
         colliders.gameObject.SetActive(false);
         //GetComponent<CharacterController>().enabled = false;
         transform.parent = GameObject.Find("UnActivePlayerParent").transform;
+        Instantiate(particule, transform.position, transform.rotation, GameObject.Find("ParticulParent").transform);
     }
 }
