@@ -21,6 +21,7 @@ public class Scr_Terrain_Placement_Animation : MonoBehaviour
         yield return new WaitForSeconds(timerBeforePlacement);
         graphics.DOKill();
         graphics.DOScale(Vector3.one, 2).SetEase(Ease.OutBounce).From(0);
+        BlocApparitionAudioSource.volume = 0.5f;
         BlocApparitionAudioSource.Play();
     }
 

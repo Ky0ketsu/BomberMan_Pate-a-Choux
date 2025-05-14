@@ -48,11 +48,11 @@ AudioRandomContainer:
   m_PrefabAsset: {fileID: 0}
   m_Name: Random_Bloc_Spawn
   m_Volume: 0
-  m_Pitch: 0
+  m_Pitch: -200
   m_AutomaticTriggerTime: 0
   m_LoopCount: 1
   m_VolumeRandomizationRange: {x: 0, y: 0}
-  m_PitchRandomizationRange: {x: -200, y: 200}
+  m_PitchRandomizationRange: {x: -600, y: 0}
   m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
   m_LoopCountRandomizationRange: {x: 0, y: 0}
   m_Elements:
