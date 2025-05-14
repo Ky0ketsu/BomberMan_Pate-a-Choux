@@ -6,7 +6,8 @@ using UnityEngine;
 public class Scr_Terrain_Placement_Animation : MonoBehaviour
 {
     [SerializeField] private float timerBeforePlacement;
-    Transform graphics => transform.Find("Graphics");
+    Transform graphics => transform.Find("Graphics"); 
+    [SerializeField] private AudioSource BlocApparitionAudioSource;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class Scr_Terrain_Placement_Animation : MonoBehaviour
         yield return new WaitForSeconds(timerBeforePlacement);
         graphics.DOKill();
         graphics.DOScale(Vector3.one, 2).SetEase(Ease.OutBounce).From(0);
+        BlocApparitionAudioSource.Play();
     }
 
 

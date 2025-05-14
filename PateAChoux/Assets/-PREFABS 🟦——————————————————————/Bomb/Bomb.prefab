@@ -103,7 +103,8 @@ MonoBehaviour:
     m_Bits: 32768
   propagation: {fileID: 4749410917353711763, guid: d91eb81d035e63c429c95865adf1491e,
     type: 3}
-  particule: {fileID: 0}
+  particule: {fileID: 8816474758065035005, guid: 7ad396e20c10a1c4682ad9c18860baa4,
+    type: 3}
 --- !u!114 &1033127879628896711
 MonoBehaviour:
   m_ObjectHideFlags: 0

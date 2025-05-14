@@ -15,13 +15,7 @@ public class Scr_Bomb_Frozen : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine(DelayBeforeCanPush(2));
-    }
-
-    IEnumerator DelayBeforeCanPush(float time)
-    {
-        yield return new WaitForSeconds(time);
-        canPush = true;
+        //StartCoroutine(DelayBeforeCanPush(2));
     }
 
     public void OnTriggerEnter(Collider other)
@@ -66,7 +60,7 @@ public class Scr_Bomb_Frozen : MonoBehaviour
         {
             transform.DOMove(transform.position + dir * pushForce, 1.5f).SetEase(Ease.OutExpo);
             canPush = false;
-            StartCoroutine(DelayBeforeCanPush(1.5f));
+            //StartCoroutine(DelayBeforeCanPush(1.5f));
         }
 
     }
