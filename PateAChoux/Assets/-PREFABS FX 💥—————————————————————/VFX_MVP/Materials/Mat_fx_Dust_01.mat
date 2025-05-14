@@ -34,7 +34,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_fx_Dust_01
-  m_Shader: {fileID: -6465566751694194690, guid: 754ef2851bbe1954bac89e35a01967f2, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 754ef2851bbe1954bac89e35a01967f2,
+    type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -126,6 +127,7 @@ Material:
     - _BUILTIN_ZWriteControl: 0
     - _Blend: 0
     - _BlendMode: 0
+    - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
     - _CastShadows: 0
     - _ConservativeDepthOffsetEnable: 0
