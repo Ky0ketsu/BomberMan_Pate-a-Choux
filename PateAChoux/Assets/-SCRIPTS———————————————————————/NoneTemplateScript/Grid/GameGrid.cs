@@ -8,12 +8,15 @@ public class GameGrid : MonoBehaviour
     public static GameGrid access;
     [SerializeField] Transform grid;
     [HideInInspector]public GridRow[] gridRows;
+    AudioSource MortSubiteAudioSource;
+
 
     void Start()
     {
         EVENTS.OnMortSubite += StartMortSubite;
         GenerateGrid();
         access = this;
+        MortSubiteAudioSource= GetComponent<AudioSource>();
     }
 
     void OnDestroy()
@@ -57,6 +60,9 @@ public class GameGrid : MonoBehaviour
         while (currentBlock.suddenDeathHappened==false)
         {
             currentBlock.MortSubite();
+            //C'est ici qu'on jouera le son
+            MortSubiteAudioSource.Play();
+
 
             float chrono = delayBetweenBlock;
             while (chrono > 0)
