@@ -1,31 +1,41 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
-using DG.Tweening;
-using Unity.VisualScripting;
 
 public class Scr_MortSubite : MonoBehaviour
 {
     [SerializeField] float timer;
+    float timerMax;
+    bool mortSubiteDemarree = false;
 
     private void Awake()
     {
-        EVENTS.OnGameStart += StartTimer;
+        timerMax = timer;
+        EVENTS.OnGameOver += ResetTimer;
     }
     private void OnDestroy()
     {
-        EVENTS.OnGameStart -= StartTimer;
+        EVENTS.OnGameOver -= ResetTimer;
     }
 
-    public void StartTimer()
+    void ResetTimer()
     {
-        Invoke("StartMortSubite", timer);
+        timer = timerMax;
+    }
+
+
+    void Update()
+    {
+        if (GAME.MANAGER.CurrentState==State.gameplay)
+        {
+            timer -= Time.deltaTime;
+            if (timer<0 && mortSubiteDemarree==false)StartMortSubite();
+        }
     }
 
     public void StartMortSubite()
     {
+        mortSubiteDemarree = true;
         EVENTS.InvokeMortSubite();
     }
 
-}
+} // FIN DU SCRIPT
