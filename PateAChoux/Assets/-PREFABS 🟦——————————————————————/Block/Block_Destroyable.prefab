@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerBeforePlacement: 0
+  BlocApparitionAudioSource: {fileID: 8364355005118733439}
 --- !u!114 &1861456944977500723
 MonoBehaviour:
   m_ObjectHideFlags: 0

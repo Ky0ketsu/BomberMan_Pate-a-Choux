@@ -103,11 +103,6 @@ public class PlayerMove : MonoBehaviour
 
     private void ApplyAnimation(int animationID)
     {
-        for (int y = 0; y < dir.Length; y++)
-        {
-            
-        }
-
         for (int i = 0; i < animationSprite.Length; i++)
         {
             if(i != animationID)
@@ -119,6 +114,11 @@ public class PlayerMove : MonoBehaviour
                 animationSprite[i].SetActive(true);
             }
         }
+    }
+
+    private  void SetCurrentDir(int currentDir)
+    {
+
     }
 
     private float slowValue = 1;

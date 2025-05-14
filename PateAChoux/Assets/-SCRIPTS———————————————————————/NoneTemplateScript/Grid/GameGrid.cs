@@ -61,6 +61,7 @@ public class GameGrid : MonoBehaviour
         {
             currentBlock.MortSubite();
             //C'est ici qu'on jouera le son
+            MortSubiteAudioSource.volume = 0.5f;
             MortSubiteAudioSource.Play();
 
 
