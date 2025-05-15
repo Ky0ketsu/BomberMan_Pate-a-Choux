@@ -3,7 +3,27 @@ guid: d4079aa9591562442bb775cb4a6b71d9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CARAMEL
+    second: {fileID: 2100000, guid: 19c5bd7b034916c4e8ef45494171cced, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CARAMEL.001
+    second: {fileID: 2100000, guid: 19c5bd7b034916c4e8ef45494171cced, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: COTE
+    second: {fileID: 2100000, guid: 54dd980443b2b5a49a123affa52070fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: COTE.001
+    second: {fileID: 2100000, guid: 54dd980443b2b5a49a123affa52070fe, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
