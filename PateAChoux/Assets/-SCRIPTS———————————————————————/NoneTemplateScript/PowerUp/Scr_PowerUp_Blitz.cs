@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Scr_PowerUp_Blitz : MonoBehaviour
 {
-    [SerializeField] private float timeEffect;
-
 
     private bool effectUse = false;
     private void Update()
