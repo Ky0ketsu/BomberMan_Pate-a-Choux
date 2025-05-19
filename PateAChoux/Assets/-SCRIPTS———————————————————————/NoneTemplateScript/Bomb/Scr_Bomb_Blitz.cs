@@ -2,6 +2,7 @@ using DG.Tweening;
 using Rewired;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Windows;
 
@@ -10,7 +11,7 @@ public class Scr_Bomb_Blitz : MonoBehaviour
     public GameObject owner;
 
     public GameObject visualizeZonePrefab;
-    public GameObject ExplosionZonePrefab;
+    public GameObject explosionZonePrefab;
 
     private GameObject currentVisualizeZone;
     private GameObject currentExplosionZone;
@@ -22,11 +23,13 @@ public class Scr_Bomb_Blitz : MonoBehaviour
     private Player player;
     private bool canShoot;
 
+    [SerializeField] private GameObject[] particule = new GameObject[3];
+    [SerializeField] private GameObject missile;
+
     public void StartAim()
     {
         owner.GetComponent<PlayerMove>().CanRun = false;
-        currentVisualizeZone = Instantiate(visualizeZonePrefab, transform);
-        currentZonePosition = transform.position;
+        currentVisualizeZone = Instantiate(visualizeZonePrefab, transform.position, transform.rotation, transform);
         canAim = true;
         canShoot = false;
         player = ReInput.players.GetPlayer(owner.GetComponent<PlayerMove>().playerID);
@@ -79,13 +82,13 @@ public class Scr_Bomb_Blitz : MonoBehaviour
 
         if(player.GetButtonDown("Bomb") && canShoot)
         {
-            Debug.Log("Blitz");
+            ShootStep1();
         }
     }
 
     IEnumerator DelayBetweenAim()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         canAim = true;
     }
     
@@ -95,11 +98,25 @@ public class Scr_Bomb_Blitz : MonoBehaviour
         canShoot = true;
     }
 
-    
+    [HideInInspector] private GameObject currentMissile;
 
-    public void Fire()
+    private void ShootStep1()
     {
-        currentExplosionZone = Instantiate(ExplosionZonePrefab, transform);
-        currentExplosionZone.transform.position = currentZonePosition;
+        currentMissile = Instantiate(missile, transform.position, transform.rotation, transform);
+        GameObject currentParticule = Instantiate(particule[0], transform.position, transform.rotation, currentMissile.transform);
+        currentMissile.transform.DOMoveY(30, 2f).SetEase(Ease.OutCubic).OnComplete(ShootStep2);
+
+        Invoke("ShootStep2", 3f);
+    }
+
+    private void ShootStep2()
+    {
+        currentMissile.transform.position = new Vector3(currentZonePosition.x, currentMissile.transform.position.z, currentZonePosition.z);
+        currentMissile.transform.DOMoveY(0, 3f).SetEase(Ease.InCubic).OnComplete(ShootStep3);
+    }
+
+    private void ShootStep3()
+    {
+        currentVisualizeZone = Instantiate(explosionZonePrefab, transform.position, transform.rotation, transform);
     }
 }

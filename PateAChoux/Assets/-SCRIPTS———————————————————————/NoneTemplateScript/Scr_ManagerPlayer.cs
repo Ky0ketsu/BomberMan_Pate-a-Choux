@@ -20,6 +20,7 @@ public class Scr_ManagerPlayer : MonoBehaviour
 
 
     Controller[] activeControllers = new Controller[4];
+    GameObject[] activePlayers = new GameObject[4];
 
 
     void Awake()
@@ -162,11 +163,14 @@ public class Scr_ManagerPlayer : MonoBehaviour
             if (ReInput.players.GetPlayer(i).isPlaying == true)
             {
                 GameObject currentPlayer = Instantiate(playerPrefab, playerSpawnPos[i],transform.rotation, playerParent);
+                activePlayers[i] = currentPlayer;
                 currentPlayer.GetComponent<PlayerMove>().playerID = i;
                 currentPlayer.name = "Joueur " + (i+1);
             }
         }
         isPlay = true;
+
+        StartCoroutine(DelayToGameplay());
     }
 
     void CheckPlayerAlive()
@@ -237,10 +241,20 @@ bool rightKeyboardAssigned, leftKeyboardAssigned = false;
         return -1;
     }
 
+    [SerializeField] float timer;
 
+    IEnumerator DelayToGameplay()
+    {
+        float chrono = timer;
+        while (chrono > 0)
+        {
+            chrono -= Time.deltaTime;
+            yield return null;
+        }
 
-
-
+        Debug.Log("Can move");
+        GAME.MANAGER.SwitchTo(State.gameplay);
+    }
 
 
 } // FIN DU SCRIPT
