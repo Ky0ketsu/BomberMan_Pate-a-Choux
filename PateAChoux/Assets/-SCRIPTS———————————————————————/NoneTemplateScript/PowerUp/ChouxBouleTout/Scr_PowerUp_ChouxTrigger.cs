@@ -29,7 +29,7 @@ public class Scr_PowerUp_ChouxTrigger : MonoBehaviour
             player.CanRun = false;
             SetDir();
 
-            player.transform.DOMove(pushWantedPos, 1).SetEase(Ease.InCubic).OnComplete(ActiveMove); // La ligne est appelée mais le DoMove ne fonctionne pas   
+            player.transform.DOMove(pushWantedPos, 1).SetEase(Ease.InCubic).OnComplete(ActiveMove); // La ligne est appelée mais le DoMove ne fonctionne pas
         }
     }
 

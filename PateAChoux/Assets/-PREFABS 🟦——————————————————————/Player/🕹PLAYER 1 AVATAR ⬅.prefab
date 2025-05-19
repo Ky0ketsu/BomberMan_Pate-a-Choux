@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 7183411942830334898}
   - component: {fileID: 3233772904887608305}
   - component: {fileID: 1303026834052407655}
+  - component: {fileID: 4755920202108347}
   m_Layer: 6
   m_Name: "\U0001F579PLAYER 1 AVATAR \u2B05"
   m_TagString: Untagged
@@ -501,6 +502,18 @@ MonoBehaviour:
   colliders: {fileID: 4572448258895731673}
   particule: {fileID: 8816474758065035005, guid: 3021b0fa311f6604fa3e6eddd2a54fcc,
     type: 3}
+--- !u!114 &4755920202108347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8436266895796835929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75073245d1796ec4f91cfbc71f8fd1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8641580318094350763
 GameObject:
   m_ObjectHideFlags: 0

@@ -104,6 +104,9 @@ public class EVENTS
 
     public static event Action OnMortSubite;
     public static void InvokeMortSubite() { LogEventInConsole("La Mort Subite Commence"); OnMortSubite?.Invoke(); }
+
+    public static event Action OnStartAnimation;
+    public static void InvokeStartAnimation() { LogEventInConsole("Start Animation"); OnStartAnimation?.Invoke(); }
     // <-- Add new game events here
 
 } // SCRIPT END

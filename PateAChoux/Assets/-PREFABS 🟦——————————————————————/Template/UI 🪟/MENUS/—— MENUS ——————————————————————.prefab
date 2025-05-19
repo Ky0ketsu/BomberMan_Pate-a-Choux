@@ -327,7 +327,7 @@ PrefabInstance:
     - target: {fileID: 733817399673472415, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
       propertyPath: m_text
-      value: RETOUR
+      value: BACK
       objectReference: {fileID: 0}
     - target: {fileID: 733817399673472415, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
@@ -567,7 +567,7 @@ PrefabInstance:
     - target: {fileID: 1525513936545270616, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
       propertyPath: m_Name
-      value: "R\xC9GLAGES PAR D\xC9FAUT Button Graphics"
+      value: RESET TO DEFAULT Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 1610461383066960566, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
@@ -1007,7 +1007,7 @@ PrefabInstance:
     - target: {fileID: 3622709235823157783, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
       propertyPath: m_Name
-      value: "FRAN\xC7AIS Button Graphics"
+      value: FRENCH Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 3740975634090392531, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
@@ -1047,7 +1047,7 @@ PrefabInstance:
     - target: {fileID: 4009162567075453952, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
       propertyPath: m_text
-      value: ANGLAIS
+      value: ENGLISH
       objectReference: {fileID: 0}
     - target: {fileID: 4009162567075453952, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
@@ -1457,7 +1457,7 @@ PrefabInstance:
     - target: {fileID: 5646610917048262555, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
       propertyPath: m_Name
-      value: RETOUR Button Graphics
+      value: BACK Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 5661914482034825771, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
@@ -1532,7 +1532,7 @@ PrefabInstance:
     - target: {fileID: 5861566205826470236, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
       propertyPath: m_text
-      value: "R\xC9GLAGES PAR D\xC9FAUT"
+      value: RESET TO DEFAULT
       objectReference: {fileID: 0}
     - target: {fileID: 5861566205826470236, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
@@ -2162,7 +2162,7 @@ PrefabInstance:
     - target: {fileID: 8345356623763179012, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
       propertyPath: m_Name
-      value: ANGLAIS Button Graphics
+      value: ENGLISH Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 8351688320260317174, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
@@ -2222,7 +2222,7 @@ PrefabInstance:
     - target: {fileID: 8517911512852789267, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
       propertyPath: m_text
-      value: "FRAN\xC7AIS"
+      value: FRENCH
       objectReference: {fileID: 0}
     - target: {fileID: 8517911512852789267, guid: 3d756fef224c8a84494fbead644a66a0,
         type: 3}
@@ -2427,7 +2427,7 @@ PrefabInstance:
     - target: {fileID: 1154007661934126075, guid: 5801a79d6e9c42746b0bdba6e99b22aa,
         type: 3}
       propertyPath: m_text
-      value: DEMARRER
+      value: START
       objectReference: {fileID: 0}
     - target: {fileID: 1154007661934126075, guid: 5801a79d6e9c42746b0bdba6e99b22aa,
         type: 3}
@@ -2592,7 +2592,7 @@ PrefabInstance:
     - target: {fileID: 6084392120081283583, guid: 5801a79d6e9c42746b0bdba6e99b22aa,
         type: 3}
       propertyPath: m_Name
-      value: DEMARRER Button Graphics
+      value: START Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 6570886562244076512, guid: 5801a79d6e9c42746b0bdba6e99b22aa,
         type: 3}
@@ -2836,7 +2836,7 @@ PrefabInstance:
     - target: {fileID: 1720157294236823443, guid: 0a7fcfde4c88ad148b31ed3aac0886c1,
         type: 3}
       propertyPath: m_text
-      value: RETOUR
+      value: BACK
       objectReference: {fileID: 0}
     - target: {fileID: 1936122032564640890, guid: 0a7fcfde4c88ad148b31ed3aac0886c1,
         type: 3}
@@ -2986,7 +2986,7 @@ PrefabInstance:
     - target: {fileID: 3026594365805932385, guid: 0a7fcfde4c88ad148b31ed3aac0886c1,
         type: 3}
       propertyPath: m_text
-      value: GRAPHISMES
+      value: ART
       objectReference: {fileID: 0}
     - target: {fileID: 3363032930585600327, guid: 0a7fcfde4c88ad148b31ed3aac0886c1,
         type: 3}
@@ -3126,7 +3126,7 @@ PrefabInstance:
     - target: {fileID: 4948699600979456371, guid: 0a7fcfde4c88ad148b31ed3aac0886c1,
         type: 3}
       propertyPath: m_text
-      value: REMERCIEMENTS
+      value: THANKS
       objectReference: {fileID: 0}
     - target: {fileID: 5205514028717066608, guid: 0a7fcfde4c88ad148b31ed3aac0886c1,
         type: 3}
@@ -3191,12 +3191,12 @@ PrefabInstance:
     - target: {fileID: 5518818597512611670, guid: 0a7fcfde4c88ad148b31ed3aac0886c1,
         type: 3}
       propertyPath: m_text
-      value: SON
+      value: SOUND
       objectReference: {fileID: 0}
     - target: {fileID: 6029467011724129687, guid: 0a7fcfde4c88ad148b31ed3aac0886c1,
         type: 3}
       propertyPath: m_Name
-      value: RETOUR Button Graphics
+      value: BACK Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 6174050102564066479, guid: 0a7fcfde4c88ad148b31ed3aac0886c1,
         type: 3}
@@ -3256,7 +3256,7 @@ PrefabInstance:
     - target: {fileID: 7115658350113705945, guid: 0a7fcfde4c88ad148b31ed3aac0886c1,
         type: 3}
       propertyPath: m_text
-      value: TEMPLATE DE PROJET UNITY PAR <B><color=yellow>KARL FAYETON</B>
+      value: UNITY PROJECT TEMPLATE BY <B><color=yellow>KARL FAYETON</B>
       objectReference: {fileID: 0}
     - target: {fileID: 7497412848949698347, guid: 0a7fcfde4c88ad148b31ed3aac0886c1,
         type: 3}
@@ -3490,7 +3490,7 @@ PrefabInstance:
     - target: {fileID: 335678825197292001, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_text
-      value: "D\xC9MARRER"
+      value: START
       objectReference: {fileID: 0}
     - target: {fileID: 335678825197292001, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3500,7 +3500,7 @@ PrefabInstance:
     - target: {fileID: 1022848315653779217, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_text
-      value: "D\xC9MARRER"
+      value: START
       objectReference: {fileID: 0}
     - target: {fileID: 1022848315653779217, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3645,12 +3645,12 @@ PrefabInstance:
     - target: {fileID: 3326160017606543864, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_Name
-      value: "PARAM\xC8TRES Button Graphics"
+      value: SETTINGS Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 3789719278001879857, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_Name
-      value: QUITTER Button Graphics
+      value: QUIT Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 3947916482484858313, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3695,7 +3695,7 @@ PrefabInstance:
     - target: {fileID: 4338118774029063625, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_Name
-      value: "CR\xC9DITS Button Graphics"
+      value: CREDITS Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 4992172829265986240, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3715,7 +3715,7 @@ PrefabInstance:
     - target: {fileID: 5350877380203164949, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_Name
-      value: "D\xC9MARRER Button Graphics"
+      value: START Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 7353084624605879514, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3740,7 +3740,7 @@ PrefabInstance:
     - target: {fileID: 7663760246250361852, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_text
-      value: "PARAM\xC8TRES"
+      value: SETTINGS
       objectReference: {fileID: 0}
     - target: {fileID: 7663760246250361852, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3775,7 +3775,7 @@ PrefabInstance:
     - target: {fileID: 8134635786135445813, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_text
-      value: QUITTER
+      value: QUIT
       objectReference: {fileID: 0}
     - target: {fileID: 8134635786135445813, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3830,7 +3830,7 @@ PrefabInstance:
     - target: {fileID: 8667135380878544845, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
       propertyPath: m_text
-      value: "CR\xC9DITS"
+      value: CREDITS
       objectReference: {fileID: 0}
     - target: {fileID: 8667135380878544845, guid: 6a2c42127b502764c96637af2e6c8cf3,
         type: 3}
@@ -3879,7 +3879,7 @@ PrefabInstance:
     - target: {fileID: 522259777005742045, guid: 9b10d2c8b099aae4e9ca15c5f0ea7e7c,
         type: 3}
       propertyPath: m_text
-      value: Menu Principal
+      value: Main Menu
       objectReference: {fileID: 0}
     - target: {fileID: 823932606149077243, guid: 9b10d2c8b099aae4e9ca15c5f0ea7e7c,
         type: 3}
@@ -4019,7 +4019,7 @@ PrefabInstance:
     - target: {fileID: 4849445783766711769, guid: 9b10d2c8b099aae4e9ca15c5f0ea7e7c,
         type: 3}
       propertyPath: m_Name
-      value: Menu Principal Button Graphics
+      value: Main Menu Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 5353772949923195275, guid: 9b10d2c8b099aae4e9ca15c5f0ea7e7c,
         type: 3}
@@ -4127,7 +4127,7 @@ PrefabInstance:
     - target: {fileID: 3546623556357934487, guid: a903e18420b22f94fbaf52f84e8138bf,
         type: 3}
       propertyPath: m_text
-      value: Menu Principal
+      value: Main Menu
       objectReference: {fileID: 0}
     - target: {fileID: 4267728678580102768, guid: a903e18420b22f94fbaf52f84e8138bf,
         type: 3}
@@ -4247,7 +4247,7 @@ PrefabInstance:
     - target: {fileID: 8452098621795964819, guid: a903e18420b22f94fbaf52f84e8138bf,
         type: 3}
       propertyPath: m_Name
-      value: Menu Principal Button Graphics
+      value: Main Menu Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 8956322603511694273, guid: a903e18420b22f94fbaf52f84e8138bf,
         type: 3}
