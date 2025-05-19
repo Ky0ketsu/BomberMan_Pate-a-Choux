@@ -4,20 +4,24 @@ using UnityEngine.Audio;
 
 public class MUSIC : MonoBehaviour
 {
+    private bool m_hasFocus = true; // Est utilisé pour savoir si la fenêtre du jeu a le focus ou non.
+    
+    
+    
     public void SetPlaylist(SO_Playlist desired)
     {
-        SetPlaylist(desired,false);
+        SetPlaylist(desired, false);
     }
 
     public void SetPlaylist(SO_Playlist desired, bool forceStart)
     {
-        if (desired==null || desired.playlist.tracks.Length<1)
+        if (desired == null || desired.playlist.tracks.Length < 1)
         {
-            if (currentPlaylist!=null) FadeOutToSilence(); 
+            if (currentPlaylist != null) FadeOutToSilence();
         }
         else
         {
-            if (forceStart==false && desired.playlist==currentPlaylist) return;
+            if (forceStart == false && desired.playlist == currentPlaylist) return;
             currentPlaylistIndex = 0;
             SwitchPlaylist(desired);
         }
@@ -25,7 +29,7 @@ public class MUSIC : MonoBehaviour
 
     public void Play()
     {
-        if (players[current].clip !=null)
+        if (players[current].clip != null)
         {
             players[current].Play();
             StartCoroutine(PlayAndCheckTrackEnd());
@@ -41,7 +45,7 @@ public class MUSIC : MonoBehaviour
 
     public void Pause()
     {
-        if (players[current].clip !=null)
+        if (players[current].clip != null)
         {
             players[current].Pause();
             paused = true;
@@ -61,43 +65,35 @@ public class MUSIC : MonoBehaviour
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static MUSIC PLAYER;
     AudioSource[] players;
     int current = 0;
     Coroutine fadeInRoutine, fadeOutRoutine, playRoutine;
-    [Header("MUSIC MIXER")]
-    [SerializeField] AudioMixerGroup mixer;
+
+    [Header("MUSIC MIXER")] [SerializeField]
+    AudioMixerGroup mixer;
+
     float speed = 1f;
     Music currentMusic;
     int currentPlaylistIndex = 0;
     bool paused = false;
-    [Header("MONITORING ONLY")]
-    [SerializeField]Playlist oldPlaylist;
-    [SerializeField]Playlist currentPlaylist;
+
+    [Header("MONITORING ONLY")] [SerializeField]
+    Playlist oldPlaylist;
+
+    [SerializeField] Playlist currentPlaylist;
 
     void Awake()
     {
-        if (PLAYER!=null)
+        if (PLAYER != null)
         {
             Destroy(this);
             return;
         }
+
         PLAYER = this;
         AudioSource[] alreadyExisting = GetComponentsInChildren<AudioSource>();
-        for (int i=0;i<alreadyExisting.Length;i++) Destroy(alreadyExisting[i]);
+        for (int i = 0; i < alreadyExisting.Length; i++) Destroy(alreadyExisting[i]);
         CreateSource("MUSIC PLAYER 1");
         CreateSource("MUSIC PLAYER 2");
         players = GetComponentsInChildren<AudioSource>();
@@ -133,57 +129,76 @@ public class MUSIC : MonoBehaviour
 
     void PlayMusic(Music desired)
     {
-        if (desired.clip != players[current].clip) StartTrack(desired);
+        Debug.Log("In PlayMusic");
+        if (desired.clip != players[current].clip)
+        {
+            Debug.Log("In IF PlayMusic");
+            StartTrack(desired);
+        }
     }
 
 
     void StartTrack(Music desired)
     {
-        if (desired.clip!=null)
+        if (players[current].clip == desired.clip && players[current].isPlaying)
+        {
+            Debug.Log("Le morceau est déjà en cours de lecture, pas besoin de le redémarrer.");
+            return;
+        }
+
+        Debug.Log("Démarrage du morceau : " + desired.clip.name);
+        if (desired.clip != null)
         {
             players[current].loop = false;
             players[current].clip = desired.clip;
             players[current].volume = desired.volume;
             players[current].Play();
-            if (playRoutine!=null) StopCoroutine(playRoutine);
+            if (playRoutine != null) StopCoroutine(playRoutine);
             playRoutine = StartCoroutine(PlayAndCheckTrackEnd());
             ApplyFinalMusicPitch();
             currentMusic = desired;
+            paused = false;
         }
     }
 
 
     void SwitchPlaylist(SO_Playlist newPlaylist)
     {
-        if (newPlaylist==null || newPlaylist.playlist.tracks.Length<1)
+        if (newPlaylist == null || newPlaylist.playlist.tracks.Length < 1)
         {
             FadeOutToSilence();
             return;
         }
-        Debug.Log("🎵 PLAYLIST "+newPlaylist.name);
+
+        Debug.Log("🎵 PLAYLIST " + newPlaylist.name);
         Playlist tempPlist = newPlaylist.playlist;
         if (tempPlist.randomizeTracks)
         {
             for (int t = 0; t < tempPlist.tracks.Length; t++)
             {
                 Music tmp = tempPlist.tracks[t];
-                int r = Random.Range(t,  tempPlist.tracks.Length);
+                int r = Random.Range(t, tempPlist.tracks.Length);
                 tempPlist.tracks[t] = tempPlist.tracks[r];
                 tempPlist.tracks[r] = tmp;
             }
         }
 
-        if (currentPlaylist!=null) oldPlaylist = currentPlaylist; // saved previous playlist in oldplaylist
+        if (currentPlaylist != null) oldPlaylist = currentPlaylist; // saved previous playlist in oldplaylist
         currentPlaylist = tempPlist; // new current playlist
 
 
-        if (fadeInRoutine!=null) StopCoroutine(fadeInRoutine);
-        if (fadeOutRoutine!=null) StopCoroutine(fadeOutRoutine);
-        current = current<1 ? 1:0; // Swapping the AudioSources to make the cross fade effect
+        if (fadeInRoutine != null) StopCoroutine(fadeInRoutine);
+        if (fadeOutRoutine != null) StopCoroutine(fadeOutRoutine);
+        current = current < 1 ? 1 : 0; // Swapping the AudioSources to make the cross fade effect
+        Debug.Log("Call StartTrack in SwitchPlayList");
         StartTrack(currentPlaylist.tracks[currentPlaylistIndex]);
         players[current].volume = 0;
-        if (currentPlaylist!=null) fadeInRoutine = StartCoroutine(FadingPlayer(currentPlaylist.fadeInDuration, currentMusic.volume,players[current]));
-        if (oldPlaylist!=null) fadeOutRoutine = StartCoroutine(FadingPlayer(oldPlaylist.fadeOutDuration, 0, current==0 ? players[1]:players[0] ));
+        if (currentPlaylist != null)
+            fadeInRoutine =
+                StartCoroutine(FadingPlayer(currentPlaylist.fadeInDuration, currentMusic.volume, players[current]));
+        if (oldPlaylist != null)
+            fadeOutRoutine =
+                StartCoroutine(FadingPlayer(oldPlaylist.fadeOutDuration, 0, current == 0 ? players[1] : players[0]));
     }
 
 
@@ -191,26 +206,27 @@ public class MUSIC : MonoBehaviour
     {
         float chrono = 0;
         float step = Mathf.Abs(targetVolume - player.volume);
-        
+
         while (chrono < duration)
-        {   
-            chrono += Time.unscaledDeltaTime;  
-            player.volume = Mathf.MoveTowards(player.volume,targetVolume,step*Time.unscaledDeltaTime/duration);
+        {
+            chrono += Time.unscaledDeltaTime;
+            player.volume = Mathf.MoveTowards(player.volume, targetVolume, step * Time.unscaledDeltaTime / duration);
             yield return null;
         }
 
-        player.volume = Mathf.Clamp(targetVolume,0,1f);
+        player.volume = Mathf.Clamp(targetVolume, 0, 1f);
     }
 
 
     IEnumerator PlayAndCheckTrackEnd()
     {
         paused = false;
-        while (players[current].isPlaying || (Time.timeScale==0 &&currentPlaylist.timeScale!=TimeScale.Unscaled))
+        while (players[current].isPlaying || (Time.timeScale == 0 && currentPlaylist.timeScale != TimeScale.Unscaled))
         {
-            if(paused) yield break;
+            if (paused) yield break;
             yield return null;
         }
+
         TrackEnded();
     }
 
@@ -218,50 +234,102 @@ public class MUSIC : MonoBehaviour
     void FadeOutToSilence()
     {
         players[current].loop = true;
-        if (fadeOutRoutine!=null) StopCoroutine(fadeOutRoutine);
+        if (fadeOutRoutine != null) StopCoroutine(fadeOutRoutine);
         fadeOutRoutine = StartCoroutine(FadingPlayer(currentPlaylist.fadeOutDuration, 0, players[current]));
         currentPlaylist = null;
     }
 
     void TrackEnded()
     {
-        if (currentPlaylist==null) // If playlist was deleted during play
+        if (currentPlaylist == null)
         {
-            Stop(); // stop the music
-            return; // do not try to find what next track is
+            Stop();
+            return;
         }
+
+        // Vérifie si le jeu est en pause ou hors focus
+        if (!m_hasFocus)
+        {
+            Debug.Log("La fenêtre n'a pas le focus, annulation de la reprise.");
+            return;
+        }
+
         currentPlaylistIndex += 1;
-        if (currentPlaylist.tracks.Length>currentPlaylistIndex) // If this was not the last track
+        if (currentPlaylist.tracks.Length > currentPlaylistIndex)
         {
-            PlayMusic(currentPlaylist.tracks[currentPlaylistIndex]); // Play next track
+            PlayMusic(currentPlaylist.tracks[currentPlaylistIndex]);
         }
-        else if (currentPlaylist.looping) // If this was the last track but playlist is in loop mode
+        else if (currentPlaylist.looping)
+        {
+            Debug.Log("Dernière piste atteinte, redémarrage de la playlist.");
+            currentPlaylistIndex = 0;
+            StartTrack(currentPlaylist.tracks[currentPlaylistIndex]);
+        }
+        else
         {
             currentPlaylistIndex = 0;
-            StartTrack(currentPlaylist.tracks[currentPlaylistIndex]); // Play first track
+            Stop();
         }
-        else // If this was the last track and playlist is not in loop mode
+    }
+    
+
+
+    void OnApplicationFocus(bool focus)
+    {
+        m_hasFocus = focus;
+        if (!focus)
         {
-            currentPlaylistIndex = 0;
-            Stop(); // Stop the music
+            Debug.Log("Fenêtre du jeu a perdu le focus.");
+            Pause(); // Mettre en pause la musique
+        }
+        else
+        {
+            Debug.Log("Fenêtre du jeu a repris le focus.");
+            Resume(); // Reprendre la musique
         }
     }
 
+    void OnApplicationPause(bool pauseStatus)
+    {
+        m_hasFocus = !pauseStatus;
+        if (pauseStatus)
+        {
+            Debug.Log("Jeu mis en pause.");
+            Pause(); // Mettre en pause la musique
+        }
+        else
+        {
+            Debug.Log("Jeu repris.");
+            Resume(); // Reprendre la musique
+        }
+    }
+
+    public void Resume()
+    {
+        if (players[current].clip != null && paused)
+        {
+            players[current].UnPause();
+            paused = false;
+            Debug.Log("🎸MUSIC RESUME");
+        }
+    }
+
+
     void CheckIfMusicFollowTimeScale(float timeScale)
     {
-        if (currentMusic!=null) ApplyFinalMusicPitch();
+        if (currentMusic != null) ApplyFinalMusicPitch();
     }
 
     void ApplyFinalMusicPitch()
     {
         players[current].pitch = 1f;
-        if (currentPlaylist.timeScale==TimeScale.GameSpeed) players[current].pitch = TimeScaleManager.GameTimeScale;
-        else if (currentPlaylist.timeScale==TimeScale.UnityTimeScale) players[current].pitch = Time.timeScale;
+        if (currentPlaylist.timeScale == TimeScale.GameSpeed) players[current].pitch = TimeScaleManager.GameTimeScale;
+        else if (currentPlaylist.timeScale == TimeScale.UnityTimeScale) players[current].pitch = Time.timeScale;
     }
 
     int OtherPlayer()
     {
-        return current==0 ? 1 : 0;
+        return current == 0 ? 1 : 0;
     }
 
 
@@ -272,7 +340,7 @@ public class Music
 {
     [HideInInspector] public string clipTitle;
     public AudioClip clip;
-    [Range(0,1f)]public float volume = 1f;
+    [Range(0, 1f)] public float volume = 1f;
 
     public Music()
     {
