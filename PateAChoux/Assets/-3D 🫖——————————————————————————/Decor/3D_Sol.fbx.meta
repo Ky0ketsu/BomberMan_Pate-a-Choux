@@ -3,7 +3,13 @@ guid: dbb638b10df552a45a232f90d1cb3219
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bombe
+    second: {fileID: 7334397288384016061, guid: 33c6735417120184d9d186e68c2e74ce,
+      type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
