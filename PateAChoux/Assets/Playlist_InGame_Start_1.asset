@@ -21,4 +21,4 @@ MonoBehaviour:
     tracks:
     - clipTitle: Msc_GamePlay_1
       clip: {fileID: 8300000, guid: 18f41d3f030aaf744bc37646249b5f7b, type: 3}
-      volume: 0.3
+      volume: 0.1
