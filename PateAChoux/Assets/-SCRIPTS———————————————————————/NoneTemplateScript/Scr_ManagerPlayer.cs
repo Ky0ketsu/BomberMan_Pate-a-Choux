@@ -20,7 +20,7 @@ public class Scr_ManagerPlayer : MonoBehaviour
 
 
     Controller[] activeControllers = new Controller[4];
-    GameObject[] activePlayers = new GameObject[4];
+    public GameObject[] activePlayers = new GameObject[4];
 
 
     void Awake()

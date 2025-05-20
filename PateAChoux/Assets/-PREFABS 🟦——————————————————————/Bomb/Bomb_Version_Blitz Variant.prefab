@@ -134,4 +134,10 @@ MonoBehaviour:
   owner: {fileID: 0}
   visualizeZonePrefab: {fileID: 8359921446308805184, guid: fd0153e07009f3e458406b6aae6bdb6c,
     type: 3}
-  ExplosionZonePrefab: {fileID: 0}
+  explosionZonePrefab: {fileID: 8359921446308805184, guid: f247fa270ea67654e99275fc236071d8,
+    type: 3}
+  particule:
+  - {fileID: 6089237566075303425, guid: abd9b42c846200e43aa75165c9e5e28e, type: 3}
+  - {fileID: 8816474758065035005, guid: 3a0be3d04a4c693459fbcedbd4d1c86c, type: 3}
+  missile: {fileID: 919132149155446097, guid: 25da0dee9f808ae4cbd905f607fec1a1, type: 3}
+  offset: {x: 0, y: 0, z: 0}
