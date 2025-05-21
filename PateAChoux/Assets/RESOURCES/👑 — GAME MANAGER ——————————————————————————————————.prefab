@@ -148,8 +148,12 @@ MonoBehaviour:
   - {x: 16, y: 0, z: 10}
   - {x: -16, y: 0, z: -10}
   win: 00000000000000000000000000000000
+  activePlayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   totalPlayers: 0
-  timer: 3
 --- !u!1001 &265272606160230112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2937,6 +2941,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2812431367023301031, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: fr
+      value: Appuyer sur une touche
+      objectReference: {fileID: 0}
     - target: {fileID: 2821561264678668350, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4717,6 +4726,36 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4577599861241841269, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_text
+      value: Appuyer sur une touche
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577599861241841269, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 59.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577599861241841269, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 177.48398
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577599861241841269, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 80.137695
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577599861241841269, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 199.02193
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577599861241841269, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 66.17612
+      objectReference: {fileID: 0}
     - target: {fileID: 4591637008869024029, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -4874,6 +4913,36 @@ PrefabInstance:
       propertyPath: m_AspectRatio
       value: 2.8
       objectReference: {fileID: 0}
+    - target: {fileID: 4752361786767563012, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_text
+      value: Appuyer sur une touche
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752361786767563012, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 61.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752361786767563012, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 169.83981
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752361786767563012, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 83.03102
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752361786767563012, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 166.53786
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752361786767563012, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 51.594055
+      objectReference: {fileID: 0}
     - target: {fileID: 4753329819201587640, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -5003,6 +5072,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RETOUR Button Graphics
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951725421826533756, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: fr
+      value: Appuyer sur une touche
       objectReference: {fileID: 0}
     - target: {fileID: 4959374907302231068, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -5845,6 +5919,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6080002285329259807, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6096554075082652739, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6071,6 +6150,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6445462930741677782, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: fr
+      value: Appuyer sur une touche
+      objectReference: {fileID: 0}
     - target: {fileID: 6476715883738929007, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_IsActive
@@ -6280,6 +6364,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645401782415031982, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_text
+      value: Appuyer sur une touche
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645401782415031982, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 61.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645401782415031982, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 170.32532
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645401782415031982, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 97.735504
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645401782415031982, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 181.3004
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645401782415031982, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 78.62514
       objectReference: {fileID: 0}
     - target: {fileID: 6668132404343022609, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -6547,6 +6661,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118122956442049502, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_text
+      value: Appuyer sur une touche
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118122956442049502, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 57.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118122956442049502, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 169.32729
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118122956442049502, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 92.86699
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118122956442049502, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 215.8582
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118122956442049502, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 83.40318
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118122956442049502, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7169275094954758910, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
@@ -8146,6 +8295,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8811717782282275852, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: fr
+      value: Appuyer sur une touche
+      objectReference: {fileID: 0}
     - target: {fileID: 8818027680040024575, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: buttonClick.clip
@@ -8231,6 +8385,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7219785828014985034, guid: 71ebd469deb1c2c4fb8e039a76af2119,
         type: 2}
+    - target: {fileID: 9024077703356038518, guid: c6b26752e8dc0b34ab30cc91105625db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9080021337347274486, guid: c6b26752e8dc0b34ab30cc91105625db,
         type: 3}
       propertyPath: m_AnchorMax.x

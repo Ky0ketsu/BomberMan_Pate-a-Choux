@@ -10,6 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3718262042042446997, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718262042042446997, guid: 4811bc64d2d12d749a0af386f0ce3ed1,
+        type: 3}
       propertyPath: m_Resource
       value: 
       objectReference: {fileID: 6418180475301049370, guid: 656c1795c954a274ea44b27d4cd4bd1b,

@@ -171,6 +171,7 @@ public class Scr_ManagerPlayer : MonoBehaviour
         isPlay = true;
 
         StartCoroutine(DelayToGameplay());
+        EVENTS.InvokeStartAnimation();
     }
 
     void CheckPlayerAlive()
@@ -241,11 +242,9 @@ bool rightKeyboardAssigned, leftKeyboardAssigned = false;
         return -1;
     }
 
-    [SerializeField] float timer;
-
     IEnumerator DelayToGameplay()
     {
-        float chrono = timer;
+        float chrono = playerParent.childCount + 0.5f;
         while (chrono > 0)
         {
             chrono -= Time.deltaTime;

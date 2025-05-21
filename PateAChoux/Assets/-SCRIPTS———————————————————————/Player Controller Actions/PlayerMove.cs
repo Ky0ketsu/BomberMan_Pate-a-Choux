@@ -94,7 +94,7 @@ public class PlayerMove : MonoBehaviour
             if (inputs.x < 0) ApplyAnimation(2);
             else ApplyAnimation(0);
         }
-        else ApplyAnimation(1);
+        else ApplyAnimation(0);
 
 
     }
