@@ -46,8 +46,8 @@ public class PlayerMove : MonoBehaviour
             animationSprite[i] = transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(playerID).GetChild(i).gameObject;
         }
 
-        /*gameObject.layer = 24 + playerID;
-        colliderInternal.layer = 24 + playerID;*/
+        gameObject.layer = 24 + playerID;
+        colliderInternal.layer = 24 + playerID;
 
        
     }
@@ -101,7 +101,7 @@ public class PlayerMove : MonoBehaviour
             if (inputs.x < 0) ApplyAnimation(2);
             else ApplyAnimation(0);
         }
-        else ApplyAnimation(0);
+        else ApplyAnimation(3);
 
 
     }

@@ -28,8 +28,8 @@ public class Scr_Bomb : MonoBehaviour
         transform.DOMoveY(maxY, 0.5f).SetEase(Ease.OutExpo);
         transform.DOMoveY(minY, 1).SetEase(Ease.InExpo).OnComplete(ParticuleEndAnimation);
 
-        /*gameObject.layer = 20 + owner.GetComponent<PlayerMove>().playerID;
-        colliderInternal.layer = 20 + owner.GetComponent<PlayerMove>().playerID;*/
+        gameObject.layer = 20 + owner.GetComponent<PlayerMove>().playerID;
+        colliderInternal.layer = 20 + owner.GetComponent<PlayerMove>().playerID;
 
     }
 

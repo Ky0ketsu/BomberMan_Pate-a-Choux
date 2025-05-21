@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2083639465915618805}
   - component: {fileID: 1867469532679070811}
   - component: {fileID: 3638364040295172942}
+  - component: {fileID: 261269450471865086}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -92,6 +93,23 @@ MonoBehaviour:
   lockRotation: 1
   lockScale: 1
   lockParenting: 1
+--- !u!114 &261269450471865086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2743950388784378905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9fdbdc0f8ffe242b77b7cf71807548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angle: 15
+  duration: 0.5
+  easing: 10
+  firstDirection: 1
+  ignoreTimeScale: 0
 --- !u!1 &3034202100646823106
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +194,7 @@ PrefabInstance:
     - target: {fileID: 29617785907980139, guid: 3b2ef2f418cd6cb44ae1e3c494a6ea71,
         type: 3}
       propertyPath: m_text
-      value: Press any button
+      value: TITRE
       objectReference: {fileID: 0}
     - target: {fileID: 29617785907980139, guid: 3b2ef2f418cd6cb44ae1e3c494a6ea71,
         type: 3}
