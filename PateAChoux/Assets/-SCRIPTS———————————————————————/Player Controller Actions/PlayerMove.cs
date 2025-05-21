@@ -44,6 +44,8 @@ public class PlayerMove : MonoBehaviour
 
             animationSprite[i] = transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(playerID).GetChild(i).gameObject;
         }
+
+        gameObject.layer = 24 + playerID;
     }
 
     void EnableMoveSet()

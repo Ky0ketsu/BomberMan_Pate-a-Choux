@@ -28,14 +28,14 @@ TagManager:
   - DEBUG
   - PLAYERTRIGGER
   - DECOR
+  - BOMB1
+  - BOMB2
+  - BOMB3
+  - BOMB4
   - PLAYER1
   - PLAYER2
   - PLAYER3
   - PLAYER4
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 
