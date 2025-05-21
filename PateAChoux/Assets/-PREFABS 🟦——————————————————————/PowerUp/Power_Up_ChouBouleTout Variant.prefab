@@ -120,6 +120,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Power_Up_ChouBouleTout Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4522522018809846807, guid: 39c88d0fd367a5449b2dae3fb987c3cc,
+        type: 3}
+      propertyPath: particule
+      value: 
+      objectReference: {fileID: 8044265350877242121, guid: 5e29538d967703b469c20e43140bf15f,
+        type: 3}
     - target: {fileID: 7868230112940668474, guid: 39c88d0fd367a5449b2dae3fb987c3cc,
         type: 3}
       propertyPath: m_LocalPosition.x

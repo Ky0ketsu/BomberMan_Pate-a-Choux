@@ -107,6 +107,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Power_Up_NappageDeCaramel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4522522018809846807, guid: 39c88d0fd367a5449b2dae3fb987c3cc,
+        type: 3}
+      propertyPath: particule
+      value: 
+      objectReference: {fileID: 679500270457869679, guid: 0fe589b9e6028c44a806be81e2caa4a3,
+        type: 3}
     - target: {fileID: 7868230112940668474, guid: 39c88d0fd367a5449b2dae3fb987c3cc,
         type: 3}
       propertyPath: m_LocalPosition.x

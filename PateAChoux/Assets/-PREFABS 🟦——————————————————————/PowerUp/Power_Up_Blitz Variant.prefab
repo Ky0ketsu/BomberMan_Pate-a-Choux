@@ -272,6 +272,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Power_Up_Blitz Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4522522018809846807, guid: 39c88d0fd367a5449b2dae3fb987c3cc,
+        type: 3}
+      propertyPath: particule
+      value: 
+      objectReference: {fileID: 5771457848284743292, guid: eeea33c4480efe940b4b6550634b2ecf,
+        type: 3}
     - target: {fileID: 7868230112940668474, guid: 39c88d0fd367a5449b2dae3fb987c3cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -359,4 +365,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3909b3b3c500ede4c8c42e3e2e8af2d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeEffect: 0

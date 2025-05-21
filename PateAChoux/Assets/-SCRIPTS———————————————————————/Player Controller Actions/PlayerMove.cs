@@ -63,7 +63,7 @@ public class PlayerMove : MonoBehaviour
         HorizontalMovement();
         VerticalMovement();
         ApplyMovement();
-        CheckAnimation();
+        if(CanRun) CheckAnimation();
     }
 
     void GetInputs()
@@ -133,11 +133,16 @@ public class PlayerMove : MonoBehaviour
         movement.y= CanFall ? -60f : 0; // very simple fall with constant speed
     }
 
+    [SerializeField] private GameObject trail;
+
     void HorizontalMovement()
     {
         GetInputs();
         movement.x = CanRun ? inputs.x * ((maxSpeed + (1 * speedUp)) * slowValue) : 0;
         movement.z = CanRun ? inputs.y * ((maxSpeed + (1 * speedUp)) * slowValue) : 0;
+
+        if (movement.x != 0 || movement.z != 0) trail.GetComponent<ParticleSystem>().Play();
+        else trail.GetComponent<ParticleSystem>().Pause();
     }
 
     void ApplyMovement()

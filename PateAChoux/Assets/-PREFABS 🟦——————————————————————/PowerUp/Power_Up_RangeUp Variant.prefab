@@ -13,6 +13,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Power_Up_RangeUp Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4522522018809846807, guid: 39c88d0fd367a5449b2dae3fb987c3cc,
+        type: 3}
+      propertyPath: particule
+      value: 
+      objectReference: {fileID: 8816474758065035005, guid: 32a3848503afa444181a6231c3ee3d8d,
+        type: 3}
     - target: {fileID: 7868230112940668474, guid: 39c88d0fd367a5449b2dae3fb987c3cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -100,7 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f03e3776937a4944a634d6df255db30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 0}
 --- !u!1001 &5648045253894862371
 PrefabInstance:
   m_ObjectHideFlags: 0
