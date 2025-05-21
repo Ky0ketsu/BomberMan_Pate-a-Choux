@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Rewired;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ public class Scr_Bomb : MonoBehaviour
 
     [SerializeField] private GameObject particule;
 
+    [SerializeField] private GameObject colliderInternal;
+
 
     public void Start()
     {
@@ -26,6 +29,19 @@ public class Scr_Bomb : MonoBehaviour
         transform.DOMoveY(minY, 1).SetEase(Ease.InExpo).OnComplete(ParticuleEndAnimation);
 
         gameObject.layer = 20 + owner.GetComponent<PlayerMove>().playerID;
+        colliderInternal.layer = 20 + owner.GetComponent<PlayerMove>().playerID;
+
+        /*foreach (Transform t in gameObject.GetComponentInChildren<Transform>(true))
+        {
+            if (t.childCount > 0)
+            {
+                foreach (Transform r in t.gameObject.GetComponentInChildren<Transform>(true))
+                {
+                    t.gameObject.layer = 20 + owner.GetComponent<PlayerMove>().playerID;
+                }
+            }
+            t.gameObject.layer = 20 + owner.GetComponent<PlayerMove>().playerID;
+        }*/
     }
 
     private void ParticuleEndAnimation()
