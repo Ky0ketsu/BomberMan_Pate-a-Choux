@@ -227,8 +227,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.85, z: 0}
-  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1.9999999, y: 1.5, z: 1.9999999}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2429838865508510905}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -335,6 +335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 3D_Bomb_ExplosionBombe
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b082c21a5758783449ac8fc54058260a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
