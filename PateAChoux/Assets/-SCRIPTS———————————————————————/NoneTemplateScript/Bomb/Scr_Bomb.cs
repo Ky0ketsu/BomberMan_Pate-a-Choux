@@ -72,9 +72,10 @@ public class Scr_Bomb : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(new Vector3(owner.transform.position.x, 0, owner.transform.position.z), new Vector3(transform.position.x, 0, transform.position.z)) >= 2)
+        if (Vector3.Distance(new Vector3(owner.transform.position.x, 0, owner.transform.position.z), new Vector3(transform.position.x, 0, transform.position.z)) >= 1.5f)
         {
             gameObject.layer = 15;
+            colliderInternal.layer = 15;
         }
     }
 }
