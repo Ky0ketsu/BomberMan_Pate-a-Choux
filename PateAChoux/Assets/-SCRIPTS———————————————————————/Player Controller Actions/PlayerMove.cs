@@ -46,21 +46,10 @@ public class PlayerMove : MonoBehaviour
             animationSprite[i] = transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(playerID).GetChild(i).gameObject;
         }
 
-        gameObject.layer = 24 + playerID;
-        colliderInternal.layer = 24 + playerID;
+        /*gameObject.layer = 24 + playerID;
+        colliderInternal.layer = 24 + playerID;*/
 
-        /*foreach(Transform t in gameObject.GetComponentInChildren<Transform>(true))
-        {
-            if(t.childCount >= 1)
-            {
-                foreach(Transform r in t.gameObject.GetComponentInChildren<Transform>(true))
-                {
-                    t.gameObject.layer = 24 + playerID;
-                }
-            }
-
-            t.gameObject.layer = 24 + playerID;
-        }*/
+       
     }
 
     void EnableMoveSet()

@@ -477,6 +477,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   chouxBouleToutActive: 0
+  colliderInternal: {fileID: 9000601456480134680}
   dir:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
