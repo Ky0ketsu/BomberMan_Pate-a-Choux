@@ -63,7 +63,7 @@ public class ButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         Vector3 currentScale =  _transform.localScale;
         _transform.DOKill();
         transform.localScale = currentScale;
-        _transform.DOPunchScale(-Vector3.one*0.5f,scaleDuration,3,1f).SetUpdate(true).OnComplete(ClickEffectDone);
+        _transform.DOPunchScale(-Vector3.one * 0.5f, scaleDuration, 3, 1f).SetUpdate(true).OnComplete(ClickEffectDone);
     }
 
     void ClickEffectDone()
@@ -119,7 +119,7 @@ public class ButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         Debug.Log("👇✅Clicked on "+buttonName);
         #endif
         if (unselectAfterClicked) EventSystemUnselectThis();
-        ClickButtonEffect();
+        if(!clickEffect) ClickButtonEffect();
     }
 
     public void OnPointerExit(PointerEventData eventData)
