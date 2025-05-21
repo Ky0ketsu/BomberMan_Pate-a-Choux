@@ -66,10 +66,11 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        if (!canRun) return;
         HorizontalMovement();
         VerticalMovement();
         ApplyMovement();
-        if(CanRun) CheckAnimation();
+        CheckAnimation();
     }
 
     void GetInputs()
