@@ -3,7 +3,12 @@ guid: 33c6735417120184d9d186e68c2e74ce
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PATE A CHOUX
+    second: {fileID: 2100000, guid: 5f56eb7007346a64fbc8a35077fefd48, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
