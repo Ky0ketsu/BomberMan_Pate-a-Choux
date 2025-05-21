@@ -59,12 +59,23 @@ public class Scr_Player_Bomb : MonoBehaviour
 
                     if (currentCase.childCount <= 0)
                     {
-                        if (frozenActive) CreateBomb(bombFrozenPrefab);
-                        else if (caramelActive) CreateBomb(bombCaramelPrefab);
+                        if (frozenActive)
+                        {
+                            Debug.Log("FrozenActive");
+                            CreateBomb(bombFrozenPrefab);
+                            frozenActive = false; // TODO : Rectif du frozenActive
+
+                        }
+                        else if (caramelActive)
+                        {
+                            CreateBomb(bombCaramelPrefab);
+                            caramelActive = false; // TODO : Si bug avec blitz suite à ma modif, supprimer cette ligne.
+                        }
                         else if (blitzActive)
                         {
                             CreateBomb(bombBlitzPrefab);
                             canBomb = false;
+                            blitzActive = false; // TODO : Si bug avec blitz suite à ma modif, supprimer cette ligne.
                         }
                         else CreateBomb(bombPrefab);
                     }

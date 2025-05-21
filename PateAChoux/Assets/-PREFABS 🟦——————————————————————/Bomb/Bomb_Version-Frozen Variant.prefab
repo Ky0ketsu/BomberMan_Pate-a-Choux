@@ -51,7 +51,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 267420032
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -344,14 +344,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b758017756adbcb42903675c8f5b0d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceX: 0
-  distanceZ: 0
-  pushForce: 5
-  canPush: 0
-  offset: {x: 0, y: 0, z: 0}
+  slideSpeed: 0.2
+  maxSlideDistance: 5
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 267420096
+  offset: {x: 0, y: 0, z: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 32768
+  groundCheckDistance: 0.3
 --- !u!4 &8965646629860705313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3921109020594181659, guid: 6267db36b714fdc408882d407987753f,

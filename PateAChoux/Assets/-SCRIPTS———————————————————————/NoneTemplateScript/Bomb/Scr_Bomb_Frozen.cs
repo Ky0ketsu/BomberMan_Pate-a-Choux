@@ -7,61 +7,104 @@ using UnityEngine.UI;
 
 public class Scr_Bomb_Frozen : MonoBehaviour
 {
-    public float distanceX, distanceZ;
-    public int pushForce;
-    public bool canPush;
-    public Vector3 offset;
+    [Header("Déplacement")]
+    public float slideSpeed = 0.2f;
+    public int maxSlideDistance = 5;
     public LayerMask mask;
+    public Vector3 offset;
 
-    public void Start()
+    [Header("Sol")]
+    public LayerMask groundMask;
+    public float groundCheckDistance = 0.3f;
+
+    private bool canPush = false;
+    private Coroutine pushCoroutine;
+    private Rigidbody rb;
+
+    private void Start()
     {
-        //StartCoroutine(DelayBeforeCanPush(2));
+        rb = GetComponent<Rigidbody>();
+        StartCoroutine(WaitUntilGrounded());
     }
 
-    public void OnTriggerEnter(Collider other)
+    private IEnumerator WaitUntilGrounded()
     {
-        if(other.GetComponentInParent<PlayerMove>() && canPush)
+        // Attendre que la bombe touche le sol
+        while (!IsOnGround())
+            yield return null;
+
+        // Attendre qu'elle soit immobile
+        while (rb != null && rb.velocity.magnitude > 0.05f)
+            yield return null;
+
+        //AlignToGrid();
+        canPush = true;
+    }
+
+    private bool IsOnGround()
+    {
+        return Physics.Raycast(transform.position + Vector3.up * 0.1f, Vector3.down, groundCheckDistance, groundMask);
+    }
+
+    private void AlignToGrid()
+    {
+        float x = Mathf.Round(transform.position.x / 2f) * 2f;
+        float z = Mathf.Round(transform.position.z / 2f) * 2f;
+        transform.position = new Vector3(x, transform.position.y, z) + offset;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!canPush) return;
+
+        PlayerMove player = other.GetComponentInParent<PlayerMove>();
+        if (player != null)
         {
-            distanceX = Vector3.Distance(new Vector3(other.transform.position.x, 0, 0), new Vector3(transform.position.x, 0, 0));
-            distanceZ = Vector3.Distance(new Vector3(0, 0, other.transform.position.z), new Vector3(0, 0, transform.position.z));
-
-            if (distanceX < distanceZ)
-            {
-                if (other.transform.position.z > transform.position.z) Push(new Vector3(0, 0, -2));
-                else Push(new Vector3(0, 0, 2));
-            }else
-            {
-                if (other.transform.position.x > transform.position.x) Push(new Vector3(-2,0,0));
-                else Push(new Vector3(2,0, 0));
-            }
-
-        }
-
-        if(other.GetComponentInParent<Scr_Wall_Properties>() != null)
-        {
-            transform.DOKill();
-            if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2, transform.position.z), new Vector3(0, -1, 0), out RaycastHit hit, Mathf.Infinity, mask))
-            {
-                Transform currentCase = hit.transform.GetChild(0);
-                Debug.Log(currentCase);
-
-                transform.position = currentCase.position + offset;
-            }
+            Vector3 dir = (transform.position - other.transform.position).normalized;
+            dir = SnapToCardinal(dir);
+            TryPush(dir);
         }
     }
 
-    private void Push(Vector3 dir)
+    private Vector3 SnapToCardinal(Vector3 dir)
     {
-        if(Physics.Raycast(transform.position, dir, out RaycastHit hit, 2, mask))
-        {
-        
-        }
+        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.z))
+            return new Vector3(Mathf.Sign(dir.x), 0, 0);
         else
+            return new Vector3(0, 0, Mathf.Sign(dir.z));
+    }
+
+    private void TryPush(Vector3 direction)
+    {
+        if (pushCoroutine != null)
+            StopCoroutine(pushCoroutine);
+
+        pushCoroutine = StartCoroutine(SlideGrid(direction));
+    }
+
+    private IEnumerator SlideGrid(Vector3 direction)
+    {
+        canPush = false;
+
+        for (int i = 1; i <= maxSlideDistance; i++)
         {
-            transform.DOMove(transform.position + dir * pushForce, 1.5f).SetEase(Ease.OutExpo);
-            canPush = false;
-            //StartCoroutine(DelayBeforeCanPush(1.5f));
+            Vector3 nextPos = transform.position + direction * 2f;
+
+            if (Physics.Raycast(transform.position + Vector3.up * 0.5f, direction, 2f, mask))
+                break;
+
+            Tween t = transform.DOMove(nextPos, slideSpeed).SetEase(Ease.Linear);
+            yield return t.WaitForCompletion();
         }
 
+        AlignToGrid();
+        yield return new WaitForSeconds(1f);
+        canPush = true;
+    }
+
+    private void OnDestroy()
+    {
+        if (pushCoroutine != null)
+            StopCoroutine(pushCoroutine);
     }
 }
