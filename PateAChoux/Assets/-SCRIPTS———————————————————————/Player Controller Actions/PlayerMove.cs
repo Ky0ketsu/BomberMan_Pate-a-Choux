@@ -66,7 +66,11 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (!canRun) return;
+        if (!canRun)
+        {
+            ApplyAnimation(4);
+            return;
+        }
         HorizontalMovement();
         VerticalMovement();
         ApplyMovement();
@@ -101,7 +105,7 @@ public class PlayerMove : MonoBehaviour
             if (inputs.x < 0) ApplyAnimation(2);
             else ApplyAnimation(0);
         }
-        else ApplyAnimation(3);
+        else ApplyAnimation(4);
 
 
     }
