@@ -141,8 +141,16 @@ public class PlayerMove : MonoBehaviour
         movement.x = CanRun ? inputs.x * ((maxSpeed + (1 * speedUp)) * slowValue) : 0;
         movement.z = CanRun ? inputs.y * ((maxSpeed + (1 * speedUp)) * slowValue) : 0;
 
-        if (movement.x != 0 || movement.z != 0) trail.GetComponent<ParticleSystem>().Play();
-        else trail.GetComponent<ParticleSystem>().Pause();
+        if (movement.x != 0 || movement.z != 0)
+        {
+            trail.GetComponent<ParticleSystem>().enableEmission = true;
+            trail.transform.GetChild(0).GetComponent<ParticleSystem>().enableEmission = true;
+        }
+        else
+        {
+            trail.GetComponent<ParticleSystem>().enableEmission = false;
+            trail.transform.GetChild(0).GetComponent<ParticleSystem>().enableEmission = false;
+        }
     }
 
     void ApplyMovement()

@@ -46,12 +46,12 @@ public class Scr_Bomb : MonoBehaviour
             currentZone.GetComponent<Scr_Bomb_CaramelExplosion>().PlaceZone(transform);
         }
 
-        StartCoroutine(Animation());
+        StartCoroutine(DelayToDestroy());
     }
 
-    IEnumerator Animation()
+    IEnumerator DelayToDestroy()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         Destroy(gameObject);
     }
 }

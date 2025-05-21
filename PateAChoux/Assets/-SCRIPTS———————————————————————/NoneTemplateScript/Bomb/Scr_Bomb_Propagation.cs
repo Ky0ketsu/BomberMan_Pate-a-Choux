@@ -1,4 +1,5 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -12,6 +13,8 @@ public class Scr_Bomb_Propagation : MonoBehaviour
 
     public GameObject propagation;
     [SerializeField] private GameObject particule;
+    [SerializeField] private GameObject bombGraphics;
+    [SerializeField] private GameObject fuzeParticule;
 
     private void Start()
     {
@@ -20,10 +23,12 @@ public class Scr_Bomb_Propagation : MonoBehaviour
 
     public void Explosion()
     {
-        Instantiate(propagation, transform.position + Vector3.up, transform.rotation, transform);
-        Instantiate(particule, transform.position + Vector3.up, transform.rotation, GameObject.Find("ParticuleParent").transform);
+        fuzeParticule.SetActive(false);
+        bombGraphics.SetActive(false);
+        Instantiate(propagation, transform.position , transform.rotation, transform);
+        Instantiate(particule, transform.position , transform.rotation, GameObject.Find("ParticuleParent").transform);
 
-        for (int i = 1; i < range+1; i++)
+            for (int i = 1; i < range+1; i++)
         {
             if(canLeft) Propagation(Vector3.left, i);
             if(canRight) Propagation(Vector3.right, i);

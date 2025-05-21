@@ -48,6 +48,6 @@ public class Scr_Player_Death : MonoBehaviour
         colliders.gameObject.SetActive(false);
         //GetComponent<CharacterController>().enabled = false;
         transform.parent = GameObject.Find("UnActivePlayerParent").transform;
-        if (particule) Instantiate(particule, transform.position, transform.rotation, GameObject.Find("ParticulParent").transform);
+        if (particule != null) Instantiate(particule, transform.position, transform.rotation, GameObject.Find("ParticuleParent").transform);
     }
 }

@@ -84,7 +84,7 @@ MonoBehaviour:
   minY: 0
   caramelPrefab: {fileID: 1135031926234062967, guid: 3e862148fe4a92f46a76970c4ba55e94,
     type: 3}
-  graphics: {fileID: 8624797137781918065}
+  graphics: {fileID: 0}
 --- !u!114 &415257569539209928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +105,8 @@ MonoBehaviour:
     type: 3}
   particule: {fileID: 8816474758065035005, guid: 7ad396e20c10a1c4682ad9c18860baa4,
     type: 3}
+  bombGraphics: {fileID: 3128868076090884526}
+  fuzeParticule: {fileID: 1051555549967930164}
 --- !u!114 &1033127879628896711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,6 +626,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f25fb5eab14f66741bb2d7b67d2ac8d8, type: 3}
+--- !u!1 &1051555549967930164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8816474758065035005, guid: f25fb5eab14f66741bb2d7b67d2ac8d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8416534079839126985}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7853415257711917224 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1743287464539913569, guid: f25fb5eab14f66741bb2d7b67d2ac8d8,
