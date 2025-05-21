@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Rewired;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,13 +16,26 @@ public class Scr_Bomb : MonoBehaviour
 
     public Transform graphics;
 
+    [SerializeField] private GameObject particule;
+
+    [SerializeField] private GameObject colliderInternal;
+
 
     public void Start()
     {
         StartCoroutine(Timer());
         graphics.DOScale(new Vector3(1.3f, 1.3f, 1.3f), 0.2f).SetLoops(-1, LoopType.Yoyo);
         transform.DOMoveY(maxY, 0.5f).SetEase(Ease.OutExpo);
-        transform.DOMoveY(minY, 1).SetEase(Ease.InExpo);
+        transform.DOMoveY(minY, 1).SetEase(Ease.InExpo).OnComplete(ParticuleEndAnimation);
+
+        gameObject.layer = 20 + owner.GetComponent<PlayerMove>().playerID;
+        colliderInternal.layer = 20 + owner.GetComponent<PlayerMove>().playerID;
+
+    }
+
+    private void ParticuleEndAnimation()
+    {
+        Instantiate(particule, transform.position, transform.rotation, GameObject.Find("ParticuleParent").transform);
     }
 
     public IEnumerator Timer()
@@ -53,5 +67,14 @@ public class Scr_Bomb : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
+    }
+
+
+    private void Update()
+    {
+        if (Vector3.Distance(new Vector3(owner.transform.position.x, 0, owner.transform.position.z), new Vector3(transform.position.x, 0, transform.position.z)) >= 2)
+        {
+            gameObject.layer = 15;
+        }
     }
 }

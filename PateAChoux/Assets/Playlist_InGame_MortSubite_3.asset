@@ -21,4 +21,4 @@ MonoBehaviour:
     tracks:
     - clipTitle: Msc_MortSubite_3
       clip: {fileID: 8300000, guid: 311b2a6b959332a43b31f20f3d90bc1f, type: 3}
-      volume: 0.1
+      volume: 0.2

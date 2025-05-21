@@ -19,6 +19,7 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField] private GameObject[] animationSprite = new GameObject[4];
     [HideInInspector] public bool chouxBouleToutActive;
+    [SerializeField] private GameObject colliderInternal;
 
     void Awake()
     {
@@ -44,6 +45,11 @@ public class PlayerMove : MonoBehaviour
 
             animationSprite[i] = transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(playerID).GetChild(i).gameObject;
         }
+
+        gameObject.layer = 24 + playerID;
+        colliderInternal.layer = 24 + playerID;
+
+       
     }
 
     void EnableMoveSet()
@@ -60,10 +66,11 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        if (!canRun) return;
         HorizontalMovement();
         VerticalMovement();
         ApplyMovement();
-        if(CanRun) CheckAnimation();
+        CheckAnimation();
     }
 
     void GetInputs()
@@ -94,7 +101,7 @@ public class PlayerMove : MonoBehaviour
             if (inputs.x < 0) ApplyAnimation(2);
             else ApplyAnimation(0);
         }
-        else ApplyAnimation(0);
+        else ApplyAnimation(3);
 
 
     }
@@ -130,7 +137,7 @@ public class PlayerMove : MonoBehaviour
 
     void VerticalMovement()
     {
-        movement.y= CanFall ? -60f : 0; // very simple fall with constant speed
+        //movement.y= CanFall ? -60f : 0; // very simple fall with constant speed
     }
 
     [SerializeField] private GameObject trail;

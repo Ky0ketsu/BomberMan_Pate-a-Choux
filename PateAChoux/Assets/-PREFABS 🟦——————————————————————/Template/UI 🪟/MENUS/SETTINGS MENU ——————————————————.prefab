@@ -994,7 +994,7 @@ PrefabInstance:
     - target: {fileID: 46960876874496888, guid: 9101ee62cbb4c024095e742e34da13a0,
         type: 3}
       propertyPath: m_text
-      value: BACK
+      value: RETOUR
       objectReference: {fileID: 0}
     - target: {fileID: 46960876874496888, guid: 9101ee62cbb4c024095e742e34da13a0,
         type: 3}
@@ -1124,7 +1124,7 @@ PrefabInstance:
     - target: {fileID: 4959895939460964732, guid: 9101ee62cbb4c024095e742e34da13a0,
         type: 3}
       propertyPath: m_Name
-      value: BACK Button Graphics
+      value: RETOUR Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 5982882668673742733, guid: 9101ee62cbb4c024095e742e34da13a0,
         type: 3}
@@ -1371,6 +1371,17 @@ PrefabInstance:
       propertyPath: m_text
       value: SOUND EFFECTS
       objectReference: {fileID: 0}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7219785828014985034, guid: 71ebd469deb1c2c4fb8e039a76af2119,
+        type: 2}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8546289960536185586, guid: 4f741495c62431347baac8daba514962,
         type: 3}
       propertyPath: en
@@ -1470,6 +1481,17 @@ PrefabInstance:
       propertyPath: m_text
       value: GLOBAL VOLUME
       objectReference: {fileID: 0}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7219785828014985034, guid: 71ebd469deb1c2c4fb8e039a76af2119,
+        type: 2}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8546289960536185586, guid: 4f741495c62431347baac8daba514962,
         type: 3}
       propertyPath: en
@@ -1522,7 +1544,7 @@ PrefabInstance:
     - target: {fileID: 3927137165913878792, guid: 4f741495c62431347baac8daba514962,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927137165913878792, guid: 4f741495c62431347baac8daba514962,
         type: 3}
@@ -1578,6 +1600,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: LANGUAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7219785828014985034, guid: 71ebd469deb1c2c4fb8e039a76af2119,
+        type: 2}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8546289960536185586, guid: 4f741495c62431347baac8daba514962,
         type: 3}
@@ -1677,6 +1710,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: UI VOLUME
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7219785828014985034, guid: 71ebd469deb1c2c4fb8e039a76af2119,
+        type: 2}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8546289960536185586, guid: 4f741495c62431347baac8daba514962,
         type: 3}
@@ -2111,6 +2155,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130180459921424307, guid: 320f4e026f5aacf42a600f7c1117eb2c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130180459921424307, guid: 320f4e026f5aacf42a600f7c1117eb2c,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2159,6 +2208,12 @@ PrefabInstance:
       propertyPath: m_text
       value: INPUTS
       objectReference: {fileID: 0}
+    - target: {fileID: 8292530123029169051, guid: 320f4e026f5aacf42a600f7c1117eb2c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7219785828014985034, guid: 71ebd469deb1c2c4fb8e039a76af2119,
+        type: 2}
     - target: {fileID: 8511977491363483222, guid: 320f4e026f5aacf42a600f7c1117eb2c,
         type: 3}
       propertyPath: m_Name
@@ -2382,7 +2437,7 @@ PrefabInstance:
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_text
-      value: ENGLISH
+      value: ANGLAIS
       objectReference: {fileID: 0}
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
@@ -2507,7 +2562,7 @@ PrefabInstance:
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name
-      value: ENGLISH Button Graphics
+      value: ANGLAIS Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 6459998953733841741, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
@@ -2823,6 +2878,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130180459921424307, guid: 320f4e026f5aacf42a600f7c1117eb2c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130180459921424307, guid: 320f4e026f5aacf42a600f7c1117eb2c,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2871,6 +2931,12 @@ PrefabInstance:
       propertyPath: m_text
       value: GENERAL
       objectReference: {fileID: 0}
+    - target: {fileID: 8292530123029169051, guid: 320f4e026f5aacf42a600f7c1117eb2c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7219785828014985034, guid: 71ebd469deb1c2c4fb8e039a76af2119,
+        type: 2}
     - target: {fileID: 8511977491363483222, guid: 320f4e026f5aacf42a600f7c1117eb2c,
         type: 3}
       propertyPath: m_Name
@@ -3089,6 +3155,17 @@ PrefabInstance:
       propertyPath: m_text
       value: VOICES
       objectReference: {fileID: 0}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7219785828014985034, guid: 71ebd469deb1c2c4fb8e039a76af2119,
+        type: 2}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8546289960536185586, guid: 4f741495c62431347baac8daba514962,
         type: 3}
       propertyPath: en
@@ -3205,7 +3282,7 @@ PrefabInstance:
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_text
-      value: RESET TO DEFAULT
+      value: "R\xC9GLAGES PAR D\xC9FAUT"
       objectReference: {fileID: 0}
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
@@ -3335,7 +3412,7 @@ PrefabInstance:
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name
-      value: RESET TO DEFAULT Button Graphics
+      value: "R\xC9GLAGES PAR D\xC9FAUT Button Graphics"
       objectReference: {fileID: 0}
     - target: {fileID: 6459998953733841741, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
@@ -3664,6 +3741,17 @@ PrefabInstance:
       propertyPath: m_text
       value: MUSIC
       objectReference: {fileID: 0}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7219785828014985034, guid: 71ebd469deb1c2c4fb8e039a76af2119,
+        type: 2}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8546289960536185586, guid: 4f741495c62431347baac8daba514962,
         type: 3}
       propertyPath: en
@@ -3693,6 +3781,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9007616948160249082}
     m_Modifications:
+    - target: {fileID: 1298547542893268124, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: lockPosition
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927137165913878792, guid: 4f741495c62431347baac8daba514962,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3712,6 +3805,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3927137165913878792, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3927137165913878792, guid: 4f741495c62431347baac8daba514962,
         type: 3}
@@ -3762,6 +3860,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: MOUSE SENSITIVITY
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7219785828014985034, guid: 71ebd469deb1c2c4fb8e039a76af2119,
+        type: 2}
+    - target: {fileID: 7934111980042489120, guid: 4f741495c62431347baac8daba514962,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8546289960536185586, guid: 4f741495c62431347baac8daba514962,
         type: 3}
@@ -4006,7 +4115,7 @@ PrefabInstance:
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_text
-      value: FRENCH
+      value: "FRAN\xC7AIS"
       objectReference: {fileID: 0}
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
@@ -4131,7 +4240,7 @@ PrefabInstance:
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name
-      value: FRENCH Button Graphics
+      value: "FRAN\xC7AIS Button Graphics"
       objectReference: {fileID: 0}
     - target: {fileID: 6459998953733841741, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
@@ -4256,6 +4365,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3130180459921424307, guid: 320f4e026f5aacf42a600f7c1117eb2c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130180459921424307, guid: 320f4e026f5aacf42a600f7c1117eb2c,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4304,6 +4418,12 @@ PrefabInstance:
       propertyPath: m_text
       value: AUDIO
       objectReference: {fileID: 0}
+    - target: {fileID: 8292530123029169051, guid: 320f4e026f5aacf42a600f7c1117eb2c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7219785828014985034, guid: 71ebd469deb1c2c4fb8e039a76af2119,
+        type: 2}
     - target: {fileID: 8511977491363483222, guid: 320f4e026f5aacf42a600f7c1117eb2c,
         type: 3}
       propertyPath: m_Name
