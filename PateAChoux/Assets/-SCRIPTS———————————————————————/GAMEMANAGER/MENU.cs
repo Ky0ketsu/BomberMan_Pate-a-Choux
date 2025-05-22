@@ -188,24 +188,20 @@ public class MENU : MonoBehaviour
     public void LobbyMenu()
     {
         ShowNextMenu(lobbyMenu, 0.5f, 0, 0.5f);
-        lobbyMenu.GetComponent<Scr_Menu_Lobby_PrintScore>().PrintScore();
+        //lobbyMenu.GetComponent<Scr_Menu_Lobby_PrintScore>().PrintScore();
         EVENTS.InvokeLobby();
     }
 
     public void VictoryMenu()
     {
         ShowNextMenu(victoryMenu, 0.5f, 0, 0.5f);
-        Invoke("ActiveVictoryMenu", 0.55f);
-    }
-
-    void ActiveVictoryMenu()
-    {
         victoryMenu.GetComponent<Scr_Menu_Victory>().Victory();
     }
 
     public void DefeatMenu()
     {
         ShowNextMenu(defeatMenu, 0.5f, 0, 0.5f);
+        defeatMenu.GetComponent<Scr_Menu_Defeat>().Defeat();
     }
 
     //fin de mon code

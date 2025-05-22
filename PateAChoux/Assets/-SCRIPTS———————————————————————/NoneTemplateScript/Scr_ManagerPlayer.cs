@@ -195,9 +195,9 @@ public class Scr_ManagerPlayer : MonoBehaviour
         }
         if (playerParent.childCount == 1)
         {
+            AddScore(playerParent.GetChild(0).GetComponent<PlayerMove>().playerID);
             GAME.MANAGER.SwitchTo(State.waiting);
             EVENTS.InvokeVictory();
-            AddScore(playerParent.GetChild(0).GetComponent<PlayerMove>().playerID);
         }
     }
 
@@ -215,6 +215,12 @@ bool rightKeyboardAssigned, leftKeyboardAssigned = false;
 
     void ResetAllControllers()
     {
+        for (int i = 0; i < 4; i++)
+        {
+            playerSlotMenu.transform.GetChild(i).GetComponent<Scr_Menu_Lobby_PlayerAnimation>().AnimationDespawn();
+            win[i] = 0;
+        }
+
         totalPlayers = 0;
         activeControllers = new Controller[4];
         foreach (Player player in ReInput.players.GetPlayers())
