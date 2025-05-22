@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Rewired;
 using System.Linq;
+using DG.Tweening;
 
 public class Scr_ManagerPlayer : MonoBehaviour
 {
@@ -250,7 +251,8 @@ bool rightKeyboardAssigned, leftKeyboardAssigned = false;
 
     IEnumerator DelayToGameplay()
     {
-        float chrono = playerParent.childCount + 0.5f;
+        float chrono = 4;
+        StartCoroutine(PrintDecompte());
         while (chrono > 0)
         {
             chrono -= Time.deltaTime;
@@ -260,6 +262,22 @@ bool rightKeyboardAssigned, leftKeyboardAssigned = false;
         Debug.Log("Can move");
         GAME.MANAGER.SwitchTo(State.gameplay);
     }
+
+    IEnumerator PrintDecompte()
+    {
+        yield return new WaitForSeconds(1f);
+        TimerSprite[0].transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.InCubic);
+        yield return new WaitForSeconds(0.9f);
+        TimerSprite[0].transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InCubic);
+        TimerSprite[1].transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.InCubic);
+        yield return new WaitForSeconds(0.9f);
+        TimerSprite[1].transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InCubic);
+        TimerSprite[2].transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.InCubic);
+        yield return new WaitForSeconds(0.9f);
+        TimerSprite[2].transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InCubic);
+    }
+
+    [SerializeField] GameObject[] TimerSprite;
 
 
 } // FIN DU SCRIPT
