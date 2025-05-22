@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     Player player; // Rewired plugin
     [HideInInspector] public int speedUp = 0;
 
-    [SerializeField] private GameObject[] animationSprite = new GameObject[4];
+    [SerializeField] private GameObject[] animationSprite = new GameObject[8];
     [HideInInspector] public bool chouxBouleToutActive;
     [SerializeField] private GameObject colliderInternal;
 
@@ -38,10 +38,10 @@ public class PlayerMove : MonoBehaviour
         player = ReInput.players.GetPlayer(playerID);
         if (GAME.MANAGER.CurrentState==State.gameplay) EnableMoveSet();
 
-        for (int i = 0; i < animationSprite.Length; i++)
+        for (int i = 0; i < 8; i++)
         {
-            if(i != playerID) transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(i).gameObject.SetActive(false);
-            else transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(i).gameObject.SetActive(true);
+            if(i != playerID && i < 4) transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(i).gameObject.SetActive(false);
+            else if (i == playerID && i < 4) transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(i).gameObject.SetActive(true);
 
             animationSprite[i] = transform.Find("GRAPHICS").Find("PlayerAnimation").GetChild(playerID).GetChild(i).gameObject;
         }
@@ -66,7 +66,11 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (!canRun) return;
+        if (!canRun)
+        {
+            ApplyAnimation(4);
+            return;
+        }
         HorizontalMovement();
         VerticalMovement();
         ApplyMovement();
@@ -101,7 +105,7 @@ public class PlayerMove : MonoBehaviour
             if (inputs.x < 0) ApplyAnimation(2);
             else ApplyAnimation(0);
         }
-        else ApplyAnimation(3);
+        else ApplyAnimation(4);
 
 
     }
@@ -110,7 +114,7 @@ public class PlayerMove : MonoBehaviour
 
     private void ApplyAnimation(int animationID)
     {
-        for (int i = 0; i < animationSprite.Length; i++)
+        for (int i = 0; i < 8; i++)
         {
             if(i != animationID)
             {
