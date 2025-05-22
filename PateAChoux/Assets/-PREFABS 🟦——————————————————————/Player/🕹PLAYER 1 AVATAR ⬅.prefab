@@ -896,6 +896,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerAnimation
       objectReference: {fileID: 0}
+    - target: {fileID: 1645735388987902737, guid: f5d8a4bbb3032cb4a850a187d4a42e4c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3267243075367390020, guid: f5d8a4bbb3032cb4a850a187d4a42e4c,
         type: 3}
       propertyPath: m_IsActive
@@ -907,6 +912,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5376673442826548338, guid: f5d8a4bbb3032cb4a850a187d4a42e4c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678530109320487602, guid: f5d8a4bbb3032cb4a850a187d4a42e4c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716980184070171340, guid: f5d8a4bbb3032cb4a850a187d4a42e4c,
         type: 3}
       propertyPath: m_IsActive
       value: 0
