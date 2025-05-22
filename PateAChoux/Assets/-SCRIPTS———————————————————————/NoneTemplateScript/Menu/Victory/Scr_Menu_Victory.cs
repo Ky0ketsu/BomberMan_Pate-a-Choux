@@ -25,6 +25,7 @@ public class Scr_Menu_Victory : MonoBehaviour
         winnerSlot.GetComponentInChildren<TextMeshProUGUI>().text = Scr_ManagerPlayer.acces.win[currentWinner].ToString();
 
 
+
         int currentloserNum = 0;
         for (int i = 0; i < 4; i++)
         {

@@ -160,10 +160,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68730ff01bf05ef4f8d4d3d5dc7929de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationDelay: 0.7
+  animationDelay: 2
   animationTime: 1
   particule: {fileID: 8816474758065035005, guid: b86c010e13136274e8157fdf3e523efa,
     type: 3}
+  graphics: {fileID: 5374332219512483209}
 --- !u!114 &4522522018809846807
 MonoBehaviour:
   m_ObjectHideFlags: 0
