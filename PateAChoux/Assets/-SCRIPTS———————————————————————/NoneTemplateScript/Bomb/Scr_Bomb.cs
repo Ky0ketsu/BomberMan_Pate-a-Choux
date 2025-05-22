@@ -16,6 +16,8 @@ public class Scr_Bomb : MonoBehaviour
 
     public Transform graphics;
 
+    public bool _isUpDone;
+
     [SerializeField] private GameObject particule;
 
     [SerializeField] private GameObject colliderInternal;
@@ -48,7 +50,11 @@ public class Scr_Bomb : MonoBehaviour
     {
         if(owner != null)
         {
-            owner.GetComponent<Scr_Player_Bomb>().stockBomb++;
+            if(!_isUpDone)
+            {
+                owner.GetComponent<Scr_Player_Bomb>().stockBomb++;
+                _isUpDone = true;
+            }
         }
 
         gameObject.GetComponent<Scr_Bomb_Propagation>().Explosion();
