@@ -374,11 +374,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmpro: {fileID: 4995472765965190419}
   player: {fileID: 385576194438785183}
-  players:
-  - {fileID: 21300000, guid: 053a7ed81f8891343993688fadf85be8, type: 3}
-  - {fileID: 21300000, guid: 4949dbcc9bf777b4e80bbbacb25394ad, type: 3}
-  - {fileID: 21300000, guid: 0bcec3ea0fec22a43960ad2fc5ee48d5, type: 3}
-  - {fileID: 21300000, guid: 1b2994e1ce8138e42b387432289d99e5, type: 3}
+  playerSprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slotPlayer: []
+  currentWinner: 0
 --- !u!114 &3902930799157588503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,7 +827,7 @@ PrefabInstance:
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_text
-      value: Main Menu
+      value: Menu Principal
       objectReference: {fileID: 0}
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
@@ -945,7 +947,7 @@ PrefabInstance:
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name
-      value: Main Menu Button Graphics
+      value: Menu Principal Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 6459998953733841741, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
