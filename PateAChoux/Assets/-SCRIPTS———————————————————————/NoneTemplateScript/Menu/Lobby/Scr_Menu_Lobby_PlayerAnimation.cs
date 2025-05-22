@@ -26,13 +26,9 @@ public class Scr_Menu_Lobby_PlayerAnimation : MonoBehaviour
        player.transform.DOScale(Vector3.one * 1.1f, time / 2).SetEase(Ease.Linear).SetLoops(-1 ,LoopType.Yoyo);
     }
 
-    public void StopYoyo()
-    {
-        player.transform.DOKill();
-    }
-
     public void AnimationDespawn()
     {
+        player.transform.DOKill();
         controller.transform.DOScale(Vector3.one, 0.1f);
         player.transform.DOScale(Vector3.zero, 0.1f);
     }
