@@ -101,6 +101,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  playerList: {fileID: 0}
 --- !u!1001 &1008984092058752448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_text
-      value: Restart
+      value: Redemarez
       objectReference: {fileID: 0}
     - target: {fileID: 722590726480801720, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
@@ -310,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 5653400515240392124, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
       propertyPath: m_Name
-      value: Restart Button Graphics
+      value: Redemarez Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 6459998953733841741, guid: 3ee834a07d046ee4ebebee9a58cafa8f,
         type: 3}
@@ -543,7 +544,7 @@ PrefabInstance:
     - target: {fileID: 3546623556357934487, guid: a903e18420b22f94fbaf52f84e8138bf,
         type: 3}
       propertyPath: m_text
-      value: Main Menu
+      value: Menu Principal
       objectReference: {fileID: 0}
     - target: {fileID: 4267728678580102768, guid: a903e18420b22f94fbaf52f84e8138bf,
         type: 3}
@@ -653,7 +654,7 @@ PrefabInstance:
     - target: {fileID: 8452098621795964819, guid: a903e18420b22f94fbaf52f84e8138bf,
         type: 3}
       propertyPath: m_Name
-      value: Main Menu Button Graphics
+      value: Menu Principal Button Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 8956322603511694273, guid: a903e18420b22f94fbaf52f84e8138bf,
         type: 3}
@@ -933,7 +934,7 @@ PrefabInstance:
     - target: {fileID: 6458950444592946359, guid: d018fa1fd1aa1c54cace03e8b0500b45,
         type: 3}
       propertyPath: m_text
-      value: No Winner
+      value: Pas de Gagnant
       objectReference: {fileID: 0}
     - target: {fileID: 6458950444592946359, guid: d018fa1fd1aa1c54cace03e8b0500b45,
         type: 3}
