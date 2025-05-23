@@ -187,7 +187,7 @@ PrefabInstance:
     - target: {fileID: 5061088733937205955, guid: 4ca0935799c1811418395be7e463730b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1524,7 +1524,7 @@ PrefabInstance:
     - target: {fileID: 2112606290770284390, guid: 3ae3a805036ef434397273412f7fa651,
         type: 3}
       propertyPath: delayBetweenBlock
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2315249364416877357, guid: 3ae3a805036ef434397273412f7fa651,
         type: 3}
