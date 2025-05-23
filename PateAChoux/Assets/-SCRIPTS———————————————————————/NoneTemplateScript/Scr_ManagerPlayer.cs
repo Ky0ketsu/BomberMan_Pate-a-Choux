@@ -251,6 +251,9 @@ bool rightKeyboardAssigned, leftKeyboardAssigned = false;
 
     IEnumerator DelayToGameplay()
     {
+        TimerSprite[0].transform.DOScale(Vector3.zero, 0.1f);
+        TimerSprite[1].transform.DOScale(Vector3.zero, 0.1f);
+        TimerSprite[2].transform.DOScale(Vector3.zero, 0.1f);
         float chrono = 4;
         StartCoroutine(PrintDecompte());
         while (chrono > 0)
